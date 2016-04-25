@@ -13,6 +13,6 @@ Hoja de auto-evaluación: [auto-iw2016-tempojobs](https://docs.google.com/spread
 
 #### Roles:
 * Matías Díaz Aguirre:
-··* Administrador de sistemas.
+  * Administrador de sistemas.
 * María Martín Marín:
-··* Jefe de proyecto.
+  * Jefe de proyecto.
