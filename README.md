@@ -6,6 +6,8 @@ El objetivo de este proyecto es desarrollar una aplicación web empresarial senc
 la cual poder gestionar ofertas de empleo y las inscripciones de posibles candidatos.
 
 Hoja de auto-evaluación: [auto-iw2016-tempojobs](https://docs.google.com/spreadsheets/d/1m27WBOe_tDdPjohx7sM0_MM33ur7FEmseI-JLapoFYI/edit?usp=sharing)
+Entregables:
+* E1: [Documento de planificación](https://docs.google.com/document/d/1qFu-Q5v8uLhlId2M9zFeppOT0CdY8ohl4T-J0hhmSVI/edit?usp=sharing)
 
 #### Colaboradores:
 * Matías Díaz Aguirre
@@ -14,5 +16,12 @@ Hoja de auto-evaluación: [auto-iw2016-tempojobs](https://docs.google.com/spread
 #### Roles:
 * Matías Díaz Aguirre:
   * Administrador de sistemas.
+  * Administrador de la base de datos.
+  * Codificador de pruebas.
+  * Analista/programador.
 * María Martín Marín:
   * Jefe de proyecto.
+  * Arquitecto software.
+  * Diseñador de interfaz de usuario.
+  * Evaluador interno.
+  * Analista/programador.
