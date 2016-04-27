@@ -8,7 +8,7 @@ la cual poder gestionar ofertas de empleo y las inscripciones de posibles candid
 Hoja de auto-evaluación: [auto-iw2016-tempojobs](https://docs.google.com/spreadsheets/d/1m27WBOe_tDdPjohx7sM0_MM33ur7FEmseI-JLapoFYI/edit?usp=sharing)
 
 Entregables:
-* E1: [Documento de planificación](https://docs.google.com/document/d/1qFu-Q5v8uLhlId2M9zFeppOT0CdY8ohl4T-J0hhmSVI/edit?usp=sharing)
+* E1: [Documento de plan de proyecto](https://docs.google.com/document/d/1qFu-Q5v8uLhlId2M9zFeppOT0CdY8ohl4T-J0hhmSVI/edit?usp=sharing)
 
 #### Colaboradores:
 * Matías Díaz Aguirre
