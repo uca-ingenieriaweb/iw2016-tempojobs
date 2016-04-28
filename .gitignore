@@ -13,6 +13,9 @@ buildNumber.properties
 *.tmp
 *.bak
 
+# Roo
+log.roo
+
 # Eclipse
 .metadata
 bin/
