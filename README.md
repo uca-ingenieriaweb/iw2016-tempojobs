@@ -9,7 +9,8 @@ Hoja de auto-evaluación: [auto-iw2016-tempojobs](https://docs.google.com/spread
 
 Entregables:
 * E1: [Documento de plan de proyecto](https://docs.google.com/document/d/1qFu-Q5v8uLhlId2M9zFeppOT0CdY8ohl4T-J0hhmSVI/edit?usp=sharing)
-
+* E2: [Documento de requisitos](https://docs.google.com/document/d/1jWdlkVnUCD8FCixcph0YGIk8XyvLM64gvuhZ0hjjOFc/edit?usp=sharing)
+* 
 #### Colaboradores:
 * María Martín Marín
 * Matías Díaz Aguirre
