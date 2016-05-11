@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_uca_iw_tempojobs_domain_Empleado" items="${empleadoes}" z="gydRxjysUXhjZtTcwf5w0zsc/LM=">
+        <table:table data="${empleadoes}" id="l_es_uca_iw_tempojobs_domain_Empleado" path="/empleadoes" z="wCBiVCOYYxw/b4ln4gHElyWqy24=">
+            <table:column date="true" dateTimePattern="${empleado_finicio_date_format}" id="c_es_uca_iw_tempojobs_domain_Empleado_fInicio" property="FInicio" z="t8idHvCGdB1oCNr3TW99QVH6wwk="/>
+            <table:column date="true" dateTimePattern="${empleado_ffinal_date_format}" id="c_es_uca_iw_tempojobs_domain_Empleado_fFinal" property="FFinal" z="BM6RCVmeXi7e5qKMTLGY6D8TdiY="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empleado_sPuesto" property="SPuesto" z="0m9p499tOijnnJpNo1Ck2F7MJw4="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empleado_UsuarioEmpleado" property="usuarioEmpleado" z="2wK587zNGe0w7HhO8p8rmDQY2sg="/>
+        </table:table>
+    </page:list>
+</div>

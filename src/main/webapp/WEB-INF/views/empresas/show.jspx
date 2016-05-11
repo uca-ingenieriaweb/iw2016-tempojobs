@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Empresa" object="${empresa}" path="/empresas" z="Ugta4gxV6Vdzybw5PD/TRTC5hc0=">
+        <field:display field="SNombre" id="s_es_uca_iw_tempojobs_domain_Empresa_sNombre" object="${empresa}" z="YCVU4uTXAd2VYZrkNb5MB4Qf7Vk="/>
+        <field:display field="SCIF" id="s_es_uca_iw_tempojobs_domain_Empresa_sCIF" object="${empresa}" z="pZ8Ochn54cT29uqlZsZcjwvJ3/4="/>
+        <field:display field="SActividadProfesional" id="s_es_uca_iw_tempojobs_domain_Empresa_sActividadProfesional" object="${empresa}" z="AoT4bCELZ1Czv+9RdZZmc0qoS8E="/>
+        <field:display field="IEmpleados" id="s_es_uca_iw_tempojobs_domain_Empresa_iEmpleados" object="${empresa}" z="pqL+k+C3ph5J2NnbLPGyBD7umGA="/>
+        <field:display field="usuarioEmpresa" id="s_es_uca_iw_tempojobs_domain_Empresa_UsuarioEmpresa" object="${empresa}" z="1R6M7hpOhyrgr3/IgxOJ9f81c40="/>
+    </page:show>
+</div>
