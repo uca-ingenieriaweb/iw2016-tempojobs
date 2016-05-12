@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Empresa" object="${empresa}" path="/empresas" z="Ugta4gxV6Vdzybw5PD/TRTC5hc0=">
+        <field:display field="SNombre" id="s_es_uca_iw_tempojobs_domain_Empresa_sNombre" object="${empresa}" z="YCVU4uTXAd2VYZrkNb5MB4Qf7Vk="/>
+        <field:display field="SApellidos" id="s_es_uca_iw_tempojobs_domain_Empresa_sApellidos" object="${empresa}" z="Z3yXV7P/fdVWs8bobhnpDKWhNa4="/>
+        <field:display date="true" dateTimePattern="${empresa_ffechanac_date_format}" field="FFechaNac" id="s_es_uca_iw_tempojobs_domain_Empresa_fFechaNac" object="${empresa}" z="0LQNcUyzXt54Ic7UOgalF+v9ZDo="/>
+        <field:display field="SDireccion" id="s_es_uca_iw_tempojobs_domain_Empresa_sDireccion" object="${empresa}" z="Z1b/Hp7FCXWFIHJ7lFzk99shCeg="/>
+        <field:display field="SEmail" id="s_es_uca_iw_tempojobs_domain_Empresa_sEmail" object="${empresa}" z="XtE+o6vSCAQ6D3xURCcLGxo6r4Q="/>
+        <field:display field="STelefono" id="s_es_uca_iw_tempojobs_domain_Empresa_sTelefono" object="${empresa}" z="WoP6jX1jugBd04jWnBAt5ivXW5E="/>
+        <field:display field="SPassword" id="s_es_uca_iw_tempojobs_domain_Empresa_sPassword" object="${empresa}" z="xVcH+4TMTiz3oG8aGdUbmIBUJ9A="/>
+        <field:display field="STitulo" id="s_es_uca_iw_tempojobs_domain_Empresa_sTitulo" object="${empresa}" z="My6+nL0biRDvQ66pQVR+aLb8h1s="/>
+        <field:display field="SCIF" id="s_es_uca_iw_tempojobs_domain_Empresa_sCIF" object="${empresa}" z="pZ8Ochn54cT29uqlZsZcjwvJ3/4="/>
+        <field:display field="SActividadProfesional" id="s_es_uca_iw_tempojobs_domain_Empresa_sActividadProfesional" object="${empresa}" z="AoT4bCELZ1Czv+9RdZZmc0qoS8E="/>
+        <field:display field="IEmpleados" id="s_es_uca_iw_tempojobs_domain_Empresa_iEmpleados" object="${empresa}" z="pqL+k+C3ph5J2NnbLPGyBD7umGA="/>
+    </page:show>
+</div>
