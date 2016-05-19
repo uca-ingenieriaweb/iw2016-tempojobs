@@ -1,4 +1,5 @@
 // Roo Script para implantación rápida
+// Generar proyecto iw2016-tempojobs desde Spring Source Tool y cargar script
 
 // Crear conexión con la BD
 jpa setup --provider HIBERNATE --database MYSQL --databaseName tempojobs --userName tempojobs --password tempojobs --hostName localhost
@@ -40,6 +41,40 @@ field string --fieldName sTelefono --notNull --sizeMin 9 --sizeMax 16
 
 field string --fieldName sTipoContrato --notNull --sizeMin 3 --sizeMax 32 --class ~.domain.Oferta
 field number --fieldName dSueldoBruto --type java.lang.Double --notNull
+field number --fieldName iVacantes --type java.lang.Integer --notNull
+field string --fieldName sFormacion --notNull --sizeMin 3 --sizeMax 256
+field string --fieldName sExperiencia --notNull --sizeMin 3 --sizeMax 64
+field string --fieldName sEstado --notNull --sizeMin 3 --sizeMax 32
+field date --fieldName fFechaInicioAct --type java.util.Date --notNull
+field date --fieldName fFechaFinAct --type.java.util.Date --notNull
+
+field string --fieldname sFoto --notNull --sizeMin 3 --sizeMax 128 --class ~.domain.Perfil
+field string --fieldName sPuesto --notNull --sizeMin 3 --sizeMax 32
+
+field string --fieldName sEmpresa --notNull --sizeMin 3 --sizeMax 32 --class ~.domain.Experiencia
+field string --fieldName sPuesto --notNull --sizeMin 3 --sizeMax 32
+field date --fieldName fFechaInicio --type java.util.Date --notNull
+field date --fieldName fFechaFinal --type java.util.Date --notNull
+
+field string --fieldName sTitulo --notNull --sizeMin 3 --sizeMax 64 --class ~.domain.Formacion
+field date --fieldName fFechaInicio --type java.util.Date --notNull
+field date --fieldName fFechaFinal --type java.util.Date --notNull
+
+field date --fieldName fFechaInscripcion --type java.util.Date --notNull --class ~.domain.Inscripcion
+field string --fieldName SEstado --notNull --sizeMin 3 --sizeMax 32
+
+// Creando relaciones entre entidades
+field set --fieldName sedes --type ~.domain.Sede --class ~.domain.Empresa
+field set --fieldName ofertas --type ~.domain.Oferta --class ~.domain.Sede
+
+field reference --fieldName oferta --type ~.domain.Oferta --class ~.domain.Empleado
+field set --fieldName experiencias --type ~.domain.Experiencia --class ~.domain.Perfil
+field set --fieldName formaciones --type ~.domain.Formacion
+
+field reference --fieldName oferta --type ~.domain.Oferta --class ~.domain.Inscripcion
+field reference --fieldName perfil --type ~.domain.Perfil
+field set --fieldName inscripcion --type ~.domain.Inscripcion --class ~.domain.Oferta
+field set --fieldName inscripcion --type ~.domain.Inscripcion --class ~.domain.Perfil
 
 // Generando capa web
 web mvc setup
