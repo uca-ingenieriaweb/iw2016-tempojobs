@@ -85,7 +85,6 @@ field set --fieldName puestos --type ~.domain.Puesto --class ~.domain.Perfil
 web mvc setup
 web mvc all --package ~.web
 web mvc scaffold --class ~.web.DemandanteController --backingType ~.domain.Demandante
-web mvc language --code es
 
 // Pruebas con Selenium
 selenium test --controller ~.web.EmpresaController
