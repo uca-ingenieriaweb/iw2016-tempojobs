@@ -79,7 +79,7 @@ field reference --fieldName perfil --type ~.domain.Perfil
 field set --fieldName inscripcion --type ~.domain.Inscripcion --class ~.domain.Oferta
 field set --fieldName inscripcion --type ~.domain.Inscripcion --class ~.domain.Perfil
 
-field set --fieldName puestos -type ~.domain.Puesto --class ~.domain.Perfil
+field set --fieldName puestos --type ~.domain.Puesto --class ~.domain.Perfil
 
 // Generando capa web
 web mvc setup
