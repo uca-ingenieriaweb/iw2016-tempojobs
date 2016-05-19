@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_es_uca_iw_tempojobs_domain_Experiencia" modelAttribute="experiencia" path="/experiencias" versionField="Version" z="80yssM5HqswSUbLBJddjNtGUiJA=">
+        <field:textarea field="sEmpresa" id="c_es_uca_iw_tempojobs_domain_Experiencia_sEmpresa" required="true" z="HHbXU07y1iZwEgKTrss7YNDTc1Q="/>
+        <field:textarea field="sPuesto" id="c_es_uca_iw_tempojobs_domain_Experiencia_sPuesto" required="true" z="Y3Z+Za8XPN1Aim6EVPfbX1363eQ="/>
+        <field:datetime dateTimePattern="${experiencia_ffechainicio_date_format}" field="fFechaInicio" id="c_es_uca_iw_tempojobs_domain_Experiencia_fFechaInicio" required="true" z="cupWxhVH8BYLTmTrKrmgBcJb2zw="/>
+        <field:datetime dateTimePattern="${experiencia_ffechafinal_date_format}" field="fFechaFinal" id="c_es_uca_iw_tempojobs_domain_Experiencia_fFechaFinal" required="true" z="5W4me+0puMetukE6IkUiUC/NX04="/>
+    </form:update>
+</div>

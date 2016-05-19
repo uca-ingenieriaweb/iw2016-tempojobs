@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Perfil" object="${perfil}" path="/perfils" z="tYcpVNcza2dku7dz+apWJ1pLbAs=">
+        <field:display field="SFoto" id="s_es_uca_iw_tempojobs_domain_Perfil_sFoto" object="${perfil}" z="JpjJt2TVnMxAOLGhFOJ859cQQ5A="/>
+        <field:display field="experiencias" id="s_es_uca_iw_tempojobs_domain_Perfil_experiencias" object="${perfil}" z="tr8SLSYLn9jo6mz0n39C1ZqsnQA="/>
+        <field:display field="formaciones" id="s_es_uca_iw_tempojobs_domain_Perfil_formaciones" object="${perfil}" z="O7GR61n5Qo9MY3w5eNvP3Y5F7vI="/>
+        <field:display field="inscripcion" id="s_es_uca_iw_tempojobs_domain_Perfil_inscripcion" object="${perfil}" z="rGsZTYu3fVSiSK0oR7aBNp8+wYo="/>
+        <field:display field="puestos" id="s_es_uca_iw_tempojobs_domain_Perfil_puestos" object="${perfil}" z="tB49iTqwJWNxeaEXh3cMr3td49Y="/>
+    </page:show>
+</div>

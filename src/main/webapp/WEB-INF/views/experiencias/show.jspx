@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Experiencia" object="${experiencia}" path="/experiencias" z="hL1X/hgEq5i0XVaDTvYkfdCzk2E=">
+        <field:display field="SEmpresa" id="s_es_uca_iw_tempojobs_domain_Experiencia_sEmpresa" object="${experiencia}" z="YydPdag5vW4ASesNwYihrR/p6n4="/>
+        <field:display field="SPuesto" id="s_es_uca_iw_tempojobs_domain_Experiencia_sPuesto" object="${experiencia}" z="l9PTASIse2exYtVslHPFjAVrHpw="/>
+        <field:display date="true" dateTimePattern="${experiencia_ffechainicio_date_format}" field="FFechaInicio" id="s_es_uca_iw_tempojobs_domain_Experiencia_fFechaInicio" object="${experiencia}" z="6EcCjnTaqlSevMNHh2WZJ09WNxs="/>
+        <field:display date="true" dateTimePattern="${experiencia_ffechafinal_date_format}" field="FFechaFinal" id="s_es_uca_iw_tempojobs_domain_Experiencia_fFechaFinal" object="${experiencia}" z="KTHnebIdXYZ1VhDLDO0VmXFr5DY="/>
+    </page:show>
+</div>

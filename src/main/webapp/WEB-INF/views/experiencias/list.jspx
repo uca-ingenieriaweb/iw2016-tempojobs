@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_uca_iw_tempojobs_domain_Experiencia" items="${experiencias}" z="aAnbiJCzhQ3J+NZ+y4zZlqnqbdU=">
+        <table:table data="${experiencias}" id="l_es_uca_iw_tempojobs_domain_Experiencia" path="/experiencias" z="AUcdB3ArXGB+HJF1+5GriQ5RGyc=">
+            <table:column id="c_es_uca_iw_tempojobs_domain_Experiencia_sEmpresa" property="SEmpresa" z="NLw4Own3MR1k9z1ATpm/uKbCdI0="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Experiencia_sPuesto" property="SPuesto" z="pRUS+/EwszzkN/EHbvxzqKGVkcU="/>
+            <table:column date="true" dateTimePattern="${experiencia_ffechainicio_date_format}" id="c_es_uca_iw_tempojobs_domain_Experiencia_fFechaInicio" property="FFechaInicio" z="ELHWpEAAjY1dWE9jCdb9L8x/Sig="/>
+            <table:column date="true" dateTimePattern="${experiencia_ffechafinal_date_format}" id="c_es_uca_iw_tempojobs_domain_Experiencia_fFechaFinal" property="FFechaFinal" z="NSuj9MhMD9Jci0w71yP4reD3Ts4="/>
+        </table:table>
+    </page:list>
+</div>

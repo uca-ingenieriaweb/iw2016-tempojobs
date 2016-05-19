@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_es_uca_iw_tempojobs_domain_Formacion" modelAttribute="formacion" path="/formacions" versionField="Version" z="h78gDGfn9hLEYQ79ZhMCqcuVOd0=">
+        <field:textarea field="sTitulo" id="c_es_uca_iw_tempojobs_domain_Formacion_sTitulo" required="true" z="1W/H2j5Vqgncm6aY1OrMh2qNvqg="/>
+        <field:datetime dateTimePattern="${formacion_ffechainicio_date_format}" field="fFechaInicio" id="c_es_uca_iw_tempojobs_domain_Formacion_fFechaInicio" required="true" z="8lo+3U7mzy6/JZwi3VAwctZtDE4="/>
+        <field:datetime dateTimePattern="${formacion_ffechafinal_date_format}" field="fFechaFinal" id="c_es_uca_iw_tempojobs_domain_Formacion_fFechaFinal" required="true" z="wA/5B7glOhHcFgGpD2B1vxQv5U4="/>
+    </form:update>
+</div>

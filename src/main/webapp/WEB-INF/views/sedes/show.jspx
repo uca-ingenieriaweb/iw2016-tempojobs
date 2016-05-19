@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Sede" object="${sede}" path="/sedes" z="WAJJwth9T6Pq3TsoXvsHzOIIczE=">
+        <field:display field="SDireccion" id="s_es_uca_iw_tempojobs_domain_Sede_sDireccion" object="${sede}" z="1aKK/8FqY4hgooOI0/aE8qJHyVY="/>
+        <field:display field="SLocalidad" id="s_es_uca_iw_tempojobs_domain_Sede_sLocalidad" object="${sede}" z="VnKcG4xx5Bi1aHfFIORlhWpcjB0="/>
+        <field:display field="SProvincia" id="s_es_uca_iw_tempojobs_domain_Sede_sProvincia" object="${sede}" z="VFuaOzpqIbC92oNiQNDMjMkDUu0="/>
+        <field:display field="SPais" id="s_es_uca_iw_tempojobs_domain_Sede_sPais" object="${sede}" z="emLFMe8Ojo+VRIjzThp0dmXV/pM="/>
+        <field:display field="STelefono" id="s_es_uca_iw_tempojobs_domain_Sede_sTelefono" object="${sede}" z="VP8eXzYIHkEmHuV5s1Udt6bcV7E="/>
+        <field:display field="ofertas" id="s_es_uca_iw_tempojobs_domain_Sede_ofertas" object="${sede}" z="uW944fMf07Nh93CoUGswZeyT/z4="/>
+    </page:show>
+</div>
