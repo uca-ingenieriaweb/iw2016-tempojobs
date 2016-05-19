@@ -50,7 +50,7 @@ field date --fieldName fInicioActividad --type java.util.Date --notNull
 field date --fieldName fFechaInicio --type java.util.Date --notNull
 field date --fieldName fFechaFin --type java.util.Date --notNull
 
-field string --fieldname sFoto --notNull --sizeMin 3 --sizeMax 128 --class ~.domain.Perfil
+field string --fieldName sFoto --notNull --sizeMin 3 --sizeMax 128 --class ~.domain.Perfil
 
 field string --fieldName sEmpresa --notNull --sizeMin 3 --sizeMax 32 --class ~.domain.Experiencia
 field string --fieldName sPuesto --notNull --sizeMin 3 --sizeMax 32
