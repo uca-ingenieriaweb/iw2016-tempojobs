@@ -15,6 +15,7 @@ entity jpa --class ~.domain.Perfil --testAutomatically
 entity jpa --class ~.domain.Experiencia --testAutomatically
 entity jpa --class ~.domain.Formacion --testAutomatically
 entity jpa --class ~.domain.Inscripcion --testAutomatically
+entity jpa --class ~.domain.Puesto --testAutomatically
 
 // Creando campos y relaciones de las entidades
 field string --fieldName sNombre --sizeMin 3 --sizeMax 32 --class ~.domain.AbstractUsuario
@@ -45,11 +46,11 @@ field number --fieldName iVacantes --type java.lang.Integer --notNull
 field string --fieldName sFormacion --notNull --sizeMin 3 --sizeMax 256
 field string --fieldName sExperiencia --notNull --sizeMin 3 --sizeMax 64
 field string --fieldName sEstado --notNull --sizeMin 3 --sizeMax 32
-field date --fieldName fFechaInicioAct --type java.util.Date --notNull
-field date --fieldName fFechaFinAct --type.java.util.Date --notNull
+field date --fieldName fInicioActividad --type java.util.Date --notNull
+field date --fieldName fFechaInicio --type java.util.Date --notNull
+field date --fieldName fFechaFin --type.java.util.Date --notNull
 
 field string --fieldname sFoto --notNull --sizeMin 3 --sizeMax 128 --class ~.domain.Perfil
-field string --fieldName sPuesto --notNull --sizeMin 3 --sizeMax 32
 
 field string --fieldName sEmpresa --notNull --sizeMin 3 --sizeMax 32 --class ~.domain.Experiencia
 field string --fieldName sPuesto --notNull --sizeMin 3 --sizeMax 32
@@ -62,6 +63,8 @@ field date --fieldName fFechaFinal --type java.util.Date --notNull
 
 field date --fieldName fFechaInscripcion --type java.util.Date --notNull --class ~.domain.Inscripcion
 field string --fieldName SEstado --notNull --sizeMin 3 --sizeMax 32
+
+field string --fieldName sNombre --notNull --sizeMin 3 --sizeMax 32 --class ~.domain.Puesto
 
 // Creando relaciones entre entidades
 field set --fieldName sedes --type ~.domain.Sede --class ~.domain.Empresa
@@ -76,6 +79,8 @@ field reference --fieldName perfil --type ~.domain.Perfil
 field set --fieldName inscripcion --type ~.domain.Inscripcion --class ~.domain.Oferta
 field set --fieldName inscripcion --type ~.domain.Inscripcion --class ~.domain.Perfil
 
+field set --fieldName puestos -type ~.domain.Puesto --class ~.domain.Perfil
+
 // Generando capa web
 web mvc setup
 web mvc all --package ~.web
@@ -86,3 +91,10 @@ web mvc language --code es
 selenium test --controller ~.web.EmpresaController
 selenium test --controller ~.web.EmpleadoController
 selenium test --controller ~.web.DemandanteController
+selenium test --controller ~.web.SedeController
+selenium test --controller ~.web.OfertaController
+selenium test --controller ~.web.PerfilController
+selenium test --controller ~.web.ExperienciaController
+selenium test --controller ~.web.FormacionController
+selenium test --controller ~.web.InscripcionController
+selenium test --controller ~.web.PuestoController
