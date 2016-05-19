@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_es_uca_iw_tempojobs_domain_Oferta" modelAttribute="oferta" path="/ofertas" versionField="Version" z="N3pjJJfMZNHeJiJkxte9G1F0rag=">
+        <field:textarea field="sTipoContrato" id="c_es_uca_iw_tempojobs_domain_Oferta_sTipoContrato" required="true" z="wIFLS1OJ4SdOBpHCADYiRZEvpik="/>
+        <field:input field="dSueldoBruto" id="c_es_uca_iw_tempojobs_domain_Oferta_dSueldoBruto" required="true" validationMessageCode="field_invalid_number" z="8CtvC4v1mpKtYv7KV+Jlzm7fnco="/>
+        <field:input field="iVacantes" id="c_es_uca_iw_tempojobs_domain_Oferta_iVacantes" required="true" validationMessageCode="field_invalid_integer" z="8K+q6MavT8iJmEglqcEetgm9q4c="/>
+        <field:textarea field="sFormacion" id="c_es_uca_iw_tempojobs_domain_Oferta_sFormacion" required="true" z="vAl1mzls2mlxcY/Wx491a5AKpFU="/>
+        <field:textarea field="sExperiencia" id="c_es_uca_iw_tempojobs_domain_Oferta_sExperiencia" required="true" z="M/VVQSo7Yrgvd6REY1VBsby4cJo="/>
+        <field:textarea field="sEstado" id="c_es_uca_iw_tempojobs_domain_Oferta_sEstado" required="true" z="8Lf6SSes7nzRdh0mnqa7Nju/LFw="/>
+        <field:datetime dateTimePattern="${oferta_finicioactividad_date_format}" field="fInicioActividad" id="c_es_uca_iw_tempojobs_domain_Oferta_fInicioActividad" required="true" z="NT8x70ODIkrpZkXAoR2ZPzvcvdU="/>
+        <field:datetime dateTimePattern="${oferta_ffechainicio_date_format}" field="fFechaInicio" id="c_es_uca_iw_tempojobs_domain_Oferta_fFechaInicio" required="true" z="9cU5WRU+d31RN87UwZRQvF5Kqrc="/>
+        <field:datetime dateTimePattern="${oferta_ffechafin_date_format}" field="fFechaFin" id="c_es_uca_iw_tempojobs_domain_Oferta_fFechaFin" required="true" z="wGCbJS4E5Y0tDj+gFpm5oiK+aLU="/>
+        <field:select field="inscripcion" id="c_es_uca_iw_tempojobs_domain_Oferta_inscripcion" itemValue="id" items="${inscripcions}" multiple="true" path="/inscripcions" z="JxIzIcZyf8yKs+WToA82jzfdil0="/>
+    </form:update>
+</div>

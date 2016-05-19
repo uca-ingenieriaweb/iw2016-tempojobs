@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Oferta" object="${oferta}" path="/ofertas" z="qD6ADKGCikg7iTlIhLhOu+sWa8M=">
+        <field:display field="STipoContrato" id="s_es_uca_iw_tempojobs_domain_Oferta_sTipoContrato" object="${oferta}" z="WHXpdne6n0QdDun82xMRaAna2yE="/>
+        <field:display field="DSueldoBruto" id="s_es_uca_iw_tempojobs_domain_Oferta_dSueldoBruto" object="${oferta}" z="b7lq3gtKJZBUAwLR0YPQyUC3cOk="/>
+        <field:display field="IVacantes" id="s_es_uca_iw_tempojobs_domain_Oferta_iVacantes" object="${oferta}" z="c+7J2b/RbwnJtdFicAeLJgCbLCU="/>
+        <field:display field="SFormacion" id="s_es_uca_iw_tempojobs_domain_Oferta_sFormacion" object="${oferta}" z="5aN8J7FKglUc1HZiTWODddwpP5o="/>
+        <field:display field="SExperiencia" id="s_es_uca_iw_tempojobs_domain_Oferta_sExperiencia" object="${oferta}" z="2SscGw53o30oiJ3dUyGSG2rFUkM="/>
+        <field:display field="SEstado" id="s_es_uca_iw_tempojobs_domain_Oferta_sEstado" object="${oferta}" z="4Yrk64dVFYFGZuZEORr4Hw+RlNE="/>
+        <field:display date="true" dateTimePattern="${oferta_finicioactividad_date_format}" field="FInicioActividad" id="s_es_uca_iw_tempojobs_domain_Oferta_fInicioActividad" object="${oferta}" z="PrVq0M/mI1cAOA5WOjRE42rrI0Q="/>
+        <field:display date="true" dateTimePattern="${oferta_ffechainicio_date_format}" field="FFechaInicio" id="s_es_uca_iw_tempojobs_domain_Oferta_fFechaInicio" object="${oferta}" z="BgI0Kg05KqDt5Zq4bS3lGGMdkz0="/>
+        <field:display date="true" dateTimePattern="${oferta_ffechafin_date_format}" field="FFechaFin" id="s_es_uca_iw_tempojobs_domain_Oferta_fFechaFin" object="${oferta}" z="EPXYj6oZhpQ/00tLVcZfjxNxzfw="/>
+        <field:display field="inscripcion" id="s_es_uca_iw_tempojobs_domain_Oferta_inscripcion" object="${oferta}" z="sRZCZX6dIG0NvEFZNsmGXiNXNQ8="/>
+    </page:show>
+</div>

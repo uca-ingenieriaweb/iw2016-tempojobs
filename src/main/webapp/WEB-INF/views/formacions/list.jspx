@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_uca_iw_tempojobs_domain_Formacion" items="${formacions}" z="1ejEeSOKvDcwuGZQSvEaa/+cLZY=">
+        <table:table data="${formacions}" id="l_es_uca_iw_tempojobs_domain_Formacion" path="/formacions" z="FB6txVvNS374sfGgKIbOKpQVW88=">
+            <table:column id="c_es_uca_iw_tempojobs_domain_Formacion_sTitulo" property="STitulo" z="1HyhZB7I23TX89bHh+imk5tsbZU="/>
+            <table:column date="true" dateTimePattern="${formacion_ffechainicio_date_format}" id="c_es_uca_iw_tempojobs_domain_Formacion_fFechaInicio" property="FFechaInicio" z="iyt/ACNycbDKwAr/Y1Sl9mMcbdY="/>
+            <table:column date="true" dateTimePattern="${formacion_ffechafinal_date_format}" id="c_es_uca_iw_tempojobs_domain_Formacion_fFechaFinal" property="FFechaFinal" z="FnMH+dOpofoAV41VYHDnZER07bQ="/>
+        </table:table>
+    </page:list>
+</div>

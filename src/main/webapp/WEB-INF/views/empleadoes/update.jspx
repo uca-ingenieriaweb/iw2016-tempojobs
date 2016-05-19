@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_es_uca_iw_tempojobs_domain_Empleado" modelAttribute="empleado" path="/empleadoes" versionField="Version" z="IQWGOXQpj6IedL51TfJTHKFprPs=">
+        <field:textarea field="sNombre" id="c_es_uca_iw_tempojobs_domain_Empleado_sNombre" z="iNiiSvYJOwdRtqYCaOBBj3X8xNc="/>
+        <field:textarea field="sApellidos" id="c_es_uca_iw_tempojobs_domain_Empleado_sApellidos" required="true" z="ZGGuXr9sQ5cCc5zPT9+M9+Jvp+0="/>
+        <field:datetime dateTimePattern="${empleado_ffechanac_date_format}" field="fFechaNac" id="c_es_uca_iw_tempojobs_domain_Empleado_fFechaNac" required="true" z="jSr3yjmz4YG0i9+fW7VP1FL/0Uc="/>
+        <field:textarea field="sDireccion" id="c_es_uca_iw_tempojobs_domain_Empleado_sDireccion" required="true" z="vWxIAtP8jxHXr5U/TCntB1MARmI="/>
+        <field:textarea field="sEmail" id="c_es_uca_iw_tempojobs_domain_Empleado_sEmail" required="true" z="SxrxrisVaz+AQCvVa88MxexEGp0="/>
+        <field:input field="sTelefono" id="c_es_uca_iw_tempojobs_domain_Empleado_sTelefono" max="16" min="9" required="true" z="qe3szbKDp7oTHwVulJpDGJuO9Qs="/>
+        <field:datetime dateTimePattern="${empleado_finicio_date_format}" field="fInicio" id="c_es_uca_iw_tempojobs_domain_Empleado_fInicio" required="true" z="vBcdhdLBcOnWPDsI8gCQ2NfI9hw="/>
+        <field:datetime dateTimePattern="${empleado_ffinal_date_format}" field="fFinal" id="c_es_uca_iw_tempojobs_domain_Empleado_fFinal" required="true" z="tM/Haw1BfaAI/80MSqtfb8VcWTI="/>
+        <field:textarea field="sPuesto" id="c_es_uca_iw_tempojobs_domain_Empleado_sPuesto" required="true" z="G3ZZJrFNcR72YsbmJiSUVhrnRNs="/>
+        <field:select field="oferta" id="c_es_uca_iw_tempojobs_domain_Empleado_oferta" itemValue="id" items="${ofertas}" path="/ofertas" z="hHnXhhpAKrp76AVLL5kGn+5+pxw="/>
+    </form:update>
+</div>
