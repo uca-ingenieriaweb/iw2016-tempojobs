@@ -48,7 +48,7 @@ field string --fieldName sExperiencia --notNull --sizeMin 3 --sizeMax 64
 field string --fieldName sEstado --notNull --sizeMin 3 --sizeMax 32
 field date --fieldName fInicioActividad --type java.util.Date --notNull
 field date --fieldName fFechaInicio --type java.util.Date --notNull
-field date --fieldName fFechaFin --type.java.util.Date --notNull
+field date --fieldName fFechaFin --type java.util.Date --notNull
 
 field string --fieldname sFoto --notNull --sizeMin 3 --sizeMax 128 --class ~.domain.Perfil
 
