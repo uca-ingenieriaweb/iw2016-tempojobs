@@ -1,0 +1,53 @@
+// Roo Script para implantación rápida
+
+// Crear conexión con la BD
+jpa setup --provider HIBERNATE --database MYSQL --databaseName tempojobs --userName tempojobs --password tempojobs --hostName localhost
+
+// Creando entidades
+entity jpa --class ~.domain.AbstractUsuario --abstract
+entity jpa --class ~.domain.Empresa --testAutomatically --extends ~.domain.AbstractUsuario
+entity jpa --class ~.domain.Empleado --testAutomatically --extends ~.domain.AbstractUsuario
+entity jpa --class ~.domain.Demandante --testAutomatically --extends ~.domain.AbstractUsuario
+entity jpa --class ~.domain.Sede --testAutomatically
+entity jpa --class ~.domain.Oferta --testAutomatically
+entity jpa --class ~.domain.Perfil --testAutomatically
+entity jpa --class ~.domain.Experiencia --testAutomatically
+entity jpa --class ~.domain.Formacion --testAutomatically
+entity jpa --class ~.domain.Inscripcion --testAutomatically
+
+// Creando campos y relaciones de las entidades
+field string --fieldName sNombre --sizeMin 3 --sizeMax 32 --class ~.domain.AbstractUsuario
+field string --fieldName sApellidos --notNull --sizeMin 3 --sizeMax 64
+field date --fieldName fFechaNac --type java.util.Date --notNull
+field string --fieldName sDireccion --notNull --sizeMin 3 --sizeMax 128
+field string --fieldName sEmail --notNull --sizeMin 6 --sizeMax 128
+field string --fieldName sTelefono --notNull --sizeMin 9 --sizeMax 16
+
+field string --fieldName sTitulo --sizeMin 3 --sizeMax 32 --class ~.domain.Empresa
+field string --fieldName sCIF --notNull --sizeMin 9 --sizeMax 16
+field string --fieldName sActividadProfesional --notNull --sizeMin 3 --sizeMax 64
+field number --fieldName iEmpleados --notNull --type java.lang.Integer
+
+field date --fieldName fInicio --type java.util.Date --notNull --class ~.domain.Empleado
+field date --fieldName fFinal --type java.util.Date --notNull
+field string --fieldName sPuesto --notNull --sizeMin 3 --sizeMax 32
+
+field string --fieldName sDireccion --notNull --sizeMin 3 --sizeMax 128 --class ~.domain.Sede
+field string --fieldName sLocalidad --notNull --sizeMin 3 --sizeMax 64
+field string --fieldName sProvincia --notNull --sizeMin 3 --sizeMax 32
+field string --fieldName sPais --notNull --sizeMin 3 --sizeMax 32
+field string --fieldName sTelefono --notNull --sizeMin 9 --sizeMax 16
+
+field string --fieldName sTipoContrato --notNull --sizeMin 3 --sizeMax 32 --class ~.domain.Oferta
+field number --fieldName dSueldoBruto --type java.lang.Double --notNull
+
+// Generando capa web
+web mvc setup
+web mvc all --package ~.web
+web mvc scaffold --class ~.web.DemandanteController --backingType ~.domain.Demandante
+web mvc language --code es
+
+// Pruebas con Selenium
+selenium test --controller ~.web.EmpresaController
+selenium test --controller ~.web.EmpleadoController
+selenium test --controller ~.web.DemandanteController
