@@ -6,9 +6,10 @@ jpa setup --provider HIBERNATE --database MYSQL --databaseName tempojobs --userN
 
 // Creando entidades
 entity jpa --class ~.domain.AbstractUsuario --abstract
-entity jpa --class ~.domain.Empresa --testAutomatically --extends ~.domain.AbstractUsuario
+entity jpa --class ~.domain.UsuarioEmpresa --testAutomatically --extends ~.domain.AbstractUsuario
 entity jpa --class ~.domain.Empleado --testAutomatically --extends ~.domain.AbstractUsuario
 entity jpa --class ~.domain.Demandante --testAutomatically --extends ~.domain.AbstractUsuario
+entity jpa --class ~.domain.Empresa --testAutomatically
 entity jpa --class ~.domain.Sede --testAutomatically
 entity jpa --class ~.domain.Oferta --testAutomatically
 entity jpa --class ~.domain.Perfil --testAutomatically
@@ -25,14 +26,14 @@ field string --fieldName direccion --notNull --sizeMin 3 --sizeMax 128
 field string --fieldName email --notNull --sizeMin 6 --sizeMax 128
 field string --fieldName telefono --notNull --sizeMin 9 --sizeMax 16
 
-field string --fieldName titulo --sizeMin 3 --sizeMax 32 --class ~.domain.Empresa
-field string --fieldName cIF --notNull --sizeMin 9 --sizeMax 16
-field string --fieldName actividadProfesional --notNull --sizeMin 3 --sizeMax 64
-field number --fieldName empleados --notNull --type java.lang.Integer
-
 field date --fieldName fechaInicio --type java.util.Date --notNull --class ~.domain.Empleado
 field date --fieldName fechaFinal --type java.util.Date --notNull
 field string --fieldName puesto --notNull --sizeMin 3 --sizeMax 32
+
+field string --fieldName nombre --sizeMin 3 --sizeMax 32 --class ~.domain.Empresa
+field string --fieldName cIF --notNull --sizeMin 9 --sizeMax 16
+field string --fieldName actividadProfesional --notNull --sizeMin 3 --sizeMax 64
+field number --fieldName empleados --notNull --type java.lang.Integer
 
 field string --fieldName direccion --notNull --sizeMin 3 --sizeMax 128 --class ~.domain.Sede
 field string --fieldName localidad --notNull --sizeMin 3 --sizeMax 64
@@ -67,6 +68,7 @@ field string --fieldName estado --notNull --sizeMin 3 --sizeMax 32
 field string --fieldName nombre --notNull --sizeMin 3 --sizeMax 32 --class ~.domain.Puesto
 
 // Creando relaciones entre entidades
+field reference --fieldName empresa --type ~.domain.Empresa --class ~.domain.UsuarioEmpresa
 field set --fieldName sedes --type ~.domain.Sede --class ~.domain.Empresa
 field set --fieldName ofertas --type ~.domain.Oferta --class ~.domain.Sede
 
@@ -84,6 +86,7 @@ field set --fieldName puestos --type ~.domain.Puesto --class ~.domain.Perfil
 // Generando capa web
 web mvc setup
 web mvc all --package ~.web
+web mvc scaffold --class ~.web.UsuarioEmpresaController --backingType ~.domain.UsuarioEmpresa
 web mvc scaffold --class ~.web.DemandanteController --backingType ~.domain.Demandante
 web mvc language --code es
 
@@ -103,9 +106,10 @@ security setup
 web mvc bootstrap update
 
 // Pruebas con Selenium
-selenium test --controller ~.web.EmpresaController
+selenium test --controller ~.web.UsuarioEmpresaController
 selenium test --controller ~.web.EmpleadoController
 selenium test --controller ~.web.DemandanteController
+selenium test --controller ~.web.EmpresaController
 selenium test --controller ~.web.SedeController
 selenium test --controller ~.web.OfertaController
 selenium test --controller ~.web.PerfilController
