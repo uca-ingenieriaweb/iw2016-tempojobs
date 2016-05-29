@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_uca_iw_tempojobs_domain_Sede" items="${sedes}" z="M5Ii1tu0VLWN8tToFs6jRbvKCXE=">
+        <table:table data="${sedes}" id="l_es_uca_iw_tempojobs_domain_Sede" path="/sedes" z="xfY0wpcf+gYwgOK9Rmet3GUsp3U=">
+            <table:column id="c_es_uca_iw_tempojobs_domain_Sede_direccion" property="direccion" z="bWKhzYHFIV0sjJ/zgQX4oieUVJU="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Sede_localidad" property="localidad" z="yr8+VwQuTD+xZF/wRjCQmaA9ipA="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Sede_provincia" property="provincia" z="OwXpdjQGEcQ3bDEhwbzXIIEBMIQ="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Sede_pais" property="pais" z="2fx0VsZmHCM5Jv/hepaeV5Co3oI="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Sede_telefono" property="telefono" z="b3cwkbPUWhqVkpqHRtMrOFVONdY="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Sede_ofertas" property="ofertas" z="uRYavMl+e/j6jRE6XLygQgf26iY="/>
+        </table:table>
+    </page:list>
+</div>

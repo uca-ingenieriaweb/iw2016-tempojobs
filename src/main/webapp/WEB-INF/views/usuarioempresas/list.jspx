@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_uca_iw_tempojobs_domain_UsuarioEmpresa" items="${usuarioempresas}" z="NJJ9nJqBVLHA8h1CQG42DkausJQ=">
+        <table:table data="${usuarioempresas}" id="l_es_uca_iw_tempojobs_domain_UsuarioEmpresa" path="/usuarioempresas" z="1yU8Fl1URI/qGOxQv4WkwV4CUjA=">
+            <table:column id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_nombre" property="nombre" z="j9VWoGogZgsUjI4fQBEAwLk53M0="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_apellidos" property="apellidos" z="vHAkGnDs9lON6XKmPkpJRY5ec/I="/>
+            <table:column date="true" dateTimePattern="${usuarioEmpresa_fechanac_date_format}" id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_fechaNac" property="fechaNac" z="Z09/hKsd9HFhQY2S2hkqt++E3Eo="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_direccion" property="direccion" z="UMbonhkXDmb9tgZOKl6nCz/ZVxM="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_email" property="email" z="YzzXWD9/QCvygVR/t1JQSis0p5g="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_telefono" property="telefono" z="Vt4o40GiV4c8U40fZJQ6wo3XwzE="/>
+        </table:table>
+    </page:list>
+</div>

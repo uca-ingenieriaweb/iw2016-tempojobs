@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/jquery/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Formacion" object="${formacion}" path="/formacions" z="+itPdBYTVw8KQ/RDervT9gnp+EY=">
+        <field:display field="titulo" id="s_es_uca_iw_tempojobs_domain_Formacion_titulo" object="${formacion}" z="h/Rz6gJvd3K9i7sUTfCQHC+dPzw="/>
+        <field:display date="true" dateTimePattern="${formacion_fechainicio_date_format}" field="fechaInicio" id="s_es_uca_iw_tempojobs_domain_Formacion_fechaInicio" object="${formacion}" z="bixJuyvQaEjjBihf6Ht9P/31Jkk="/>
+        <field:display date="true" dateTimePattern="${formacion_fechafinal_date_format}" field="fechaFinal" id="s_es_uca_iw_tempojobs_domain_Formacion_fechaFinal" object="${formacion}" z="adAHgtwXVNQY376wUF53JktW7/o="/>
+    </page:show>
+</div>
