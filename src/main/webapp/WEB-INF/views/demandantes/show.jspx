@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Demandante" object="${demandante}" path="/demandantes" z="lwPRy1U54q5ytbKRACpjbG/Q748=">
+        <field:display field="nombre" id="s_es_uca_iw_tempojobs_domain_Demandante_nombre" object="${demandante}" z="0VvjvpDBxhhzn97lhZVc0t6896k="/>
+        <field:display field="apellidos" id="s_es_uca_iw_tempojobs_domain_Demandante_apellidos" object="${demandante}" z="ZGYCtrcWwFlGot5uSuRL5HueQus="/>
+        <field:display date="true" dateTimePattern="${demandante_fechanac_date_format}" field="fechaNac" id="s_es_uca_iw_tempojobs_domain_Demandante_fechaNac" object="${demandante}" z="rZ/60NPUg/GtyVHsbPBUhLNrqCM="/>
+        <field:display field="direccion" id="s_es_uca_iw_tempojobs_domain_Demandante_direccion" object="${demandante}" z="ET7XHAGqvcES7bNF4XdJCSA8W3M="/>
+        <field:display field="email" id="s_es_uca_iw_tempojobs_domain_Demandante_email" object="${demandante}" z="XZEvnzskCY8rgq4EdPrZeaRZYjU="/>
+        <field:display field="telefono" id="s_es_uca_iw_tempojobs_domain_Demandante_telefono" object="${demandante}" z="lOTL8z/YP53TEfygOrq1A87+zl8="/>
+    </page:show>
+</div>

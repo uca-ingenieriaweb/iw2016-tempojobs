@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_es_uca_iw_tempojobs_domain_Demandante" modelAttribute="demandante" path="/demandantes" render="${empty dependencies}" z="keAvcdiqSm7E2eXGv7AO2OSIUtM=">
+        <field:textarea field="nombre" id="c_es_uca_iw_tempojobs_domain_Demandante_nombre" z="Ylx6gxZ4F8zQs5KzniNeFq3ZPTc="/>
+        <field:textarea field="apellidos" id="c_es_uca_iw_tempojobs_domain_Demandante_apellidos" required="true" z="yjNW0sJPHFUatnVMcsyMOhNwzo8="/>
+        <field:datetime dateTimePattern="${demandante_fechanac_date_format}" field="fechaNac" id="c_es_uca_iw_tempojobs_domain_Demandante_fechaNac" required="true" z="jJq1pU/G7Dmyo8WQlK3haHerTWQ="/>
+        <field:textarea field="direccion" id="c_es_uca_iw_tempojobs_domain_Demandante_direccion" required="true" z="6pFgzqFTd+Hs2w/5262Jq6U64u0="/>
+        <field:textarea field="email" id="c_es_uca_iw_tempojobs_domain_Demandante_email" required="true" validationMessageCode="field_invalid_email" z="lnMkZ87/Sy3L4GXk4cB1eOZBVRo="/>
+        <field:input field="telefono" id="c_es_uca_iw_tempojobs_domain_Demandante_telefono" max="16" min="9" required="true" z="/sOQDpSuFpimGSVjB4hkuy+q66s="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_es_uca_iw_tempojobs_domain_Demandante" render="${not empty dependencies}" z="KmRutGhp9SU8LLQ3BSO1M4h/M4c="/>
+</div>
