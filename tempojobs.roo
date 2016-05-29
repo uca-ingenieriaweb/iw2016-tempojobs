@@ -73,24 +73,33 @@ field set --fieldName sedes --type ~.domain.Sede --class ~.domain.Empresa
 field set --fieldName ofertas --type ~.domain.Oferta --class ~.domain.Sede
 
 field reference --fieldName oferta --type ~.domain.Oferta --class ~.domain.Empleado
+field set --fieldName perfiles --type ~.domain.Perfil --class ~.domain.Demandante
 field set --fieldName experiencias --type ~.domain.Experiencia --class ~.domain.Perfil
 field set --fieldName formaciones --type ~.domain.Formacion
 
 field reference --fieldName oferta --type ~.domain.Oferta --class ~.domain.Inscripcion
 field reference --fieldName perfil --type ~.domain.Perfil
-field set --fieldName inscripcion --type ~.domain.Inscripcion --class ~.domain.Oferta
-field set --fieldName inscripcion --type ~.domain.Inscripcion --class ~.domain.Perfil
+field set --fieldName inscripciones --type ~.domain.Inscripcion --class ~.domain.Oferta
+field set --fieldName inscripciones --type ~.domain.Inscripcion --class ~.domain.Perfil
 
 field set --fieldName puestos --type ~.domain.Puesto --class ~.domain.Perfil
+
+// Búsquedas
+finder add --finderName findOfertasByFormacionLikeAndExperienciaLikeAndEstadoLike --class ~.domain.Oferta
+finder add --finderName findOfertasBySueldoBrutoGreaterThan
+finder add --finderName findExperienciasByPuestoLikeAndEmpresaLike --class ~.domain.Experiencia
+finder add --finderName findFormacionsByTituloLike --class ~.domain.Formacion
+finder add --finderName findSedesByLocalidadLikeAndProvinciaLike --class ~.domain.Sede
 
 // Generando capa web
 web mvc setup
 web mvc all --package ~.web
 web mvc scaffold --class ~.web.UsuarioEmpresaController --backingType ~.domain.UsuarioEmpresa
 web mvc scaffold --class ~.web.DemandanteController --backingType ~.domain.Demandante
+web mvc finder all
 web mvc language --code es
 
-// JPA y Bootstrap
+// jQuery, Datatables y Bootstrap
 jpa gvnix setup
 jpa batch all
 web mvc batch setup
@@ -100,6 +109,27 @@ web mvc jquery setup
 web mvc datatables setup
 web mvc jquery all
 web mvc bootstrap setup
+
+// Mejorando vistas de Datatables
+web mvc datatables add --type ~.web.UsuarioEmpresaController --mode show
+web mvc datatables add --type ~.web.EmpleadoController --mode show
+web mvc datatables add --type ~.web.DemandanteController --mode show
+web mvc datatables add --type ~.web.EmpresaController --mode show
+web mvc datatables add --type ~.web.SedeController
+web mvc datatables add --type ~.web.OfertaController --mode show
+web mvc datatables add --type ~.web.PerfilController
+web mvc datatables add --type ~.web.ExperienciaController
+web mvc datatables add --type ~.web.FormacionController
+web mvc datatables add --type ~.web.InscripcionController
+web mvc datatables add --type ~.web.PuestoController
+// Añadimos tablas relacionadas
+web mvc datatables detail add --type ~.web.UsuarioEmpresaController --property empresa
+web mvc datatables detail add --type ~.web.EmpresaController --property sedes
+web mvc datatables detail add --type ~.web.DemandanteController --property perfiles
+web mvc datatables detail add --type ~.web.PerfilController --property formaciones
+web mvc datatables detail add --type ~.web.PerfilController --property experiencias
+web mvc datatables detail add --type ~.web.InscripcionController --property perfil
+web mvc datatables detail add --type ~.web.InscripcionController --property oferta
 
 // Añadiendo Security
 security setup
