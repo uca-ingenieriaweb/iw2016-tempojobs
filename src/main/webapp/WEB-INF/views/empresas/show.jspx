@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Empresa" object="${empresa}" path="/empresas" z="Ugta4gxV6Vdzybw5PD/TRTC5hc0=">
+        <field:display field="nombre" id="s_es_uca_iw_tempojobs_domain_Empresa_nombre" object="${empresa}" z="SJpH23LS5RZllH3TwXNDP8VLUrg="/>
+        <field:display field="apellidos" id="s_es_uca_iw_tempojobs_domain_Empresa_apellidos" object="${empresa}" z="WwHcot/Hmjq5010cOZVEo65akf0="/>
+        <field:display date="true" dateTimePattern="${empresa_fechanac_date_format}" field="fechaNac" id="s_es_uca_iw_tempojobs_domain_Empresa_fechaNac" object="${empresa}" z="J9K8qqdzQJXxuTHezM9NvnPAn/s="/>
+        <field:display field="direccion" id="s_es_uca_iw_tempojobs_domain_Empresa_direccion" object="${empresa}" z="fe2V1YPo6QGhtndWR66fv93aaT8="/>
+        <field:display field="email" id="s_es_uca_iw_tempojobs_domain_Empresa_email" object="${empresa}" z="QPI+x3qp0v+plBjaWEIHMCzfLm0="/>
+        <field:display field="telefono" id="s_es_uca_iw_tempojobs_domain_Empresa_telefono" object="${empresa}" z="SW+LbwXUNeOnxfIY+BTif/owyqU="/>
+        <field:display field="titulo" id="s_es_uca_iw_tempojobs_domain_Empresa_titulo" object="${empresa}" z="WGigEiGpjD4bjq9VxmN8P48qkkc="/>
+        <field:display field="CIF" id="s_es_uca_iw_tempojobs_domain_Empresa_cIF" object="${empresa}" z="9bqwE/Qb3MJn6NfbBaKZ45m69l4="/>
+        <field:display field="actividadProfesional" id="s_es_uca_iw_tempojobs_domain_Empresa_actividadProfesional" object="${empresa}" z="MZo8GzzbR6wgRHtXi3l+IZSin2I="/>
+        <field:display field="empleados" id="s_es_uca_iw_tempojobs_domain_Empresa_empleados" object="${empresa}" z="6eVz1PRkz05BcR9J/6QSsfYd1E8="/>
+        <field:display field="sedes" id="s_es_uca_iw_tempojobs_domain_Empresa_sedes" object="${empresa}" z="RvIHLca1PntvdQajMZm9iLMnVkM="/>
+    </page:show>
+</div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Empleado" object="${empleado}" path="/empleadoes" z="3ifz/qC3OmvLLmZmLv+myJQalb4=">
+        <field:display field="nombre" id="s_es_uca_iw_tempojobs_domain_Empleado_nombre" object="${empleado}" z="Jsssz2wqkDkaWxSEWE0mMMSaox0="/>
+        <field:display field="apellidos" id="s_es_uca_iw_tempojobs_domain_Empleado_apellidos" object="${empleado}" z="8q0ZUL//zBF+h2tIcxbJmTFbqNs="/>
+        <field:display date="true" dateTimePattern="${empleado_fechanac_date_format}" field="fechaNac" id="s_es_uca_iw_tempojobs_domain_Empleado_fechaNac" object="${empleado}" z="9jKSHn+q2iugxjycPmsoy7CAVYo="/>
+        <field:display field="direccion" id="s_es_uca_iw_tempojobs_domain_Empleado_direccion" object="${empleado}" z="loVaPi/9nCGKhi06zbzQHt22ySk="/>
+        <field:display field="email" id="s_es_uca_iw_tempojobs_domain_Empleado_email" object="${empleado}" z="g5epk5sEPuLMz0HPWTJkDAHBAYE="/>
+        <field:display field="telefono" id="s_es_uca_iw_tempojobs_domain_Empleado_telefono" object="${empleado}" z="rXqBKg8CDa5LzdXCBeHA/wVQl2E="/>
+        <field:display date="true" dateTimePattern="${empleado_fechainicio_date_format}" field="fechaInicio" id="s_es_uca_iw_tempojobs_domain_Empleado_fechaInicio" object="${empleado}" z="ay5gyppx7WFMwQQrOBabJWdZY8g="/>
+        <field:display date="true" dateTimePattern="${empleado_fechafinal_date_format}" field="fechaFinal" id="s_es_uca_iw_tempojobs_domain_Empleado_fechaFinal" object="${empleado}" z="atqjNXZ0xATi1yS677IGutEmTtU="/>
+        <field:display field="puesto" id="s_es_uca_iw_tempojobs_domain_Empleado_puesto" object="${empleado}" z="54fCEuwEMpprcg1ULcPOjkU8LwE="/>
+        <field:display field="oferta" id="s_es_uca_iw_tempojobs_domain_Empleado_oferta" object="${empleado}" z="YH1iNJZ8eQYxZ0m6F5GaFGjJ9rs="/>
+    </page:show>
+</div>

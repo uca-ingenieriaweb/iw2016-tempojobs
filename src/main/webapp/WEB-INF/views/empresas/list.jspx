@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_uca_iw_tempojobs_domain_Empresa" items="${empresas}" z="jhZco4XrqKqFTS6zzjFjiPIyw1k=">
+        <table:table data="${empresas}" id="l_es_uca_iw_tempojobs_domain_Empresa" path="/empresas" z="7J2ibNq62EdkOOp8ISft0zCOrmk=">
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empresa_nombre" property="nombre" z="8dmzmZtAK+RMuf7ApXy605rfm1M="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empresa_apellidos" property="apellidos" z="7g1ECECmxUxa8wP+BI7z2gbSsVY="/>
+            <table:column date="true" dateTimePattern="${empresa_fechanac_date_format}" id="c_es_uca_iw_tempojobs_domain_Empresa_fechaNac" property="fechaNac" z="TFWMlCLuD/4/LIx+id+cQ3TY4LQ="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empresa_direccion" property="direccion" z="1qWpGg6AEazN01YpEutrplgprxQ="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empresa_email" property="email" z="2GhoB+FmCizOKdlHz9iJfXa3WU8="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empresa_telefono" property="telefono" z="FibYSJLcsyjEeDfHVMk7/Sch8Qg="/>
+        </table:table>
+    </page:list>
+</div>

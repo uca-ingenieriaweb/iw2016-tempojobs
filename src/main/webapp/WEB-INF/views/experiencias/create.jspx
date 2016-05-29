@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_es_uca_iw_tempojobs_domain_Experiencia" modelAttribute="experiencia" path="/experiencias" render="${empty dependencies}" z="+4zHogKSWWQ4rp1qKq2IqLJrKMM=">
+        <field:textarea field="empresa" id="c_es_uca_iw_tempojobs_domain_Experiencia_empresa" required="true" z="yO3az8KzLBnnhRu5NcoJhnFzPbM="/>
+        <field:textarea field="puesto" id="c_es_uca_iw_tempojobs_domain_Experiencia_puesto" required="true" z="v+xEGFGQtc98bOqdG3FwVJ2+bMo="/>
+        <field:datetime dateTimePattern="${experiencia_fechainicio_date_format}" field="fechaInicio" id="c_es_uca_iw_tempojobs_domain_Experiencia_fechaInicio" required="true" z="k/w6VYapPJcal/mLucavVleqa3s="/>
+        <field:datetime dateTimePattern="${experiencia_fechafinal_date_format}" field="fechaFinal" id="c_es_uca_iw_tempojobs_domain_Experiencia_fechaFinal" required="true" z="hPh/NuISHTLuKxGttRGFE6B3LI0="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_es_uca_iw_tempojobs_domain_Experiencia" render="${not empty dependencies}" z="bwWl8NyudMRk7cpHhm6JAUmxWZ0="/>
+</div>
