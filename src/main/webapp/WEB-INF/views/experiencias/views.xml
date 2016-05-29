@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="experiencias/list">
+        <put-attribute name="body" value="/WEB-INF/views/experiencias/list.jspx"/>
+    </definition>
+<definition extends="default" name="experiencias/show">
+        <put-attribute name="body" value="/WEB-INF/views/experiencias/show.jspx"/>
+    </definition>
+<definition extends="default" name="experiencias/create">
+        <put-attribute name="body" value="/WEB-INF/views/experiencias/create.jspx"/>
+    </definition>
+<definition extends="default" name="experiencias/update">
+        <put-attribute name="body" value="/WEB-INF/views/experiencias/update.jspx"/>
+    </definition>
+<definition extends="default" name="experiencias/findExperienciasByPuestoLikeAndEmpresaLike">
+        <put-attribute name="body" value="/WEB-INF/views/experiencias/findExperienciasByPuestoLikeAndEmpresaLike.jspx"/>
+    </definition>
+</tiles-definitions>

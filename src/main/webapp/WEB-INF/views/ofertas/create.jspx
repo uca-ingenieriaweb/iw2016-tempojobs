@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/datatables" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_es_uca_iw_tempojobs_domain_Oferta" modelAttribute="oferta" path="/ofertas" render="${empty dependencies}" z="NcZhV2Wq4zltJy1KddkO4iTHL+A=">
+        <field:textarea field="tipoContrato" id="c_es_uca_iw_tempojobs_domain_Oferta_tipoContrato" required="true" z="BgReAOhr+KFYFk5xA0bqwCXCnXk="/>
+        <field:input field="sueldoBruto" id="c_es_uca_iw_tempojobs_domain_Oferta_sueldoBruto" required="true" validationMessageCode="field_invalid_number" z="4w1FDA8ahq3A3v2N7lF+pkt77gg="/>
+        <field:input field="vacantes" id="c_es_uca_iw_tempojobs_domain_Oferta_vacantes" required="true" validationMessageCode="field_invalid_integer" z="yzs/NzYd4HCb0Fp2W0t0OF5dNEQ="/>
+        <field:textarea field="formacion" id="c_es_uca_iw_tempojobs_domain_Oferta_formacion" required="true" z="sazftgFAijtBb3Z8ZKgnW8BoP4k="/>
+        <field:textarea field="experiencia" id="c_es_uca_iw_tempojobs_domain_Oferta_experiencia" required="true" z="uadFxWdm3vpTgM+BARJm+aLv4xI="/>
+        <field:textarea field="estado" id="c_es_uca_iw_tempojobs_domain_Oferta_estado" required="true" z="hKqiAUIyksYaaeulZVdgbNDlC5U="/>
+        <field:datetime dateTimePattern="${oferta_inicioactividad_date_format}" field="inicioActividad" id="c_es_uca_iw_tempojobs_domain_Oferta_inicioActividad" required="true" z="XizoJFWqAtICQgD+/RKtFjKGcYg="/>
+        <field:datetime dateTimePattern="${oferta_fechainicio_date_format}" field="fechaInicio" id="c_es_uca_iw_tempojobs_domain_Oferta_fechaInicio" required="true" z="j6bF4RCBSRJ2WtNn1VynTBH1b+k="/>
+        <field:datetime dateTimePattern="${oferta_fechafin_date_format}" field="fechaFin" id="c_es_uca_iw_tempojobs_domain_Oferta_fechaFin" required="true" z="3z3qugGyhDSwyr3HGxI2kHNGOxI="/>
+        <field:select field="inscripciones" id="c_es_uca_iw_tempojobs_domain_Oferta_inscripciones" itemValue="id" items="${inscripcions}" multiple="true" path="/inscripcions" z="IS/ooWsaFYhkte3AWtCf6YheF6A="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_es_uca_iw_tempojobs_domain_Oferta" render="${not empty dependencies}" z="Z4D6Sb8xNWaFANpuQnMyKvL/WYA="/>
+</div>

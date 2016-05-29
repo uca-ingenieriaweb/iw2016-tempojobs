@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/datatables" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_es_uca_iw_tempojobs_domain_UsuarioEmpresa" modelAttribute="usuarioEmpresa" path="/usuarioempresas" versionField="Version" z="yjaB6m5wr1bkUMZeUupyrjEOtic=">
+        <field:textarea field="nombre" id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_nombre" z="6fYJx08GC29RxLg0S4twDs+zN1U="/>
+        <field:textarea field="apellidos" id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_apellidos" required="true" z="fpejbjl0d7tDqgE5/sA4qDQV5fM="/>
+        <field:datetime dateTimePattern="${usuarioEmpresa_fechanac_date_format}" field="fechaNac" id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_fechaNac" required="true" z="E++LPJX4nWDDLcy1D5pwlVnLk10="/>
+        <field:textarea field="direccion" id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_direccion" required="true" z="Rx9GW0hkBij/nk6oP4PftHyAHus="/>
+        <field:textarea field="email" id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_email" required="true" validationMessageCode="field_invalid_email" z="uxRyPX+BXT+KNJZHRwb7LWv0xL4="/>
+        <field:input field="telefono" id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_telefono" max="16" min="9" required="true" z="AqM1lxPEtKRGibH7NNpPQS8uDt4="/>
+        <field:select field="empresa" id="c_es_uca_iw_tempojobs_domain_UsuarioEmpresa_empresa" itemValue="id" items="${empresas}" path="/empresas" z="gsvub3JrbMtaSzOqDQv97i7Hguw="/>
+    </form:update>
+</div>
