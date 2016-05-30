@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByLocalidadLikeOrProvinciaLike" id="ff_es_uca_iw_tempojobs_domain_Sede" path="/sedes" z="Y0W2n4IdGec6dz3qXkWP+fach3c=">
+        <field:input disableFormBinding="true" field="localidad" id="f_es_uca_iw_tempojobs_domain_Sede_localidad" max="64" min="3" required="true" z="dm2PofFgCiEM+jqEz1YuUCgbCeg="/>
+        <field:input disableFormBinding="true" field="provincia" id="f_es_uca_iw_tempojobs_domain_Sede_provincia" max="32" min="3" required="true" z="uTnL03Bn4t2J5DVLIvFIXqm2OBQ="/>
+    </form:find>
+</div>

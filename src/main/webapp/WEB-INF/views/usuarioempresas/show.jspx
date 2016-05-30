@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/datatables" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_UsuarioEmpresa" object="${usuarioempresa}" path="/usuarioempresas" z="XrQqOhZC2Qsi23jqRzYolwEIrq8=">
+        <field:display field="nombre" id="s_es_uca_iw_tempojobs_domain_UsuarioEmpresa_nombre" object="${usuarioempresa}" z="fnhMcN371DqkIiDCLGycoiVmxa4="/>
+        <field:display field="apellidos" id="s_es_uca_iw_tempojobs_domain_UsuarioEmpresa_apellidos" object="${usuarioempresa}" z="kyKqhkgLgJruLGLVce5wf5xJFZc="/>
+        <field:display date="true" dateTimePattern="${usuarioEmpresa_fechanac_date_format}" field="fechaNac" id="s_es_uca_iw_tempojobs_domain_UsuarioEmpresa_fechaNac" object="${usuarioempresa}" z="fPI2gfGgtwgPMZLVU2ClrRF78YM="/>
+        <field:display field="direccion" id="s_es_uca_iw_tempojobs_domain_UsuarioEmpresa_direccion" object="${usuarioempresa}" z="CKDJC/Fgs9Lh1wFRN1TbUoNebLM="/>
+        <field:display field="localidad" id="s_es_uca_iw_tempojobs_domain_UsuarioEmpresa_localidad" object="${usuarioempresa}" z="vsYOYIjjgnqpiD78vaDmy5LXZPM="/>
+        <field:display field="provincia" id="s_es_uca_iw_tempojobs_domain_UsuarioEmpresa_provincia" object="${usuarioempresa}" z="uyqxLtQTLuBwu7ZdK6hkgOa3Jdc="/>
+        <field:display field="email" id="s_es_uca_iw_tempojobs_domain_UsuarioEmpresa_email" object="${usuarioempresa}" z="j3KDT9ad4Q3Zu39lDhIiYPFD+U8="/>
+        <field:display field="telefono" id="s_es_uca_iw_tempojobs_domain_UsuarioEmpresa_telefono" object="${usuarioempresa}" z="Elcfp79pa5VE/rRMnAMeZPqX90s="/>
+        <field:display field="empresa" id="s_es_uca_iw_tempojobs_domain_UsuarioEmpresa_empresa" object="${usuarioempresa}" z="9gAybC1GMYcP9hHJ4cBnCrFKPEc="/>
+    </page:show>
+</div>

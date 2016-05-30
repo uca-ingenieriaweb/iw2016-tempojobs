@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/datatables" xmlns:table="urn:jsptagdir:/WEB-INF/tags/datatables" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_uca_iw_tempojobs_domain_Inscripcion" items="${inscripcions}" z="3U8wGyMqJKkrsyA/Vi4bJnBvarc=">
+        <table:table data="${inscripcions}" id="l_es_uca_iw_tempojobs_domain_Inscripcion" path="/inscripcions" z="POUIPh/hPnNYbsGlYFB+XzbM1Ls=">
+            <table:column date="true" dateTimePattern="${inscripcion_fechainscripcion_date_format}" id="c_es_uca_iw_tempojobs_domain_Inscripcion_fechaInscripcion" property="fechaInscripcion" z="LDwx9ZR1izwuu5V3qcuadDpWv08="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Inscripcion_estado" property="estado" z="KW1GVahvzpNhLtni1lG8VnpmkMk="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Inscripcion_oferta" property="oferta" z="J/Rd202ts6+X/tslyh0EatVJAC0="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Inscripcion_perfil" property="perfil" z="jXlnrLq+qVJNbps0N7UN1kGPttY="/>
+        </table:table>
+    </page:list>
+</div>
