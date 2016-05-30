@@ -25,7 +25,7 @@ field string --fieldName apellidos --notNull --sizeMin 3 --sizeMax 32
 field date --fieldName fechaNac --type java.util.Date --notNull
 field string --fieldName direccion --notNull --sizeMin 3 --sizeMax 128
 field string --fieldName localidad --notNull --sizeMin 3 --sizeMax 64
-field string --fieldName provincia --notNull --sizeMin 3 --sizeMax 32
+field string --fieldName provincia --notNull --sizeMin 3 --sizeMax 16
 field string --fieldName email --notNull --sizeMin 6 --sizeMax 64
 field string --fieldName telefono --notNull --sizeMin 9 --sizeMax 16
 
@@ -41,7 +41,7 @@ field number --fieldName empleados --notNull --type java.lang.Integer
 field string --fieldName nombre --sizeMin 3 --sizeMax 16 --class ~.domain.Sede
 field string --fieldName direccion --notNull --sizeMin 3 --sizeMax 128
 field string --fieldName localidad --notNull --sizeMin 3 --sizeMax 64
-field string --fieldName provincia --notNull --sizeMin 3 --sizeMax 32
+field string --fieldName provincia --notNull --sizeMin 3 --sizeMax 16
 field string --fieldName pais --notNull --sizeMin 3 --sizeMax 32
 field string --fieldName telefono --notNull --sizeMin 9 --sizeMax 16
 
@@ -50,7 +50,7 @@ field number --fieldName sueldoBruto --type java.lang.Double --notNull
 field number --fieldName vacantes --type java.lang.Integer --notNull
 field string --fieldName formacion --notNull --sizeMin 3 --sizeMax 256
 field string --fieldName experiencia --notNull --sizeMin 3 --sizeMax 64
-field string --fieldName estado --notNull --sizeMin 3 --sizeMax 32
+field string --fieldName estado --notNull --sizeMin 3 --sizeMax 16
 field date --fieldName inicioActividad --type java.util.Date --notNull
 field date --fieldName fechaInicio --type java.util.Date --notNull
 field date --fieldName fechaFin --type java.util.Date --notNull
@@ -74,7 +74,7 @@ field string --fieldName nombre --notNull --sizeMin 3 --sizeMax 32 --class ~.dom
 // Creando relaciones entre entidades
 field reference --fieldName empresa --type ~.domain.Empresa --class ~.domain.UsuarioEmpresa
 field set --fieldName sedes --type ~.domain.Sede --class ~.domain.Empresa
-field set --fieldName ofertas --type ~.domain.Oferta --class ~.domain.Sede
+field set --fieldName ofertas --type ~.domain.Oferta
 
 field reference --fieldName oferta --type ~.domain.Oferta --class ~.domain.Empleado
 field set --fieldName perfiles --type ~.domain.Perfil --class ~.domain.Demandante
@@ -93,8 +93,12 @@ finder add --finderName findOfertasByFormacionLikeOrExperienciaLikeOrEstadoLike 
 finder add --finderName findOfertasBySueldoBrutoGreaterThan
 finder add --finderName findExperienciasByPuestoLikeOrEmpresaLike --class ~.domain.Experiencia
 finder add --finderName findFormacionsByTituloLike --class ~.domain.Formacion
-finder add --finderName findSedesByLocalidadLikeOrProvinciaLike --class ~.domain.Sede
+finder add --finderName findSedesByLocalidadLike --class ~.domain.Sede
+finder add --finderName findSedesByProvinciaLike
 finder add --finderName findEmpresasByActividadProfesionalLike --class ~.domain.Empresa
+finder add --finderName findEmpresasByNombreLike
+finder add --finderName findEmpresasByCIF
+finder add --finderName findEmpresasByEmpleadosLessThan
 
 // Generando capa web
 web mvc setup
