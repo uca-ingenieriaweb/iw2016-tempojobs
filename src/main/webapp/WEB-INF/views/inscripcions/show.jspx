@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/datatables" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Inscripcion" object="${inscripcion}" path="/inscripcions" z="m5hgsDzIWkM6JZbksLuLyU04ZQ0=">
+        <field:display date="true" dateTimePattern="${inscripcion_fechainscripcion_date_format}" field="fechaInscripcion" id="s_es_uca_iw_tempojobs_domain_Inscripcion_fechaInscripcion" object="${inscripcion}" z="OX9/xIPxqwfl8ZsG7uJj3XyVbX0="/>
+        <field:display field="estado" id="s_es_uca_iw_tempojobs_domain_Inscripcion_estado" object="${inscripcion}" z="J+5nCNw1HwsGwxVEuc9lIk1I5mc="/>
+        <field:display field="oferta" id="s_es_uca_iw_tempojobs_domain_Inscripcion_oferta" object="${inscripcion}" z="Q77WgkGt3V2c+X0ZhXJ95BvP0D0="/>
+        <field:display field="perfil" id="s_es_uca_iw_tempojobs_domain_Inscripcion_perfil" object="${inscripcion}" z="AQ6HfC9X/BBZEpOcIeCPsGqjalg="/>
+    </page:show>
+</div>

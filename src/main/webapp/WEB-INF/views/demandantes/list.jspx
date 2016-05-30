@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/datatables" xmlns:table="urn:jsptagdir:/WEB-INF/tags/datatables" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_uca_iw_tempojobs_domain_Demandante" items="${demandantes}" z="ygDVIAoLSbnUJLjfGCWodwuzC6U=">
+        <table:table data="${demandantes}" id="l_es_uca_iw_tempojobs_domain_Demandante" path="/demandantes" z="goWtVtHj+mZkDfPCaJRsz01Dqlw=">
+            <table:column id="c_es_uca_iw_tempojobs_domain_Demandante_nombre" property="nombre" z="a8nT8aM2eVzLcdHUyHKHI6fPmQg="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Demandante_apellidos" property="apellidos" z="79x0efrmHpAEt/6pwWQVM7n2twA="/>
+            <table:column date="true" dateTimePattern="${demandante_fechanac_date_format}" id="c_es_uca_iw_tempojobs_domain_Demandante_fechaNac" property="fechaNac" z="OwCl10EYxBBQx591XZYJT2l1/qE="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Demandante_direccion" property="direccion" z="h+6uy0RDABbkB/XHkOdbc1e3D3Y="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Demandante_localidad" property="localidad" z="v+UsY5YENsKZTm1xzrtYkcYLNks="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Demandante_provincia" property="provincia" z="grd+Y5UQTF+LMNwuSNkA+HigRn8="/>
+        </table:table>
+    </page:list>
+</div>
