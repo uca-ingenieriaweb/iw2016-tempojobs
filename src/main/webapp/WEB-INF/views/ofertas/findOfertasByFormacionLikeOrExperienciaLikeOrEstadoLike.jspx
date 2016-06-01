@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByFormacionLikeOrExperienciaLikeOrEstadoLike" id="ff_es_uca_iw_tempojobs_domain_Oferta" path="/ofertas" z="1S56mRW/pAVBRFyHy/DgJEW4Nos=">
+        <field:input disableFormBinding="true" field="formacion" id="f_es_uca_iw_tempojobs_domain_Oferta_formacion" max="256" min="3" required="true" z="y6nrTvLwCQ7pB8RQXgoWKTLOL5o="/>
+        <field:input disableFormBinding="true" field="experiencia" id="f_es_uca_iw_tempojobs_domain_Oferta_experiencia" max="64" min="3" required="true" z="idcHKcydZf7Pn56BNQt5A9s7t8A="/>
+        <field:input disableFormBinding="true" field="estado" id="f_es_uca_iw_tempojobs_domain_Oferta_estado" max="16" min="3" required="true" z="kZpEsJkqKwFn/v2c9+YfoXI4DOw="/>
+    </form:find>
+</div>
