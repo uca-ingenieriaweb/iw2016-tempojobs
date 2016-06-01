@@ -3,6 +3,7 @@
 mysql -u root -p < src/sql/create.localdb.sql
 
 gvnix.sh script --file tempojobs.roo --lineNumbers
+quit
 
 echo 'Elija una opción:'
 echo '1 - Ejecutar tests'

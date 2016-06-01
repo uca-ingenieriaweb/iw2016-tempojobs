@@ -10,6 +10,7 @@ entity jpa --class ~.domain.AbstractUsuario --abstract
 entity jpa --class ~.domain.UsuarioEmpresa --testAutomatically --extends ~.domain.AbstractUsuario
 entity jpa --class ~.domain.Empleado --testAutomatically --extends ~.domain.AbstractUsuario
 entity jpa --class ~.domain.Demandante --testAutomatically --extends ~.domain.AbstractUsuario
+entity jpa --class ~.domain.Admin --testAutomatically --extends ~.domain.AbstractUsuario
 entity jpa --class ~.domain.Empresa --testAutomatically
 entity jpa --class ~.domain.Sede --testAutomatically
 entity jpa --class ~.domain.Oferta --testAutomatically
@@ -107,6 +108,7 @@ web mvc setup
 web mvc all --package ~.web
 web mvc scaffold --class ~.web.UsuarioEmpresaController --backingType ~.domain.UsuarioEmpresa
 web mvc scaffold --class ~.web.DemandanteController --backingType ~.domain.Demandante
+web mvc scaffold --class ~.web.AdminController --backingType ~.domain.Admin
 web mvc finder all
 web mvc language --code es
 
@@ -125,6 +127,7 @@ web mvc bootstrap setup
 web mvc datatables add --type ~.web.UsuarioEmpresaController
 web mvc datatables add --type ~.web.EmpleadoController
 web mvc datatables add --type ~.web.DemandanteController
+web mvc datatables add --type ~.web.AdminController
 web mvc datatables add --type ~.web.EmpresaController --mode show
 web mvc datatables add --type ~.web.SedeController
 web mvc datatables add --type ~.web.OfertaController --mode show
