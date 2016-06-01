@@ -20,7 +20,9 @@ entity jpa --class ~.domain.Inscripcion --testAutomatically
 entity jpa --class ~.domain.Puesto --testAutomatically
 
 // Creando campos y relaciones de las entidades
-field string --fieldName nombre --sizeMin 3 --sizeMax 16 --class ~.domain.AbstractUsuario
+field string --fieldName apodo --sizeMin 3 --sizeMax 16 --class ~.domain.AbstractUsuario
+field string --fieldName clave --sizeMin 8 --sizeMax 16
+field string --fieldName nombre --sizeMin 3 --sizeMax 16
 field string --fieldName apellidos --notNull --sizeMin 3 --sizeMax 32
 field date --fieldName fechaNac --type java.util.Date --notNull
 field string --fieldName direccion --notNull --sizeMin 3 --sizeMax 128
