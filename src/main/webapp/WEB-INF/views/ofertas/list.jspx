@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/datatables" xmlns:table="urn:jsptagdir:/WEB-INF/tags/datatables" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_uca_iw_tempojobs_domain_Oferta" items="${ofertas}" z="N4rDSJ69xf+1p0dRl1ia+J1syWY=">
+        <table:table data="${ofertas}" id="l_es_uca_iw_tempojobs_domain_Oferta" path="/ofertas" z="gGc5nFMBpnkgqS/vBt8fhsF80xI=">
+            <table:column id="c_es_uca_iw_tempojobs_domain_Oferta_tipoContrato" property="tipoContrato" z="BLL02T63YoBHGJhuZ/bnBDBUEhU="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Oferta_sueldoBruto" property="sueldoBruto" z="pQX8JekW0fq+SjfJU3beCFOS7sc="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Oferta_vacantes" property="vacantes" z="YVOZYDW54TlMTohNWkfuv2J4Hbk="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Oferta_formacion" property="formacion" z="r+j6UILx90cix5OjNmBBV4TRGg8="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Oferta_experiencia" property="experiencia" z="Ign9TDR5m9NGKXw38AteLALrAQU="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Oferta_estado" property="estado" z="lqDncrDjoBQgWFfdlwDOADyfTQo="/>
+        </table:table>
+    </page:list>
+</div>

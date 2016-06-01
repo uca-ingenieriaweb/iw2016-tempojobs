@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/datatables" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_es_uca_iw_tempojobs_domain_Demandante" modelAttribute="demandante" path="/demandantes" render="${empty dependencies}" z="keAvcdiqSm7E2eXGv7AO2OSIUtM=">
+        <field:input field="apodo" id="c_es_uca_iw_tempojobs_domain_Demandante_apodo" max="16" min="3" required="true" z="jgJbyXVr2z1xpgLYW8GoRtv+1PM="/>
+        <field:input field="clave" id="c_es_uca_iw_tempojobs_domain_Demandante_clave" max="16" min="8" required="true" z="+hXdX8KIbfANgbbUm2eSM2tbyZA="/>
+        <field:input field="nombre" id="c_es_uca_iw_tempojobs_domain_Demandante_nombre" max="16" min="3" required="true" z="lRgQm8L9dx2XuU2WNpjyEb8ivgE="/>
+        <field:textarea field="apellidos" id="c_es_uca_iw_tempojobs_domain_Demandante_apellidos" required="true" z="yjNW0sJPHFUatnVMcsyMOhNwzo8="/>
+        <field:datetime dateTimePattern="${demandante_fechanac_date_format}" field="fechaNac" id="c_es_uca_iw_tempojobs_domain_Demandante_fechaNac" required="true" z="jJq1pU/G7Dmyo8WQlK3haHerTWQ="/>
+        <field:textarea field="direccion" id="c_es_uca_iw_tempojobs_domain_Demandante_direccion" required="true" z="6pFgzqFTd+Hs2w/5262Jq6U64u0="/>
+        <field:textarea field="localidad" id="c_es_uca_iw_tempojobs_domain_Demandante_localidad" required="true" z="ocgHQ9RTDeyBhMtU2mijtGQB0kU="/>
+        <field:input field="provincia" id="c_es_uca_iw_tempojobs_domain_Demandante_provincia" max="16" min="3" required="true" z="EYWUzf+cooAcspYQfJ8GBPXFkDw="/>
+        <field:textarea field="email" id="c_es_uca_iw_tempojobs_domain_Demandante_email" required="true" validationMessageCode="field_invalid_email" z="lnMkZ87/Sy3L4GXk4cB1eOZBVRo="/>
+        <field:input field="telefono" id="c_es_uca_iw_tempojobs_domain_Demandante_telefono" max="16" min="9" required="true" z="/sOQDpSuFpimGSVjB4hkuy+q66s="/>
+        <field:select field="perfiles" id="c_es_uca_iw_tempojobs_domain_Demandante_perfiles" itemValue="id" items="${perfils}" multiple="true" path="/perfils" z="DIcDScUgpeiiEk7gKa3icanens4="/>
+        <field:select field="formaciones" id="c_es_uca_iw_tempojobs_domain_Demandante_formaciones" itemValue="id" items="${formacions}" multiple="true" path="/formacions" z="e4o2qcQ64RrgFqm5lEKrQfKHS60="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_es_uca_iw_tempojobs_domain_Demandante" render="${not empty dependencies}" z="KmRutGhp9SU8LLQ3BSO1M4h/M4c="/>
+</div>
