@@ -13,6 +13,8 @@ Entregables:
 * E3: [Documento de análisis](https://drive.google.com/open?id=1ZV56vxDvH7zE6xuZ56GKfw8FRiKUL79tgfkhVqS2sRw)
 * E4: [Documento de diseño](https://drive.google.com/open?id=16zt0RI7DanIPm-bnoK9YTx3vg_pVpwaLdf4GoiLM6mM)
 * E5: [Documento de implementación](https://drive.google.com/open?id=1wU29LVy7oe9LqDSTRkh-u0Cg1VdNZCgKBHJFddWsYc0)
+* E6: [Documento de pruebas](https://drive.google.com/open?id=1vy1HKTpR5a76nXT1vSKmnBH_FO-zQ6mbqgxsf_XmWM4)
+* E7: [Documento de implantación](https://drive.google.com/open?id=1AN5fI6XfqhgLLjNpgqyjJjlVpHUpOdjz0k3L3wjPueU)
 
 #### Colaboradores:
 * María Martín Marín
