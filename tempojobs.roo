@@ -95,7 +95,7 @@ field reference --fieldName estado --type ~.domain.Estado --class ~.domain.Inscr
 
 // Búsquedas
 finder add --finderName findOfertasByFormacionLike --class ~.domain.Oferta
-finder add --findername findOfertasByExperienciaLike
+finder add --finderName findOfertasByExperienciaLike
 finder add --finderName findOfertasBySueldoBrutoGreaterThan
 finder add --finderName findExperienciasByPuestoLike --class ~.domain.Experiencia
 finder add --finderName findFormacionsByTituloLike --class ~.domain.Formacion
