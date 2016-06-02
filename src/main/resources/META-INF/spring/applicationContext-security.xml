@@ -9,7 +9,7 @@
         <form-login login-processing-url="/resources/j_spring_security_check" login-page="/login" authentication-failure-url="/login?login_error=t" />
         <logout logout-url="/resources/j_spring_security_logout" />
         <!-- Configure these elements to secure URIs in your application -->
-        <intercept-url pattern="/choices/**" access="hasRole('ROLE_ADMIN')" />
+        <intercept-url pattern="/choices/**" access="hasRole('Admin')" />
         <intercept-url pattern="/member/**" access="isAuthenticated()" />
         <intercept-url pattern="/resources/**" access="permitAll" />
         <intercept-url pattern="/login/**" access="permitAll" />
@@ -21,13 +21,14 @@
         <authentication-provider>
 			<jdbc-user-service data-source-ref="dataSource"
 				users-by-username-query="SELECT apodo AS username,
-					clave AS password 
-					FROM abstract_usuario 
-					WHERE username=?"
+					clave AS password,
+					id AS enabled
+					FROM abstract_usuario
+					WHERE apodo=?"
 				authorities-by-username-query="SELECT apodo AS username,
 					dtype AS authority
 					FROM abstract_usuario
-					WHERE username=?" />
+					WHERE apodo=?" />
         </authentication-provider>
     </authentication-manager>
 </beans:beans>
