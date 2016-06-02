@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/datatables" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Oferta" object="${oferta}" path="/ofertas" z="qD6ADKGCikg7iTlIhLhOu+sWa8M=">
+        <field:display field="tipoContrato" id="s_es_uca_iw_tempojobs_domain_Oferta_tipoContrato" object="${oferta}" z="PW3YIcXKWBwYJKM+INep4Escumg="/>
+        <field:display field="sueldoBruto" id="s_es_uca_iw_tempojobs_domain_Oferta_sueldoBruto" object="${oferta}" z="ObSMImB9shcKuW/Jye13JLPoSKA="/>
+        <field:display field="vacantes" id="s_es_uca_iw_tempojobs_domain_Oferta_vacantes" object="${oferta}" z="OeRiLx5yWpLUUyu/C1NEQDLxvv0="/>
+        <field:display field="formacion" id="s_es_uca_iw_tempojobs_domain_Oferta_formacion" object="${oferta}" z="vzhInKVFWznDhZ+kqUY2FFdcVW0="/>
+        <field:display field="experiencia" id="s_es_uca_iw_tempojobs_domain_Oferta_experiencia" object="${oferta}" z="n02+agZJ/ILG75ynxn3nTWMVoMA="/>
+        <field:display date="true" dateTimePattern="${oferta_inicioactividad_date_format}" field="inicioActividad" id="s_es_uca_iw_tempojobs_domain_Oferta_inicioActividad" object="${oferta}" z="6JMdEvfzsHbKZIsatpqmYEsVefM="/>
+        <field:display date="true" dateTimePattern="${oferta_fechainicio_date_format}" field="fechaInicio" id="s_es_uca_iw_tempojobs_domain_Oferta_fechaInicio" object="${oferta}" z="MZxBHbQFoJKf81MgLifT0pyfpuU="/>
+        <field:display date="true" dateTimePattern="${oferta_fechafin_date_format}" field="fechaFin" id="s_es_uca_iw_tempojobs_domain_Oferta_fechaFin" object="${oferta}" z="K95cBOF0g/5dtPiv9dul8+l9AGA="/>
+        <field:display field="inscripciones" id="s_es_uca_iw_tempojobs_domain_Oferta_inscripciones" object="${oferta}" z="gG3dtF2uyos8rQ9U1Ht8WrcBk14="/>
+        <field:display field="empresa" id="s_es_uca_iw_tempojobs_domain_Oferta_empresa" object="${oferta}" z="eliFRZaLCwPB5p4kEMztyjvbw3c="/>
+        <field:display field="estado" id="s_es_uca_iw_tempojobs_domain_Oferta_estado" object="${oferta}" z="YfBNF0tz8hXCA/nwq1sasCMqLuc="/>
+    </page:show>
+</div>

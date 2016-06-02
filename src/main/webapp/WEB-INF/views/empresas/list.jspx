@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/datatables" xmlns:table="urn:jsptagdir:/WEB-INF/tags/datatables" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_uca_iw_tempojobs_domain_Empresa" items="${empresas}" z="jhZco4XrqKqFTS6zzjFjiPIyw1k=">
+        <table:table data="${empresas}" id="l_es_uca_iw_tempojobs_domain_Empresa" path="/empresas" z="7J2ibNq62EdkOOp8ISft0zCOrmk=">
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empresa_nombre" property="nombre" z="8dmzmZtAK+RMuf7ApXy605rfm1M="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empresa_cIF" property="CIF" z="nptr5OwK8TX/QqxgD3p6QKlBkFQ="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empresa_actividadProfesional" property="actividadProfesional" z="AXMIojz79P5ozZSsSd10qWLP5b8="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empresa_empleados" property="empleados" z="m+ExfrAJ8Jwvn8T4DSEyemhpUPo="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empresa_sedes" property="sedes" z="Fahqu6G12quJry1cOEjFeF1QoAI="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Empresa_ofertas" property="ofertas" z="DcNU/TiYHQq4F3MfmM8FQQEJbZo="/>
+        </table:table>
+    </page:list>
+</div>

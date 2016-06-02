@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/datatables" xmlns:table="urn:jsptagdir:/WEB-INF/tags/datatables" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_uca_iw_tempojobs_domain_Estado" items="${estadoes}" z="jCrU6au5zaB2OdO9e7PVcRuwnZE=">
+        <table:table data="${estadoes}" id="l_es_uca_iw_tempojobs_domain_Estado" path="/estadoes" z="13yxy4NSNuNfoVaE4QC5WM+XXIM=">
+            <table:column id="c_es_uca_iw_tempojobs_domain_Estado_nombre" property="nombre" z="6a2TVYarYUOQYRrPtngMTD++0FY="/>
+        </table:table>
+    </page:list>
+</div>
