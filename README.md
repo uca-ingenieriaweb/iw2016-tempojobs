@@ -59,3 +59,11 @@ Posteriormente, añadiremos un resúmen de dichas sesiones en forma de acta.
 Actas de reunión
 ================
 
+En el presente apartado, se aportan las actas de las diferentes reuniones realizadas a lo largo del desarrollo del proyecto.
+
+* Acta 01 (02/05/2016): [Acceder aquí](https://docs.google.com/document/d/1pjjJGuMZhWtNOMEU4TMDeBuq8h9dm6HJtCHWQ6SOEuc/edit)
+* Acta 02 (09/05/2016): [Acceder aquí](https://docs.google.com/document/d/1CdYVSi5TAcb1UMg5eYmD8XMoxNtW-TexbTwQ9jxOMC0/edit)
+* Acta 03 (16/05/2016): [Acceder aquí](https://docs.google.com/document/d/1RfOttmVPsxG7oDnbsA_mEy_2CEZ0eQhUyKdDWqju3Io/edit)
+* Acta 04 (23/05/2016): [Acceder aquí](https://docs.google.com/document/d/1Mcuh_lQ_bLhoDyB_bgePlVWDQG0MacwYWyWFvcASom8/edit)
+* Acta 05 (30/05/2016): [Acceder aquí](https://docs.google.com/document/d/1eZea9EZ2nADqMDtp1TAJ63ut8q8wXhgWOAjgQ6j4A3A/edit)
+* Acta 06 - Reunión Extraordinaria (02/06/2016): [Acceder aquí](https://docs.google.com/document/d/1EHpWyaKqNnKh0r_ntLYsPxjwaE0rOPfvBNGCmPOvEuA/edit)
