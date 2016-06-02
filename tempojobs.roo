@@ -131,13 +131,13 @@ web mvc datatables add --type ~.web.UsuarioEmpresaController
 web mvc datatables add --type ~.web.EmpleadoController
 web mvc datatables add --type ~.web.DemandanteController
 web mvc datatables add --type ~.web.AdminController
-web mvc datatables add --type ~.web.EmpresaController --mode show
+web mvc datatables add --type ~.web.EmpresaController
 web mvc datatables add --type ~.web.SedeController
-web mvc datatables add --type ~.web.OfertaController --mode show
+web mvc datatables add --type ~.web.OfertaController
 web mvc datatables add --type ~.web.PerfilController
 web mvc datatables add --type ~.web.ExperienciaController
 web mvc datatables add --type ~.web.FormacionController
-web mvc datatables add --type ~.web.InscripcionController --mode show
+web mvc datatables add --type ~.web.InscripcionController
 web mvc datatables add --type ~.web.PuestoController
 web mvc datatables add --type ~.web.EstadoController
 
