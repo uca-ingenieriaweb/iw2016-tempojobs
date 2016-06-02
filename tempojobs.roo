@@ -19,11 +19,12 @@ entity jpa --class ~.domain.Experiencia --testAutomatically
 entity jpa --class ~.domain.Formacion --testAutomatically
 entity jpa --class ~.domain.Inscripcion --testAutomatically
 entity jpa --class ~.domain.Puesto --testAutomatically
+entity jpa --class ~.domain.Estado --testAutomatically
 
 // Creando campos y relaciones de las entidades
-field string --fieldName apodo --sizeMin 3 --sizeMax 16 --class ~.domain.AbstractUsuario
-field string --fieldName clave --sizeMin 8 --sizeMax 16
-field string --fieldName nombre --sizeMin 3 --sizeMax 16
+field string --fieldName apodo --notNull --unique --sizeMin 3 --sizeMax 16 --class ~.domain.AbstractUsuario
+field string --fieldName clave --notNull --sizeMin 8 --sizeMax 16
+field string --fieldName nombre --notNull --sizeMin 3 --sizeMax 16
 field string --fieldName apellidos --notNull --sizeMin 3 --sizeMax 32
 field date --fieldName fechaNac --type java.util.Date --notNull
 field string --fieldName direccion --notNull --sizeMin 3 --sizeMax 128
@@ -36,16 +37,16 @@ field date --fieldName fechaInicio --type java.util.Date --notNull --class ~.dom
 field date --fieldName fechaFinal --type java.util.Date --notNull
 field string --fieldName puesto --notNull --sizeMin 3 --sizeMax 32
 
-field string --fieldName nombre --sizeMin 3 --sizeMax 32 --class ~.domain.Empresa
+field string --fieldName nombre --notNull --sizeMin 3 --sizeMax 32 --class ~.domain.Empresa
 field string --fieldName cIF --notNull --sizeMin 9 --sizeMax 16
 field string --fieldName actividadProfesional --notNull --sizeMin 3 --sizeMax 64
 field number --fieldName empleados --notNull --type java.lang.Integer
 
-field string --fieldName nombre --sizeMin 3 --sizeMax 16 --class ~.domain.Sede
+field string --fieldName nombre --notNull --sizeMin 3 --sizeMax 16 --class ~.domain.Sede
 field string --fieldName direccion --notNull --sizeMin 3 --sizeMax 128
 field string --fieldName localidad --notNull --sizeMin 3 --sizeMax 64
 field string --fieldName provincia --notNull --sizeMin 3 --sizeMax 16
-field string --fieldName pais --notNull --sizeMin 3 --sizeMax 32
+field string --fieldName pais --notNull --value España --sizeMin 3 --sizeMax 32
 field string --fieldName telefono --notNull --sizeMin 9 --sizeMax 16
 
 field string --fieldName tipoContrato --notNull --sizeMin 3 --sizeMax 32 --class ~.domain.Oferta
@@ -53,7 +54,6 @@ field number --fieldName sueldoBruto --type java.lang.Double --notNull
 field number --fieldName vacantes --type java.lang.Integer --notNull
 field string --fieldName formacion --notNull --sizeMin 3 --sizeMax 256
 field string --fieldName experiencia --notNull --sizeMin 3 --sizeMax 64
-field string --fieldName estado --notNull --sizeMin 3 --sizeMax 16
 field date --fieldName inicioActividad --type java.util.Date --notNull
 field date --fieldName fechaInicio --type java.util.Date --notNull
 field date --fieldName fechaFin --type java.util.Date --notNull
@@ -70,9 +70,9 @@ field date --fieldName fechaInicio --type java.util.Date --notNull
 field date --fieldName fechaFinal --type java.util.Date --notNull
 
 field date --fieldName fechaInscripcion --type java.util.Date --notNull --class ~.domain.Inscripcion
-field string --fieldName estado --notNull --sizeMin 3 --sizeMax 32
 
 field string --fieldName nombre --notNull --sizeMin 3 --sizeMax 32 --class ~.domain.Puesto
+field string --fieldName nombre --notNull --sizeMin 3 --sizeMax 16 --class ~.domain.Estado
 
 // Creando relaciones entre entidades
 field reference --fieldName empresa --type ~.domain.Empresa --class ~.domain.UsuarioEmpresa
@@ -90,11 +90,14 @@ field reference --fieldName empresa --type ~.domain.Empresa
 field set --fieldName inscripciones --type ~.domain.Inscripcion --class ~.domain.Perfil
 field set --fieldName puestos --type ~.domain.Puesto
 field set --fieldName experiencias --type ~.domain.Experiencia
+field reference --fieldName estado --type ~.domain.Estado --class ~.Oferta
+field reference --fieldName estado --type ~.domain.Estado --class ~.Inscripcion
 
 // Búsquedas
-finder add --finderName findOfertasByFormacionLikeOrExperienciaLikeOrEstadoLike --class ~.domain.Oferta
+finder add --finderName findOfertasByFormacionLike --class ~.domain.Oferta
+finder add --findername findOfertasByExperienciaLike
 finder add --finderName findOfertasBySueldoBrutoGreaterThan
-finder add --finderName findExperienciasByPuestoLikeOrEmpresaLike --class ~.domain.Experiencia
+finder add --finderName findExperienciasByPuestoLike --class ~.domain.Experiencia
 finder add --finderName findFormacionsByTituloLike --class ~.domain.Formacion
 finder add --finderName findSedesByLocalidadLike --class ~.domain.Sede
 finder add --finderName findSedesByProvinciaLike
@@ -136,6 +139,7 @@ web mvc datatables add --type ~.web.ExperienciaController
 web mvc datatables add --type ~.web.FormacionController
 web mvc datatables add --type ~.web.InscripcionController --mode show
 web mvc datatables add --type ~.web.PuestoController
+web mvc datatables add --type ~.web.EstadoController
 
 // Añadiendo Security
 security setup
