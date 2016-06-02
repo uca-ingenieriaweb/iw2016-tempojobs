@@ -48,6 +48,13 @@ La función de clientes para el desarrollo de la aplicación será desempeñada 
   * Administrador de la base de datos.
   * Codificador de pruebas.
   * Analista/programador.
+ 
+Reuniones
+=========
+
+Dada la carga académica de los dos componentes del grupo, se busca un día en el que poder realizar dichas reuniones, así como una evaluación general del estado del proyecto y de los avances. El día elegido serán todos los lunes (desde el inicio del proyecto a la entrega del mismo) en horario preferentemente de mañana (de 8:30 a 12:00, pudiendo alterarse la duración de las sesiones según sea necesario).
+
+Posteriormente, añadiremos un resúmen de dichas sesiones en forma de acta.
   
 Actas de reunión
 ================
