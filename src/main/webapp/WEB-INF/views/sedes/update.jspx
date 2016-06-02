@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/datatables" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_es_uca_iw_tempojobs_domain_Sede" modelAttribute="sede" path="/sedes" versionField="Version" z="TNX+YQ0LSkxqI3shRan49xMGkWc=">
+        <field:input field="nombre" id="c_es_uca_iw_tempojobs_domain_Sede_nombre" max="16" min="3" required="true" z="xYFgD0d1ez98t2jpDUO0mHpAqn4="/>
+        <field:textarea field="direccion" id="c_es_uca_iw_tempojobs_domain_Sede_direccion" required="true" z="5ysfinjVxH1tVnDvW1LmwHqK3PM="/>
+        <field:textarea field="localidad" id="c_es_uca_iw_tempojobs_domain_Sede_localidad" required="true" z="pgJkFAsaSKI+qKJBHSc7JHhHcI0="/>
+        <field:input field="provincia" id="c_es_uca_iw_tempojobs_domain_Sede_provincia" max="16" min="3" required="true" z="LLkLg4t97GZ83ai/eYv7YMgYHMI="/>
+        <field:textarea field="pais" id="c_es_uca_iw_tempojobs_domain_Sede_pais" required="true" z="f4kyIZgkuG2WufZbreNhxriIr3I="/>
+        <field:input field="telefono" id="c_es_uca_iw_tempojobs_domain_Sede_telefono" max="16" min="9" required="true" z="QUL4nt4Sd53RG/YvlZJ5a4Qna+w="/>
+    </form:update>
+</div>

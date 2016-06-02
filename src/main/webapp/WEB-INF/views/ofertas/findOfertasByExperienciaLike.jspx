@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/jquery/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/jquery/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:find finderName="ByExperienciaLike" id="ff_es_uca_iw_tempojobs_domain_Oferta" path="/ofertas" z="hgGNy10hnNXSEOK9WVZ8BwV1seg=">
+        <field:input disableFormBinding="true" field="experiencia" id="f_es_uca_iw_tempojobs_domain_Oferta_experiencia" max="64" min="3" required="true" z="idcHKcydZf7Pn56BNQt5A9s7t8A="/>
+    </form:find>
+</div>
