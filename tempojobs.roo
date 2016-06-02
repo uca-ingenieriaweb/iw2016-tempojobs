@@ -90,8 +90,8 @@ field reference --fieldName empresa --type ~.domain.Empresa
 field set --fieldName inscripciones --type ~.domain.Inscripcion --class ~.domain.Perfil
 field set --fieldName puestos --type ~.domain.Puesto
 field set --fieldName experiencias --type ~.domain.Experiencia
-field reference --fieldName estado --type ~.domain.Estado --class ~.Oferta
-field reference --fieldName estado --type ~.domain.Estado --class ~.Inscripcion
+field reference --fieldName estado --type ~.domain.Estado --class ~.domain.Oferta
+field reference --fieldName estado --type ~.domain.Estado --class ~.domain.Inscripcion
 
 // Búsquedas
 finder add --finderName findOfertasByFormacionLike --class ~.domain.Oferta
