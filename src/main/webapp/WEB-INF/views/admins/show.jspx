@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_es_uca_iw_tempojobs_domain_Admin" object="${admin}" path="/admins" z="qYVk8il3kMb2p2Lr7YKiMcpD9ZI=">
+        <field:display field="apodo" id="s_es_uca_iw_tempojobs_domain_Admin_apodo" object="${admin}" z="nY7O2/PnVUi1jvP3UDKa+ttalJs="/>
+        <field:display field="clave" id="s_es_uca_iw_tempojobs_domain_Admin_clave" object="${admin}" z="jFFDoAN7oOrBhrC0GwUMth8BkA0="/>
+        <field:display field="nombre" id="s_es_uca_iw_tempojobs_domain_Admin_nombre" object="${admin}" z="HBwY0ecbqnSmcTaocSdx1NOvkIU="/>
+        <field:display field="apellidos" id="s_es_uca_iw_tempojobs_domain_Admin_apellidos" object="${admin}" z="rDqWckLOQFZM2pRhxkhQ2gmTHUQ="/>
+        <field:display date="true" dateTimePattern="${admin_fechanac_date_format}" field="fechaNac" id="s_es_uca_iw_tempojobs_domain_Admin_fechaNac" object="${admin}" z="U7/YX/mQGtYYHfXQb591pCe3W1o="/>
+        <field:display field="direccion" id="s_es_uca_iw_tempojobs_domain_Admin_direccion" object="${admin}" z="9EYClZA++m4gUF4Zj80K9532X4Y="/>
+        <field:display field="localidad" id="s_es_uca_iw_tempojobs_domain_Admin_localidad" object="${admin}" z="b93jzNbjFfwEyNtjwQ3QPxv5GcQ="/>
+        <field:display field="provincia" id="s_es_uca_iw_tempojobs_domain_Admin_provincia" object="${admin}" z="Rx/PHDhpj7Fv3k+C6/EyNJPZu7U="/>
+        <field:display field="email" id="s_es_uca_iw_tempojobs_domain_Admin_email" object="${admin}" z="wUNnZ5Zy+axYF7iPkHkT4xn470Q="/>
+        <field:display field="telefono" id="s_es_uca_iw_tempojobs_domain_Admin_telefono" object="${admin}" z="zwlVKH3gjMIOi/zbN3DmSAgWgRU="/>
+    </page:show>
+</div>

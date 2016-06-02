@@ -65,5 +65,9 @@
         <menu:category id="c_seleniumtests" z="PPLMd2yNB6/LSbjIWogAacRPU+Q=">
             <menu:item id="si_seleniumtests_test" messageCode="selenium_menu_test_suite" url="/resources/selenium/test-suite.xhtml" z="wwunW/IPDcunN97u41MvMJZQ2to="/>
         </menu:category>
+        <menu:category id="c_admin" z="yJekxb7XuSQP9KBD9S6wbwLaHZY=">
+            <menu:item id="i_admin_new" messageCode="global_menu_new" url="/admins?form" z="TPmBX+1lfAP8gYU/pX/jcYwsTfM="/>
+            <menu:item id="i_admin_list" messageCode="global_menu_list" url="/admins?page=1&amp;size=${empty param.size ? 10 : param.size}" z="JRwUq6a+WGX2NnSSZCd4lcreuMk="/>
+        </menu:category>
     </menu:menu>
 </div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_es_uca_iw_tempojobs_domain_Admin" items="${admins}" z="f+EpMMMrBjTq1juDuOX+3NMT24k=">
+        <table:table data="${admins}" id="l_es_uca_iw_tempojobs_domain_Admin" path="/admins" z="KWWAlNo5zWVLAfBpxUKluK4LPUk=">
+            <table:column id="c_es_uca_iw_tempojobs_domain_Admin_apodo" property="apodo" z="O3N/J/wteMGOtsgF/4L6q3/pba8="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Admin_clave" property="clave" z="ZIXEIxRt1QugxtfmqiiRr4K1GxE="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Admin_nombre" property="nombre" z="qPI8ezZnalq4eeSWjldb1lXkYik="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Admin_apellidos" property="apellidos" z="JA/XMRssrVIHfni9N10gkJmLegc="/>
+            <table:column date="true" dateTimePattern="${admin_fechanac_date_format}" id="c_es_uca_iw_tempojobs_domain_Admin_fechaNac" property="fechaNac" z="sNjFXxULAmRcH1C9nHlCUSFgle8="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Admin_direccion" property="direccion" z="8GI9Y3WmjdeGr+7EPje+Aiw0zyw="/>
+        </table:table>
+    </page:list>
+</div>

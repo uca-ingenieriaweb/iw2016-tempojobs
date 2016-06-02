@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_es_uca_iw_tempojobs_domain_Admin" modelAttribute="admin" path="/admins" versionField="Version" z="xU7UO+wqNsmiT0VihOrme+hRY6w=">
+        <field:input field="apodo" id="c_es_uca_iw_tempojobs_domain_Admin_apodo" max="16" min="3" required="true" z="shYF7qyS1ioYuIYxbsj/ODI/UgA="/>
+        <field:input field="clave" id="c_es_uca_iw_tempojobs_domain_Admin_clave" max="16" min="8" required="true" z="emrB9KBj/nMT9armHTxGOGetvJE="/>
+        <field:input field="nombre" id="c_es_uca_iw_tempojobs_domain_Admin_nombre" max="16" min="3" required="true" z="TLlZbyIqYI1B86m0W+AG43vLGIg="/>
+        <field:textarea field="apellidos" id="c_es_uca_iw_tempojobs_domain_Admin_apellidos" required="true" z="7NzBzvQirokP3x2Jn063q85iyeo="/>
+        <field:datetime dateTimePattern="${admin_fechanac_date_format}" field="fechaNac" id="c_es_uca_iw_tempojobs_domain_Admin_fechaNac" required="true" z="3WRjMvCEZlEBa/XOJ4gxoxmm9N0="/>
+        <field:textarea field="direccion" id="c_es_uca_iw_tempojobs_domain_Admin_direccion" required="true" z="d2DyVa8BCrLS9kgMMByCxre015c="/>
+        <field:textarea field="localidad" id="c_es_uca_iw_tempojobs_domain_Admin_localidad" required="true" z="lcfO26f8Fcyy7uFNsKZfewBKXy8="/>
+        <field:input field="provincia" id="c_es_uca_iw_tempojobs_domain_Admin_provincia" max="16" min="3" required="true" z="7HsUdzcRdk1b5QWCU+a9y3uXLA8="/>
+        <field:textarea field="email" id="c_es_uca_iw_tempojobs_domain_Admin_email" required="true" validationMessageCode="field_invalid_email" z="iCkfTLWu1VUMnNCH0I0Mthskv48="/>
+        <field:input field="telefono" id="c_es_uca_iw_tempojobs_domain_Admin_telefono" max="16" min="9" required="true" z="TDsR5sfjLcp2AnHgc+EJNkXAH8I="/>
+    </form:update>
+</div>
