@@ -5,9 +5,17 @@ Proyecto de la asignatura Ingeniería Web sobre una ETT.
 El objetivo de este proyecto es desarrollar una aplicación web empresarial sencilla desde
 la cual poder gestionar ofertas de empleo y las inscripciones de posibles candidatos.
 
-Hoja de auto-evaluación: [auto-iw2016-tempojobs](https://drive.google.com/open?id=1m27WBOe_tDdPjohx7sM0_MM33ur7FEmseI-JLapoFYI)
+Hola de auto-evaluación
+=======================
+A lo largo del desarrollo del proyecto, los miembros del equipo iremos completando la hoja de evaluación con la idea de conocer, de forma aproximada, los hitos conseguidos del proyecto y el porcentaje de los mismos.
 
-Entregables:
+Acceder desde este enlace: [auto-iw2016-tempojobs](https://drive.google.com/open?id=1m27WBOe_tDdPjohx7sM0_MM33ur7FEmseI-JLapoFYI)
+
+Entregables
+===========
+
+Durante el desarrollo del proyexto, se van a realizar hasta un total de 7 entregables, que abarcará desde el Plan de Proyecto hasta la implantación del mismo.
+
 * E1: [Documento de plan de proyecto](https://drive.google.com/open?id=1qFu-Q5v8uLhlId2M9zFeppOT0CdY8ohl4T-J0hhmSVI)
 * E2: [Documento de requisitos](https://drive.google.com/open?id=1jWdlkVnUCD8FCixcph0YGIk8XyvLM64gvuhZ0hjjOFc)
 * E3: [Documento de análisis](https://drive.google.com/open?id=1ZV56vxDvH7zE6xuZ56GKfw8FRiKUL79tgfkhVqS2sRw)
@@ -15,6 +23,14 @@ Entregables:
 * E5: [Documento de implementación](https://drive.google.com/open?id=1wU29LVy7oe9LqDSTRkh-u0Cg1VdNZCgKBHJFddWsYc0)
 * E6: [Documento de pruebas](https://drive.google.com/open?id=1vy1HKTpR5a76nXT1vSKmnBH_FO-zQ6mbqgxsf_XmWM4)
 * E7: [Documento de implantación](https://drive.google.com/open?id=1AN5fI6XfqhgLLjNpgqyjJjlVpHUpOdjz0k3L3wjPueU)
+
+Personal involucrado y roles
+============================
+
+#### Clientes:
+La función de clientes para el desarrollo de la aplicación será desempeñada por los profesores de la asignatura:
+* Juan Manuel Dodero Beardo
+* Iván Ruíz Rube
 
 #### Colaboradores:
 * María Martín Marín
@@ -32,3 +48,7 @@ Entregables:
   * Administrador de la base de datos.
   * Codificador de pruebas.
   * Analista/programador.
+  
+Actas de reunión
+================
+
