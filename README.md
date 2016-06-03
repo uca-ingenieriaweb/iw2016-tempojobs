@@ -48,7 +48,12 @@ La función de clientes para el desarrollo de la aplicación será desempeñada 
   * Administrador de la base de datos.
   * Codificador de pruebas.
   * Analista/programador.
- 
+
+Planificación temporal (Diagrama de Gannt)
+==========================================
+
+![Diagrama de Gantt para el proyecto](http://s33.postimg.org/foo6lgm3j/Captura_de_pantalla_2016_06_03_a_la_s_03_06_56.png)
+
 Reuniones
 =========
 
