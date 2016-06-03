@@ -5,7 +5,7 @@ Proyecto de la asignatura Ingeniería Web sobre una ETT.
 El objetivo de este proyecto es desarrollar una aplicación web empresarial sencilla desde
 la cual poder gestionar ofertas de empleo y las inscripciones de posibles candidatos.
 
-Hola de auto-evaluación
+Hoja de auto-evaluación
 =======================
 A lo largo del desarrollo del proyecto, los miembros del equipo iremos completando la hoja de evaluación con la idea de conocer, de forma aproximada, los hitos conseguidos del proyecto y el porcentaje de los mismos.
 
