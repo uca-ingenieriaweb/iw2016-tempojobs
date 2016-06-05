@@ -15,6 +15,6 @@ import org.gvnix.addon.datatables.annotations.GvNIXDatatables;
 @RooWebFinder
 @GvNIXWebJpaBatch(service = EmpresaBatchService.class)
 @GvNIXWebJQuery
-@GvNIXDatatables(ajax = true, mode = "show")
+@GvNIXDatatables(ajax = true)
 public class EmpresaController {
 }

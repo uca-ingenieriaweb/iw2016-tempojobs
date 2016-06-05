@@ -13,6 +13,6 @@ import org.gvnix.addon.datatables.annotations.GvNIXDatatables;
 @RooWebScaffold(path = "inscripcions", formBackingObject = Inscripcion.class)
 @GvNIXWebJpaBatch(service = InscripcionBatchService.class)
 @GvNIXWebJQuery
-@GvNIXDatatables(ajax = true, mode = "show")
+@GvNIXDatatables(ajax = true)
 public class InscripcionController {
 }

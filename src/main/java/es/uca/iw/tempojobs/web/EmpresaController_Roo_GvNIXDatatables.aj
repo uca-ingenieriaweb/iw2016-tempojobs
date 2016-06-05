@@ -25,8 +25,6 @@ import es.uca.iw.tempojobs.web.EmpresaController;
 import es.uca.iw.tempojobs.web.EmpresaController_Roo_Controller;
 import es.uca.iw.tempojobs.web.EmpresaController_Roo_GvNIXDatatables;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,11 +34,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpServletResponseWrapper;
 import javax.validation.Valid;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -53,8 +49,9 @@ import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.core.convert.ConversionService;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
-import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -62,6 +59,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 privileged aspect EmpresaController_Roo_GvNIXDatatables {
@@ -118,7 +116,7 @@ privileged aspect EmpresaController_Roo_GvNIXDatatables {
         uiModel.addAttribute("datatablesInlineEditing",false);
         uiModel.addAttribute("datatablesInlineCreating",false);
         uiModel.addAttribute("datatablesSecurityApplied",true);
-        uiModel.addAttribute("datatablesStandardMode",false);
+        uiModel.addAttribute("datatablesStandardMode",true);
         uiModel.addAttribute("finderNameParam","ajax_find");
     }
     
@@ -418,70 +416,9 @@ privileged aspect EmpresaController_Roo_GvNIXDatatables {
         return "redirect:".concat(redirect);
     }
     
-    public void EmpresaController.populateItemForRender(HttpServletRequest request, Empresa empresa, boolean editing) {
-        org.springframework.ui.Model uiModel = new org.springframework.ui.ExtendedModelMap();
-        
-        request.setAttribute("empresa", empresa);
-        request.setAttribute("itemId", conversionService_dtt.convert(empresa.getId(),String.class));
-        
-        if (editing) {
-            // spring from:input tag uses BindingResult to locate property editors for each bean
-            // property. So, we add a request attribute (required key id BindingResult.MODEL_KEY_PREFIX + object name)
-            // with a correctly initialized bindingResult.
-            BeanPropertyBindingResult bindindResult = new BeanPropertyBindingResult(empresa, "empresa");
-            bindindResult.initConversion(conversionService_dtt);
-            request.setAttribute(BindingResult.MODEL_KEY_PREFIX + "empresa",bindindResult);
-            // Add date time patterns and enums to populate inputs
-            populateEditForm(uiModel, empresa);
-        }
-        
-        // Load uiModel attributes into request
-        Map<String, Object> modelMap = uiModel.asMap();
-        for (String key : modelMap.keySet()){
-            request.setAttribute(key, modelMap.get(key));
-        }
-    }
-    
-    public List<Map<String, String>> EmpresaController.renderEmpresas(SearchResults<Empresa> searchResult, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
-        // Prepare result
-        List<Empresa> empresas = searchResult.getResults();
-        List<Map<String, String>> result = new ArrayList<Map<String, String>>(empresas.size());
-        String controllerPath = "empresas";
-        String pageToUse = "show";
-        String renderUrl = String.format("/WEB-INF/views/%s/%s.jspx", controllerPath, pageToUse);
-        
-        // For every element
-        for (Empresa Empresa: empresas) {
-            Map<String, String> item = new HashMap<String, String>();
-            final StringWriter buffer = new StringWriter();
-            // Call JSP to render current entity
-            RequestDispatcher dispatcher = request.getRequestDispatcher(renderUrl);
-            
-            populateItemForRender(request, Empresa, false);
-            dispatcher.include(request, new HttpServletResponseWrapper(response) {
-                private PrintWriter writer = new PrintWriter(buffer);
-                @Override
-                public PrintWriter getWriter() throws IOException {
-                    return writer;
-                }
-            });
-            
-            String render = buffer.toString();
-            // Load item id)
-            item.put("DT_RowId", conversionService_dtt.convert(Empresa.getId(), String.class));
-            // Put rendered content into first column (uses column index)
-            item.put("0", render);
-            
-            result.add(item);
-        }
-        
-        return result;
-    }
-    
     @RequestMapping(headers = "Accept=application/json", value = "/datatables/ajax", produces = "application/json")
     @ResponseBody
-    public DatatablesResponse<Map<String, String>> EmpresaController.findAllEmpresas(@DatatablesParams DatatablesCriterias criterias, @ModelAttribute Empresa empresa, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public DatatablesResponse<Map<String, String>> EmpresaController.findAllEmpresas(@DatatablesParams DatatablesCriterias criterias, @ModelAttribute Empresa empresa, HttpServletRequest request) {
         // URL parameters are used as base search filters
         Map<String, Object> baseSearchValuesMap = getPropertyMap(empresa, request);
         setDatatablesBaseFilter(baseSearchValuesMap);
@@ -490,14 +427,30 @@ privileged aspect EmpresaController_Roo_GvNIXDatatables {
         // Get datatables required counts
         long totalRecords = searchResult.getTotalCount();
         long recordsFound = searchResult.getResultsCount();
-        List<Map<String, String>> rows = renderEmpresas(searchResult, request, response);
-        DataSet<Map<String, String>> dataSet = new DataSet<Map<String, String>>(rows, totalRecords, recordsFound); 
+        
+        // Entity pk field name
+        String pkFieldName = "id";
+        
+        DataSet<Map<String, String>> dataSet = datatablesUtilsBean_dtt.populateDataSet(searchResult.getResults(), pkFieldName, totalRecords, recordsFound, criterias.getColumnDefs(), null); 
         return DatatablesResponse.build(dataSet,criterias);
+    }
+    
+    @RequestMapping(headers = "Accept=application/json", params = "checkFilters")
+    @ResponseBody
+    public ResponseEntity<String> EmpresaController.checkFilterExpressions(WebRequest request, @RequestParam(value = "property", required = false) String property, @RequestParam(value = "expression", required = false) String expression) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        if(beanWrapper_dtt == null){
+            beanWrapper_dtt = new BeanWrapperImpl(Empresa.class);
+        }
+        Class type = beanWrapper_dtt.getPropertyType(property);
+        boolean response = datatablesUtilsBean_dtt.checkFilterExpressions(type,expression);
+        return new ResponseEntity<String>(String.format("{ \"response\": %s, \"property\": \"%s\"}",response, property), headers, org.springframework.http.HttpStatus.OK);
     }
     
     @RequestMapping(headers = "Accept=application/json", value = "/datatables/ajax", params = "ajax_find=ByActividadProfesionalLike", produces = "application/json")
     @ResponseBody
-    public DatatablesResponse<Map<String, String>> EmpresaController.findEmpresasByActividadProfesionalLike(@DatatablesParams DatatablesCriterias criterias, @RequestParam("actividadProfesional") String actividadProfesional, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public DatatablesResponse<Map<String, String>> EmpresaController.findEmpresasByActividadProfesionalLike(@DatatablesParams DatatablesCriterias criterias, @RequestParam("actividadProfesional") String actividadProfesional) {
         BooleanBuilder baseSearch = new BooleanBuilder();
         
         // Base Search. Using BooleanBuilder, a cascading builder for
@@ -515,14 +468,17 @@ privileged aspect EmpresaController_Roo_GvNIXDatatables {
         // Get datatables required counts
         long totalRecords = searchResult.getTotalCount();
         long recordsFound = searchResult.getResultsCount();
-        List<Map<String, String>> rows = renderEmpresas(searchResult, request, response);
-        DataSet<Map<String, String>> dataSet = new DataSet<Map<String, String>>(rows, totalRecords, recordsFound); 
+        
+        // Entity pk field name
+        String pkFieldName = "id";
+        
+        DataSet<Map<String, String>> dataSet = datatablesUtilsBean_dtt.populateDataSet(searchResult.getResults(), pkFieldName, totalRecords, recordsFound, criterias.getColumnDefs(), null); 
         return DatatablesResponse.build(dataSet,criterias);
     }
     
     @RequestMapping(headers = "Accept=application/json", value = "/datatables/ajax", params = "ajax_find=ByNombreLike", produces = "application/json")
     @ResponseBody
-    public DatatablesResponse<Map<String, String>> EmpresaController.findEmpresasByNombreLike(@DatatablesParams DatatablesCriterias criterias, @RequestParam("nombre") String nombre, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public DatatablesResponse<Map<String, String>> EmpresaController.findEmpresasByNombreLike(@DatatablesParams DatatablesCriterias criterias, @RequestParam("nombre") String nombre) {
         BooleanBuilder baseSearch = new BooleanBuilder();
         
         // Base Search. Using BooleanBuilder, a cascading builder for
@@ -540,14 +496,17 @@ privileged aspect EmpresaController_Roo_GvNIXDatatables {
         // Get datatables required counts
         long totalRecords = searchResult.getTotalCount();
         long recordsFound = searchResult.getResultsCount();
-        List<Map<String, String>> rows = renderEmpresas(searchResult, request, response);
-        DataSet<Map<String, String>> dataSet = new DataSet<Map<String, String>>(rows, totalRecords, recordsFound); 
+        
+        // Entity pk field name
+        String pkFieldName = "id";
+        
+        DataSet<Map<String, String>> dataSet = datatablesUtilsBean_dtt.populateDataSet(searchResult.getResults(), pkFieldName, totalRecords, recordsFound, criterias.getColumnDefs(), null); 
         return DatatablesResponse.build(dataSet,criterias);
     }
     
     @RequestMapping(headers = "Accept=application/json", value = "/datatables/ajax", params = "ajax_find=ByEmpleadosLessThan", produces = "application/json")
     @ResponseBody
-    public DatatablesResponse<Map<String, String>> EmpresaController.findEmpresasByEmpleadosLessThan(@DatatablesParams DatatablesCriterias criterias, @RequestParam("empleados") Integer empleados, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public DatatablesResponse<Map<String, String>> EmpresaController.findEmpresasByEmpleadosLessThan(@DatatablesParams DatatablesCriterias criterias, @RequestParam("empleados") Integer empleados) {
         BooleanBuilder baseSearch = new BooleanBuilder();
         
         // Base Search. Using BooleanBuilder, a cascading builder for
@@ -565,14 +524,17 @@ privileged aspect EmpresaController_Roo_GvNIXDatatables {
         // Get datatables required counts
         long totalRecords = searchResult.getTotalCount();
         long recordsFound = searchResult.getResultsCount();
-        List<Map<String, String>> rows = renderEmpresas(searchResult, request, response);
-        DataSet<Map<String, String>> dataSet = new DataSet<Map<String, String>>(rows, totalRecords, recordsFound); 
+        
+        // Entity pk field name
+        String pkFieldName = "id";
+        
+        DataSet<Map<String, String>> dataSet = datatablesUtilsBean_dtt.populateDataSet(searchResult.getResults(), pkFieldName, totalRecords, recordsFound, criterias.getColumnDefs(), null); 
         return DatatablesResponse.build(dataSet,criterias);
     }
     
     @RequestMapping(headers = "Accept=application/json", value = "/datatables/ajax", params = "ajax_find=ByCIF", produces = "application/json")
     @ResponseBody
-    public DatatablesResponse<Map<String, String>> EmpresaController.findEmpresasByCIF(@DatatablesParams DatatablesCriterias criterias, @RequestParam("cIF") String cIF, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public DatatablesResponse<Map<String, String>> EmpresaController.findEmpresasByCIF(@DatatablesParams DatatablesCriterias criterias, @RequestParam("cIF") String cIF) {
         BooleanBuilder baseSearch = new BooleanBuilder();
         
         // Base Search. Using BooleanBuilder, a cascading builder for
@@ -590,8 +552,11 @@ privileged aspect EmpresaController_Roo_GvNIXDatatables {
         // Get datatables required counts
         long totalRecords = searchResult.getTotalCount();
         long recordsFound = searchResult.getResultsCount();
-        List<Map<String, String>> rows = renderEmpresas(searchResult, request, response);
-        DataSet<Map<String, String>> dataSet = new DataSet<Map<String, String>>(rows, totalRecords, recordsFound); 
+        
+        // Entity pk field name
+        String pkFieldName = "id";
+        
+        DataSet<Map<String, String>> dataSet = datatablesUtilsBean_dtt.populateDataSet(searchResult.getResults(), pkFieldName, totalRecords, recordsFound, criterias.getColumnDefs(), null); 
         return DatatablesResponse.build(dataSet,criterias);
     }
     

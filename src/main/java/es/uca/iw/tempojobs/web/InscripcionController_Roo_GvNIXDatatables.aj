@@ -23,8 +23,6 @@ import es.uca.iw.tempojobs.web.InscripcionController;
 import es.uca.iw.tempojobs.web.InscripcionController_Roo_Controller;
 import es.uca.iw.tempojobs.web.InscripcionController_Roo_GvNIXDatatables;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,11 +32,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpServletResponseWrapper;
 import javax.validation.Valid;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -51,8 +47,9 @@ import org.springframework.beans.BeanWrapperImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.core.convert.ConversionService;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
-import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -60,6 +57,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 privileged aspect InscripcionController_Roo_GvNIXDatatables {
@@ -116,7 +114,7 @@ privileged aspect InscripcionController_Roo_GvNIXDatatables {
         uiModel.addAttribute("datatablesInlineEditing",false);
         uiModel.addAttribute("datatablesInlineCreating",false);
         uiModel.addAttribute("datatablesSecurityApplied",true);
-        uiModel.addAttribute("datatablesStandardMode",false);
+        uiModel.addAttribute("datatablesStandardMode",true);
         uiModel.addAttribute("finderNameParam","ajax_find");
     }
     
@@ -416,73 +414,9 @@ privileged aspect InscripcionController_Roo_GvNIXDatatables {
         return "redirect:".concat(redirect);
     }
     
-    public void InscripcionController.populateItemForRender(HttpServletRequest request, Inscripcion inscripcion, boolean editing) {
-        org.springframework.ui.Model uiModel = new org.springframework.ui.ExtendedModelMap();
-        
-        request.setAttribute("inscripcion", inscripcion);
-        request.setAttribute("itemId", conversionService_dtt.convert(inscripcion.getId(),String.class));
-        
-        if (editing) {
-            // spring from:input tag uses BindingResult to locate property editors for each bean
-            // property. So, we add a request attribute (required key id BindingResult.MODEL_KEY_PREFIX + object name)
-            // with a correctly initialized bindingResult.
-            BeanPropertyBindingResult bindindResult = new BeanPropertyBindingResult(inscripcion, "inscripcion");
-            bindindResult.initConversion(conversionService_dtt);
-            request.setAttribute(BindingResult.MODEL_KEY_PREFIX + "inscripcion",bindindResult);
-            // Add date time patterns and enums to populate inputs
-            populateEditForm(uiModel, inscripcion);
-        } else {
-            // Add date time patterns
-            addDateTimeFormatPatterns(uiModel);
-        }
-        
-        // Load uiModel attributes into request
-        Map<String, Object> modelMap = uiModel.asMap();
-        for (String key : modelMap.keySet()){
-            request.setAttribute(key, modelMap.get(key));
-        }
-    }
-    
-    public List<Map<String, String>> InscripcionController.renderInscripcions(SearchResults<Inscripcion> searchResult, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
-        // Prepare result
-        List<Inscripcion> inscripcions = searchResult.getResults();
-        List<Map<String, String>> result = new ArrayList<Map<String, String>>(inscripcions.size());
-        String controllerPath = "inscripcions";
-        String pageToUse = "show";
-        String renderUrl = String.format("/WEB-INF/views/%s/%s.jspx", controllerPath, pageToUse);
-        
-        // For every element
-        for (Inscripcion Inscripcion: inscripcions) {
-            Map<String, String> item = new HashMap<String, String>();
-            final StringWriter buffer = new StringWriter();
-            // Call JSP to render current entity
-            RequestDispatcher dispatcher = request.getRequestDispatcher(renderUrl);
-            
-            populateItemForRender(request, Inscripcion, false);
-            dispatcher.include(request, new HttpServletResponseWrapper(response) {
-                private PrintWriter writer = new PrintWriter(buffer);
-                @Override
-                public PrintWriter getWriter() throws IOException {
-                    return writer;
-                }
-            });
-            
-            String render = buffer.toString();
-            // Load item id)
-            item.put("DT_RowId", conversionService_dtt.convert(Inscripcion.getId(), String.class));
-            // Put rendered content into first column (uses column index)
-            item.put("0", render);
-            
-            result.add(item);
-        }
-        
-        return result;
-    }
-    
     @RequestMapping(headers = "Accept=application/json", value = "/datatables/ajax", produces = "application/json")
     @ResponseBody
-    public DatatablesResponse<Map<String, String>> InscripcionController.findAllInscripcions(@DatatablesParams DatatablesCriterias criterias, @ModelAttribute Inscripcion inscripcion, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    public DatatablesResponse<Map<String, String>> InscripcionController.findAllInscripcions(@DatatablesParams DatatablesCriterias criterias, @ModelAttribute Inscripcion inscripcion, HttpServletRequest request) {
         // URL parameters are used as base search filters
         Map<String, Object> baseSearchValuesMap = getPropertyMap(inscripcion, request);
         setDatatablesBaseFilter(baseSearchValuesMap);
@@ -491,9 +425,28 @@ privileged aspect InscripcionController_Roo_GvNIXDatatables {
         // Get datatables required counts
         long totalRecords = searchResult.getTotalCount();
         long recordsFound = searchResult.getResultsCount();
-        List<Map<String, String>> rows = renderInscripcions(searchResult, request, response);
-        DataSet<Map<String, String>> dataSet = new DataSet<Map<String, String>>(rows, totalRecords, recordsFound); 
+        
+        // Entity pk field name
+        String pkFieldName = "id";
+        org.springframework.ui.Model uiModel = new org.springframework.ui.ExtendedModelMap();
+        addDateTimeFormatPatterns(uiModel);
+        Map<String, Object> datePattern = uiModel.asMap();
+        
+        DataSet<Map<String, String>> dataSet = datatablesUtilsBean_dtt.populateDataSet(searchResult.getResults(), pkFieldName, totalRecords, recordsFound, criterias.getColumnDefs(), datePattern); 
         return DatatablesResponse.build(dataSet,criterias);
+    }
+    
+    @RequestMapping(headers = "Accept=application/json", params = "checkFilters")
+    @ResponseBody
+    public ResponseEntity<String> InscripcionController.checkFilterExpressions(WebRequest request, @RequestParam(value = "property", required = false) String property, @RequestParam(value = "expression", required = false) String expression) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Content-Type", "application/json; charset=utf-8");
+        if(beanWrapper_dtt == null){
+            beanWrapper_dtt = new BeanWrapperImpl(Inscripcion.class);
+        }
+        Class type = beanWrapper_dtt.getPropertyType(property);
+        boolean response = datatablesUtilsBean_dtt.checkFilterExpressions(type,expression);
+        return new ResponseEntity<String>(String.format("{ \"response\": %s, \"property\": \"%s\"}",response, property), headers, org.springframework.http.HttpStatus.OK);
     }
     
     @RequestMapping(value = "/exportcsv", produces = "text/csv")

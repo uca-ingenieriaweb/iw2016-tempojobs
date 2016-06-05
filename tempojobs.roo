@@ -1,6 +1,6 @@
 // Roo Script para implementación rápida
 // Generar proyecto iw2016-tempojobs desde Spring Source Tool y cargar script
-// project --topLevelPackage es.uca.iw.tempojobs --projectName iw2016-tempojobs --java 7 --packaging JAR
+project --topLevelPackage es.uca.iw.tempojobs --projectName iw2016-tempojobs --java 7 --packaging JAR
 
 // Crear conexión con la BD
 jpa setup --provider HIBERNATE --database MYSQL --databaseName tempojobs --userName tempojobs --password tempojobs --hostName localhost
