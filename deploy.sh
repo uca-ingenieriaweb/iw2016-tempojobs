@@ -1,10 +1,7 @@
 #!/bin/sh
 
-mysql -u root -p < src/sql/create.localdb.sql
-mysql -u root -p < src/sql/tempojobs.sql
-mysql -u root -p tempojobs < src/sql/add.admin.sql
-
-## gvnix.sh script --file tempojobs.roo --lineNumbers
+read -p "Introduzca el usuario administrador de MySQL (p.e. root): " usuario
+mysql -u $usuario -p < src/sql/create.localdb.sql
 
 echo ''
 echo 'Ejecutar tests:'

@@ -401,8 +401,3 @@ ALTER TABLE `perfil_puestos`
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
-INSERT INTO abstract_usuario VALUES
-('Admin', 1, 'Admin', 'admin', 'admin', 'localhost', 'admin@localhost', '1980-01-01',
-	'localhost', 'Admin', 'roo', '000 000 000', 0, NULL, NULL, NULL, NULL, NULL);
