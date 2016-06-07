@@ -4,8 +4,8 @@
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_es_uca_iw_tempojobs_domain_Experiencia" modelAttribute="experiencia" path="/experiencias" versionField="Version" z="80yssM5HqswSUbLBJddjNtGUiJA=">
         <field:textarea field="empresa" id="c_es_uca_iw_tempojobs_domain_Experiencia_empresa" required="true" z="yO3az8KzLBnnhRu5NcoJhnFzPbM="/>
-        <field:textarea field="puesto" id="c_es_uca_iw_tempojobs_domain_Experiencia_puesto" required="true" z="v+xEGFGQtc98bOqdG3FwVJ2+bMo="/>
         <field:datetime dateTimePattern="${experiencia_fechainicio_date_format}" field="fechaInicio" id="c_es_uca_iw_tempojobs_domain_Experiencia_fechaInicio" required="true" z="k/w6VYapPJcal/mLucavVleqa3s="/>
         <field:datetime dateTimePattern="${experiencia_fechafinal_date_format}" field="fechaFinal" id="c_es_uca_iw_tempojobs_domain_Experiencia_fechaFinal" required="true" z="hPh/NuISHTLuKxGttRGFE6B3LI0="/>
+        <field:select field="puesto" id="c_es_uca_iw_tempojobs_domain_Experiencia_puesto" itemValue="id" items="${puestoes}" path="/puestoes" z="oFRFDViwnkci4tKhSqnBF9TaIgw="/>
     </form:update>
 </div>

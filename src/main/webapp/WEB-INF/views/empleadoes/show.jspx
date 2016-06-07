@@ -15,7 +15,7 @@
         <field:display field="telefono" id="s_es_uca_iw_tempojobs_domain_Empleado_telefono" object="${empleado}" z="rXqBKg8CDa5LzdXCBeHA/wVQl2E="/>
         <field:display date="true" dateTimePattern="${empleado_fechainicio_date_format}" field="fechaInicio" id="s_es_uca_iw_tempojobs_domain_Empleado_fechaInicio" object="${empleado}" z="ay5gyppx7WFMwQQrOBabJWdZY8g="/>
         <field:display date="true" dateTimePattern="${empleado_fechafinal_date_format}" field="fechaFinal" id="s_es_uca_iw_tempojobs_domain_Empleado_fechaFinal" object="${empleado}" z="atqjNXZ0xATi1yS677IGutEmTtU="/>
-        <field:display field="puesto" id="s_es_uca_iw_tempojobs_domain_Empleado_puesto" object="${empleado}" z="54fCEuwEMpprcg1ULcPOjkU8LwE="/>
         <field:display field="oferta" id="s_es_uca_iw_tempojobs_domain_Empleado_oferta" object="${empleado}" z="YH1iNJZ8eQYxZ0m6F5GaFGjJ9rs="/>
+        <field:display field="puesto" id="s_es_uca_iw_tempojobs_domain_Empleado_puesto" object="${empleado}" z="54fCEuwEMpprcg1ULcPOjkU8LwE="/>
     </page:show>
 </div>

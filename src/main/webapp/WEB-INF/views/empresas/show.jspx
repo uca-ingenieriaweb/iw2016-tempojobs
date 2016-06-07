@@ -9,5 +9,6 @@
         <field:display field="empleados" id="s_es_uca_iw_tempojobs_domain_Empresa_empleados" object="${empresa}" z="6eVz1PRkz05BcR9J/6QSsfYd1E8="/>
         <field:display field="sedes" id="s_es_uca_iw_tempojobs_domain_Empresa_sedes" object="${empresa}" z="RvIHLca1PntvdQajMZm9iLMnVkM="/>
         <field:display field="ofertas" id="s_es_uca_iw_tempojobs_domain_Empresa_ofertas" object="${empresa}" z="BfgRatsBJh2O6MBj4BzPkSfLg0E="/>
+        <field:display field="usuarioempresas" id="s_es_uca_iw_tempojobs_domain_Empresa_usuarioempresas" object="${empresa}" z="MFVMeAQDSa3dUS55rDKKXEtDg4U="/>
     </page:show>
 </div>

@@ -5,6 +5,7 @@ package es.uca.iw.tempojobs.domain;
 
 import es.uca.iw.tempojobs.domain.Experiencia;
 import es.uca.iw.tempojobs.domain.ExperienciaDataOnDemand;
+import es.uca.iw.tempojobs.domain.PuestoDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect ExperienciaDataOnDemand_Roo_DataOnDemand {
@@ -25,12 +27,14 @@ privileged aspect ExperienciaDataOnDemand_Roo_DataOnDemand {
     
     private List<Experiencia> ExperienciaDataOnDemand.data;
     
+    @Autowired
+    PuestoDataOnDemand ExperienciaDataOnDemand.puestoDataOnDemand;
+    
     public Experiencia ExperienciaDataOnDemand.getNewTransientExperiencia(int index) {
         Experiencia obj = new Experiencia();
         setEmpresa(obj, index);
         setFechaFinal(obj, index);
         setFechaInicio(obj, index);
-        setPuesto(obj, index);
         return obj;
     }
     
@@ -50,14 +54,6 @@ privileged aspect ExperienciaDataOnDemand_Roo_DataOnDemand {
     public void ExperienciaDataOnDemand.setFechaInicio(Experiencia obj, int index) {
         Date fechaInicio = new GregorianCalendar(Calendar.getInstance().get(Calendar.YEAR), Calendar.getInstance().get(Calendar.MONTH), Calendar.getInstance().get(Calendar.DAY_OF_MONTH), Calendar.getInstance().get(Calendar.HOUR_OF_DAY), Calendar.getInstance().get(Calendar.MINUTE), Calendar.getInstance().get(Calendar.SECOND) + new Double(Math.random() * 1000).intValue()).getTime();
         obj.setFechaInicio(fechaInicio);
-    }
-    
-    public void ExperienciaDataOnDemand.setPuesto(Experiencia obj, int index) {
-        String puesto = "puesto_" + index;
-        if (puesto.length() > 32) {
-            puesto = puesto.substring(0, 32);
-        }
-        obj.setPuesto(puesto);
     }
     
     public Experiencia ExperienciaDataOnDemand.getSpecificExperiencia(int index) {

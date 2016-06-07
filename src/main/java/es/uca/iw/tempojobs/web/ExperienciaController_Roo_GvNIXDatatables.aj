@@ -18,8 +18,6 @@ import com.github.dandelion.datatables.extras.export.itext.PdfExport;
 import com.github.dandelion.datatables.extras.export.poi.XlsExport;
 import com.github.dandelion.datatables.extras.export.poi.XlsxExport;
 import com.github.dandelion.datatables.extras.spring3.ajax.DatatablesParams;
-import com.mysema.query.BooleanBuilder;
-import com.mysema.query.types.path.PathBuilder;
 import es.uca.iw.tempojobs.domain.Experiencia;
 import es.uca.iw.tempojobs.web.ExperienciaController;
 import es.uca.iw.tempojobs.web.ExperienciaController_Roo_Controller;
@@ -449,37 +447,6 @@ privileged aspect ExperienciaController_Roo_GvNIXDatatables {
         Class type = beanWrapper_dtt.getPropertyType(property);
         boolean response = datatablesUtilsBean_dtt.checkFilterExpressions(type,expression);
         return new ResponseEntity<String>(String.format("{ \"response\": %s, \"property\": \"%s\"}",response, property), headers, org.springframework.http.HttpStatus.OK);
-    }
-    
-    @RequestMapping(headers = "Accept=application/json", value = "/datatables/ajax", params = "ajax_find=ByPuestoLike", produces = "application/json")
-    @ResponseBody
-    public DatatablesResponse<Map<String, String>> ExperienciaController.findExperienciasByPuestoLike(@DatatablesParams DatatablesCriterias criterias, @RequestParam("puesto") String puesto) {
-        BooleanBuilder baseSearch = new BooleanBuilder();
-        
-        // Base Search. Using BooleanBuilder, a cascading builder for
-        // Predicate expressions
-        PathBuilder<Experiencia> entity = new PathBuilder<Experiencia>(Experiencia.class, "entity");
-        
-        if(puesto != null){
-            baseSearch.and(entity.getString("puesto").toLowerCase().like("%".concat(puesto).toLowerCase().concat("%")));
-        }else{
-            baseSearch.and(entity.getString("puesto").isNull());
-        }
-        
-        SearchResults<Experiencia> searchResult = datatablesUtilsBean_dtt.findByCriteria(entity, criterias, baseSearch);
-        
-        // Get datatables required counts
-        long totalRecords = searchResult.getTotalCount();
-        long recordsFound = searchResult.getResultsCount();
-        
-        // Entity pk field name
-        String pkFieldName = "id";
-        org.springframework.ui.Model uiModel = new org.springframework.ui.ExtendedModelMap();
-        addDateTimeFormatPatterns(uiModel);
-        Map<String, Object> datePattern = uiModel.asMap();
-        
-        DataSet<Map<String, String>> dataSet = datatablesUtilsBean_dtt.populateDataSet(searchResult.getResults(), pkFieldName, totalRecords, recordsFound, criterias.getColumnDefs(), datePattern); 
-        return DatatablesResponse.build(dataSet,criterias);
     }
     
     @RequestMapping(value = "/exportcsv", produces = "text/csv")

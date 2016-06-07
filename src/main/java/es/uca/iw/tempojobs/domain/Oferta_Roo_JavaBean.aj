@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.domain;
 
+import es.uca.iw.tempojobs.domain.Empleado;
 import es.uca.iw.tempojobs.domain.Empresa;
 import es.uca.iw.tempojobs.domain.Estado;
 import es.uca.iw.tempojobs.domain.Inscripcion;
@@ -90,6 +91,14 @@ privileged aspect Oferta_Roo_JavaBean {
     
     public void Oferta.setEmpresa(Empresa empresa) {
         this.empresa = empresa;
+    }
+    
+    public Empleado Oferta.getEmpleado() {
+        return this.empleado;
+    }
+    
+    public void Oferta.setEmpleado(Empleado empleado) {
+        this.empleado = empleado;
     }
     
     public Estado Oferta.getEstado() {

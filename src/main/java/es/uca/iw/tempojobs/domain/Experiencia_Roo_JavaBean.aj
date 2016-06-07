@@ -4,6 +4,7 @@
 package es.uca.iw.tempojobs.domain;
 
 import es.uca.iw.tempojobs.domain.Experiencia;
+import es.uca.iw.tempojobs.domain.Puesto;
 import java.util.Date;
 
 privileged aspect Experiencia_Roo_JavaBean {
@@ -14,14 +15,6 @@ privileged aspect Experiencia_Roo_JavaBean {
     
     public void Experiencia.setEmpresa(String empresa) {
         this.empresa = empresa;
-    }
-    
-    public String Experiencia.getPuesto() {
-        return this.puesto;
-    }
-    
-    public void Experiencia.setPuesto(String puesto) {
-        this.puesto = puesto;
     }
     
     public Date Experiencia.getFechaInicio() {
@@ -38,6 +31,14 @@ privileged aspect Experiencia_Roo_JavaBean {
     
     public void Experiencia.setFechaFinal(Date fechaFinal) {
         this.fechaFinal = fechaFinal;
+    }
+    
+    public Puesto Experiencia.getPuesto() {
+        return this.puesto;
+    }
+    
+    public void Experiencia.setPuesto(Puesto puesto) {
+        this.puesto = puesto;
     }
     
 }

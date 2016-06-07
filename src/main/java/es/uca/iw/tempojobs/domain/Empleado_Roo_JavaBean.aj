@@ -5,6 +5,7 @@ package es.uca.iw.tempojobs.domain;
 
 import es.uca.iw.tempojobs.domain.Empleado;
 import es.uca.iw.tempojobs.domain.Oferta;
+import es.uca.iw.tempojobs.domain.Puesto;
 import java.util.Date;
 
 privileged aspect Empleado_Roo_JavaBean {
@@ -25,20 +26,20 @@ privileged aspect Empleado_Roo_JavaBean {
         this.fechaFinal = fechaFinal;
     }
     
-    public String Empleado.getPuesto() {
-        return this.puesto;
-    }
-    
-    public void Empleado.setPuesto(String puesto) {
-        this.puesto = puesto;
-    }
-    
     public Oferta Empleado.getOferta() {
         return this.oferta;
     }
     
     public void Empleado.setOferta(Oferta oferta) {
         this.oferta = oferta;
+    }
+    
+    public Puesto Empleado.getPuesto() {
+        return this.puesto;
+    }
+    
+    public void Empleado.setPuesto(Puesto puesto) {
+        this.puesto = puesto;
     }
     
 }

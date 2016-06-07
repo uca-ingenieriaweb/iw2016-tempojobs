@@ -9,5 +9,6 @@
         <field:input field="provincia" id="c_es_uca_iw_tempojobs_domain_Sede_provincia" max="16" min="3" required="true" z="LLkLg4t97GZ83ai/eYv7YMgYHMI="/>
         <field:textarea field="pais" id="c_es_uca_iw_tempojobs_domain_Sede_pais" required="true" z="f4kyIZgkuG2WufZbreNhxriIr3I="/>
         <field:input field="telefono" id="c_es_uca_iw_tempojobs_domain_Sede_telefono" max="16" min="9" required="true" z="QUL4nt4Sd53RG/YvlZJ5a4Qna+w="/>
+        <field:select field="empresa" id="c_es_uca_iw_tempojobs_domain_Sede_empresa" itemValue="id" items="${empresas}" path="/empresas" z="bI1UZOv3WQ84q6aljsT3hm3R57A="/>
     </form:update>
 </div>

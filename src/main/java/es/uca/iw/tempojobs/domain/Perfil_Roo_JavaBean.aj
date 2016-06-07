@@ -3,10 +3,11 @@
 
 package es.uca.iw.tempojobs.domain;
 
+import es.uca.iw.tempojobs.domain.Demandante;
 import es.uca.iw.tempojobs.domain.Experiencia;
+import es.uca.iw.tempojobs.domain.Formacion;
 import es.uca.iw.tempojobs.domain.Inscripcion;
 import es.uca.iw.tempojobs.domain.Perfil;
-import es.uca.iw.tempojobs.domain.Puesto;
 import java.util.Set;
 
 privileged aspect Perfil_Roo_JavaBean {
@@ -27,20 +28,28 @@ privileged aspect Perfil_Roo_JavaBean {
         this.inscripciones = inscripciones;
     }
     
-    public Set<Puesto> Perfil.getPuestos() {
-        return this.puestos;
-    }
-    
-    public void Perfil.setPuestos(Set<Puesto> puestos) {
-        this.puestos = puestos;
-    }
-    
     public Set<Experiencia> Perfil.getExperiencias() {
         return this.experiencias;
     }
     
     public void Perfil.setExperiencias(Set<Experiencia> experiencias) {
         this.experiencias = experiencias;
+    }
+    
+    public Set<Formacion> Perfil.getFormaciones() {
+        return this.formaciones;
+    }
+    
+    public void Perfil.setFormaciones(Set<Formacion> formaciones) {
+        this.formaciones = formaciones;
+    }
+    
+    public Demandante Perfil.getDemandante() {
+        return this.demandante;
+    }
+    
+    public void Perfil.setDemandante(Demandante demandante) {
+        this.demandante = demandante;
     }
     
 }

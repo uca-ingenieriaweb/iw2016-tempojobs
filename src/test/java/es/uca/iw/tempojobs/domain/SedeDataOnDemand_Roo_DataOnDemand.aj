@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.domain;
 
+import es.uca.iw.tempojobs.domain.EmpresaDataOnDemand;
 import es.uca.iw.tempojobs.domain.Sede;
 import es.uca.iw.tempojobs.domain.SedeDataOnDemand;
 import java.security.SecureRandom;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect SedeDataOnDemand_Roo_DataOnDemand {
@@ -21,6 +23,9 @@ privileged aspect SedeDataOnDemand_Roo_DataOnDemand {
     private Random SedeDataOnDemand.rnd = new SecureRandom();
     
     private List<Sede> SedeDataOnDemand.data;
+    
+    @Autowired
+    EmpresaDataOnDemand SedeDataOnDemand.empresaDataOnDemand;
     
     public Sede SedeDataOnDemand.getNewTransientSede(int index) {
         Sede obj = new Sede();

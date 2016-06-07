@@ -3,10 +3,11 @@
 
 package es.uca.iw.tempojobs.web;
 
+import es.uca.iw.tempojobs.domain.Demandante;
 import es.uca.iw.tempojobs.domain.Experiencia;
+import es.uca.iw.tempojobs.domain.Formacion;
 import es.uca.iw.tempojobs.domain.Inscripcion;
 import es.uca.iw.tempojobs.domain.Perfil;
-import es.uca.iw.tempojobs.domain.Puesto;
 import es.uca.iw.tempojobs.web.PerfilController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -89,9 +90,10 @@ privileged aspect PerfilController_Roo_Controller {
     
     void PerfilController.populateEditForm(Model uiModel, Perfil perfil) {
         uiModel.addAttribute("perfil", perfil);
+        uiModel.addAttribute("demandantes", Demandante.findAllDemandantes());
         uiModel.addAttribute("experiencias", Experiencia.findAllExperiencias());
+        uiModel.addAttribute("formacions", Formacion.findAllFormacions());
         uiModel.addAttribute("inscripcions", Inscripcion.findAllInscripcions());
-        uiModel.addAttribute("puestoes", Puesto.findAllPuestoes());
     }
     
     String PerfilController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

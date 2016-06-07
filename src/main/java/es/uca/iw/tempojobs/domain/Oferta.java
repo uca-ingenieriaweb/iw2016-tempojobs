@@ -81,5 +81,10 @@ public class Oferta {
     /**
      */
     @ManyToOne
+    private Empleado empleado;
+
+    /**
+     */
+    @ManyToOne
     private Estado estado;
 }

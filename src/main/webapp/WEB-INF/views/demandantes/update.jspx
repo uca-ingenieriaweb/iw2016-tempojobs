@@ -14,6 +14,5 @@
         <field:textarea field="email" id="c_es_uca_iw_tempojobs_domain_Demandante_email" required="true" validationMessageCode="field_invalid_email" z="lnMkZ87/Sy3L4GXk4cB1eOZBVRo="/>
         <field:input field="telefono" id="c_es_uca_iw_tempojobs_domain_Demandante_telefono" max="16" min="9" required="true" z="/sOQDpSuFpimGSVjB4hkuy+q66s="/>
         <field:select field="perfiles" id="c_es_uca_iw_tempojobs_domain_Demandante_perfiles" itemValue="id" items="${perfils}" multiple="true" path="/perfils" z="DIcDScUgpeiiEk7gKa3icanens4="/>
-        <field:select field="formaciones" id="c_es_uca_iw_tempojobs_domain_Demandante_formaciones" itemValue="id" items="${formacions}" multiple="true" path="/formacions" z="e4o2qcQ64RrgFqm5lEKrQfKHS60="/>
     </form:update>
 </div>

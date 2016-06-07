@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.web;
 
+import es.uca.iw.tempojobs.domain.Empresa;
 import es.uca.iw.tempojobs.domain.Sede;
 import es.uca.iw.tempojobs.web.SedeController;
 import java.io.UnsupportedEncodingException;
@@ -86,6 +87,7 @@ privileged aspect SedeController_Roo_Controller {
     
     void SedeController.populateEditForm(Model uiModel, Sede sede) {
         uiModel.addAttribute("sede", sede);
+        uiModel.addAttribute("empresas", Empresa.findAllEmpresas());
     }
     
     String SedeController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

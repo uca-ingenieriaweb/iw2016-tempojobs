@@ -5,6 +5,7 @@ package es.uca.iw.tempojobs.web;
 
 import es.uca.iw.tempojobs.domain.Empleado;
 import es.uca.iw.tempojobs.domain.Oferta;
+import es.uca.iw.tempojobs.domain.Puesto;
 import es.uca.iw.tempojobs.web.EmpleadoController;
 import java.io.UnsupportedEncodingException;
 import javax.servlet.http.HttpServletRequest;
@@ -99,6 +100,7 @@ privileged aspect EmpleadoController_Roo_Controller {
         uiModel.addAttribute("empleado", empleado);
         addDateTimeFormatPatterns(uiModel);
         uiModel.addAttribute("ofertas", Oferta.findAllOfertas());
+        uiModel.addAttribute("puestoes", Puesto.findAllPuestoes());
     }
     
     String EmpleadoController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

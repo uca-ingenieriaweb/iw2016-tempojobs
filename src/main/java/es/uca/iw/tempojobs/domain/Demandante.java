@@ -16,9 +16,4 @@ public class Demandante extends AbstractUsuario {
      */
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Perfil> perfiles = new HashSet<Perfil>();
-
-    /**
-     */
-    @ManyToMany(cascade = CascadeType.ALL)
-    private Set<Formacion> formaciones = new HashSet<Formacion>();
 }

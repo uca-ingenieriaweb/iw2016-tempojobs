@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.domain;
 
+import es.uca.iw.tempojobs.domain.EmpleadoDataOnDemand;
 import es.uca.iw.tempojobs.domain.EmpresaDataOnDemand;
 import es.uca.iw.tempojobs.domain.EstadoDataOnDemand;
 import es.uca.iw.tempojobs.domain.Oferta;
@@ -27,6 +28,9 @@ privileged aspect OfertaDataOnDemand_Roo_DataOnDemand {
     private Random OfertaDataOnDemand.rnd = new SecureRandom();
     
     private List<Oferta> OfertaDataOnDemand.data;
+    
+    @Autowired
+    EmpleadoDataOnDemand OfertaDataOnDemand.empleadoDataOnDemand;
     
     @Autowired
     EmpresaDataOnDemand OfertaDataOnDemand.empresaDataOnDemand;

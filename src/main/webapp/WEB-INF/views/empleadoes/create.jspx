@@ -15,8 +15,8 @@
         <field:input field="telefono" id="c_es_uca_iw_tempojobs_domain_Empleado_telefono" max="16" min="9" required="true" z="OB76LU65SG4RREidOExroAWRFzE="/>
         <field:datetime dateTimePattern="${empleado_fechainicio_date_format}" field="fechaInicio" id="c_es_uca_iw_tempojobs_domain_Empleado_fechaInicio" required="true" z="JrTtLdvTuzfJlZchD5Dgh8TRLN4="/>
         <field:datetime dateTimePattern="${empleado_fechafinal_date_format}" field="fechaFinal" id="c_es_uca_iw_tempojobs_domain_Empleado_fechaFinal" required="true" z="IvOiOubeUJtyeXECDfLdGOt1OFY="/>
-        <field:textarea field="puesto" id="c_es_uca_iw_tempojobs_domain_Empleado_puesto" required="true" z="GE4nKrA1pXpx4h3VaL+Gf6JKuRg="/>
         <field:select field="oferta" id="c_es_uca_iw_tempojobs_domain_Empleado_oferta" itemValue="id" items="${ofertas}" path="/ofertas" z="hHnXhhpAKrp76AVLL5kGn+5+pxw="/>
+        <field:select field="puesto" id="c_es_uca_iw_tempojobs_domain_Empleado_puesto" itemValue="id" items="${puestoes}" path="/puestoes" z="yXPetXySF89sWI7oZPie37+i0O4="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_es_uca_iw_tempojobs_domain_Empleado" render="${not empty dependencies}" z="zSfB76Dqoah1Zi+0LHFrhasr7uQ="/>
 </div>

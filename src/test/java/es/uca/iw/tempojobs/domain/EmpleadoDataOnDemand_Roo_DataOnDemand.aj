@@ -6,6 +6,7 @@ package es.uca.iw.tempojobs.domain;
 import es.uca.iw.tempojobs.domain.Empleado;
 import es.uca.iw.tempojobs.domain.EmpleadoDataOnDemand;
 import es.uca.iw.tempojobs.domain.OfertaDataOnDemand;
+import es.uca.iw.tempojobs.domain.PuestoDataOnDemand;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -30,6 +31,9 @@ privileged aspect EmpleadoDataOnDemand_Roo_DataOnDemand {
     @Autowired
     OfertaDataOnDemand EmpleadoDataOnDemand.ofertaDataOnDemand;
     
+    @Autowired
+    PuestoDataOnDemand EmpleadoDataOnDemand.puestoDataOnDemand;
+    
     public Empleado EmpleadoDataOnDemand.getNewTransientEmpleado(int index) {
         Empleado obj = new Empleado();
         setApellidos(obj, index);
@@ -43,7 +47,6 @@ privileged aspect EmpleadoDataOnDemand_Roo_DataOnDemand {
         setLocalidad(obj, index);
         setNombre(obj, index);
         setProvincia(obj, index);
-        setPuesto(obj, index);
         setTelefono(obj, index);
         return obj;
     }
@@ -125,14 +128,6 @@ privileged aspect EmpleadoDataOnDemand_Roo_DataOnDemand {
             provincia = provincia.substring(0, 16);
         }
         obj.setProvincia(provincia);
-    }
-    
-    public void EmpleadoDataOnDemand.setPuesto(Empleado obj, int index) {
-        String puesto = "puesto_" + index;
-        if (puesto.length() > 32) {
-            puesto = puesto.substring(0, 32);
-        }
-        obj.setPuesto(puesto);
     }
     
     public void EmpleadoDataOnDemand.setTelefono(Empleado obj, int index) {

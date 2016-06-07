@@ -9,5 +9,6 @@
         <field:display field="provincia" id="s_es_uca_iw_tempojobs_domain_Sede_provincia" object="${sede}" z="gw3/Oa02yWM4u0yaVMr8edhaguI="/>
         <field:display field="pais" id="s_es_uca_iw_tempojobs_domain_Sede_pais" object="${sede}" z="IGnlyickKs0KEg1h70PdAs96iJI="/>
         <field:display field="telefono" id="s_es_uca_iw_tempojobs_domain_Sede_telefono" object="${sede}" z="XTGXtcLI+F5jCwITWNvleS6VSuw="/>
+        <field:display field="empresa" id="s_es_uca_iw_tempojobs_domain_Sede_empresa" object="${sede}" z="JV7mhA1zNsCXxVqvWsBuadlr/po="/>
     </page:show>
 </div>

@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 @RooJavaBean
 @RooToString
@@ -28,10 +29,15 @@ public class Perfil {
     /**
      */
     @ManyToMany(cascade = CascadeType.ALL)
-    private Set<Puesto> puestos = new HashSet<Puesto>();
+    private Set<Experiencia> experiencias = new HashSet<Experiencia>();
 
     /**
      */
     @ManyToMany(cascade = CascadeType.ALL)
-    private Set<Experiencia> experiencias = new HashSet<Experiencia>();
+    private Set<Formacion> formaciones = new HashSet<Formacion>();
+
+    /**
+     */
+    @ManyToOne
+    private Demandante demandante;
 }

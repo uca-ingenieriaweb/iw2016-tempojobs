@@ -7,7 +7,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import org.springframework.format.annotation.DateTimeFormat;
-import javax.validation.constraints.Size;
 import javax.persistence.ManyToOne;
 
 @RooJavaBean
@@ -31,12 +30,11 @@ public class Empleado extends AbstractUsuario {
 
     /**
      */
-    @NotNull
-    @Size(min = 3, max = 32)
-    private String puesto;
+    @ManyToOne
+    private Oferta oferta;
 
     /**
      */
     @ManyToOne
-    private Oferta oferta;
+    private Puesto puesto;
 }

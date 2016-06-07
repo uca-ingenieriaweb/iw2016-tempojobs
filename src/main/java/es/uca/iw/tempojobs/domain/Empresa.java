@@ -46,4 +46,9 @@ public class Empresa {
      */
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Oferta> ofertas = new HashSet<Oferta>();
+
+    /**
+     */
+    @ManyToMany(cascade = CascadeType.ALL)
+    private Set<UsuarioEmpresa> usuarioempresas = new HashSet<UsuarioEmpresa>();
 }

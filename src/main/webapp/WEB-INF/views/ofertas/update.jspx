@@ -13,6 +13,7 @@
         <field:datetime dateTimePattern="${oferta_fechafin_date_format}" field="fechaFin" id="c_es_uca_iw_tempojobs_domain_Oferta_fechaFin" required="true" z="3z3qugGyhDSwyr3HGxI2kHNGOxI="/>
         <field:select field="inscripciones" id="c_es_uca_iw_tempojobs_domain_Oferta_inscripciones" itemValue="id" items="${inscripcions}" multiple="true" path="/inscripcions" z="IS/ooWsaFYhkte3AWtCf6YheF6A="/>
         <field:select field="empresa" id="c_es_uca_iw_tempojobs_domain_Oferta_empresa" itemValue="id" items="${empresas}" path="/empresas" z="IFwwAJ5V3sOq2//0j0Ko/+B+vo0="/>
+        <field:select field="empleado" id="c_es_uca_iw_tempojobs_domain_Oferta_empleado" itemValue="id" items="${empleadoes}" path="/empleadoes" z="fuYRakPgz78uvFn7VDihaaXOQrc="/>
         <field:select field="estado" id="c_es_uca_iw_tempojobs_domain_Oferta_estado" itemValue="id" items="${estadoes}" path="/estadoes" z="F6O+pAJ9XRzMARiADDg+BSiuZAQ="/>
     </form:update>
 </div>

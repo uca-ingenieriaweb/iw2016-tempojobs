@@ -5,9 +5,9 @@
     <page:list id="pl_es_uca_iw_tempojobs_domain_Experiencia" items="${experiencias}" z="aAnbiJCzhQ3J+NZ+y4zZlqnqbdU=">
         <table:table data="${experiencias}" id="l_es_uca_iw_tempojobs_domain_Experiencia" path="/experiencias" z="AUcdB3ArXGB+HJF1+5GriQ5RGyc=">
             <table:column id="c_es_uca_iw_tempojobs_domain_Experiencia_empresa" property="empresa" z="ggxZnyCAltk254JRqn9pMSN5cto="/>
-            <table:column id="c_es_uca_iw_tempojobs_domain_Experiencia_puesto" property="puesto" z="yLLU9TvdzIyeCXPQ4rzaP18MtXA="/>
             <table:column date="true" dateTimePattern="${experiencia_fechainicio_date_format}" id="c_es_uca_iw_tempojobs_domain_Experiencia_fechaInicio" property="fechaInicio" z="iBBVwBxYmixHTpfBt7ANyGsxZsA="/>
             <table:column date="true" dateTimePattern="${experiencia_fechafinal_date_format}" id="c_es_uca_iw_tempojobs_domain_Experiencia_fechaFinal" property="fechaFinal" z="l7FCHmBXfbB6C+4GCSFCCyYXiAY="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Experiencia_puesto" property="puesto" z="yLLU9TvdzIyeCXPQ4rzaP18MtXA="/>
         </table:table>
     </page:list>
 </div>

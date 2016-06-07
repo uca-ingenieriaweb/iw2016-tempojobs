@@ -8,10 +8,11 @@ import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
+import javax.persistence.ManyToOne;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord(finders = { "findExperienciasByPuestoLike" })
+@RooJpaActiveRecord
 public class Experiencia {
 
     /**
@@ -19,12 +20,6 @@ public class Experiencia {
     @NotNull
     @Size(min = 3, max = 32)
     private String empresa;
-
-    /**
-     */
-    @NotNull
-    @Size(min = 3, max = 32)
-    private String puesto;
 
     /**
      */
@@ -39,4 +34,9 @@ public class Experiencia {
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
     private Date fechaFinal;
+
+    /**
+     */
+    @ManyToOne
+    private Puesto puesto;
 }

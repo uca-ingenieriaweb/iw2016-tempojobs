@@ -13,6 +13,7 @@
         <field:display date="true" dateTimePattern="${oferta_fechafin_date_format}" field="fechaFin" id="s_es_uca_iw_tempojobs_domain_Oferta_fechaFin" object="${oferta}" z="K95cBOF0g/5dtPiv9dul8+l9AGA="/>
         <field:display field="inscripciones" id="s_es_uca_iw_tempojobs_domain_Oferta_inscripciones" object="${oferta}" z="gG3dtF2uyos8rQ9U1Ht8WrcBk14="/>
         <field:display field="empresa" id="s_es_uca_iw_tempojobs_domain_Oferta_empresa" object="${oferta}" z="eliFRZaLCwPB5p4kEMztyjvbw3c="/>
+        <field:display field="empleado" id="s_es_uca_iw_tempojobs_domain_Oferta_empleado" object="${oferta}" z="bhEKZBrCGqH70x8957dnuXEbfgk="/>
         <field:display field="estado" id="s_es_uca_iw_tempojobs_domain_Oferta_estado" object="${oferta}" z="YfBNF0tz8hXCA/nwq1sasCMqLuc="/>
     </page:show>
 </div>

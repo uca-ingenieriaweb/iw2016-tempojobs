@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.web;
 
+import es.uca.iw.tempojobs.domain.Empleado;
 import es.uca.iw.tempojobs.domain.Empresa;
 import es.uca.iw.tempojobs.domain.Estado;
 import es.uca.iw.tempojobs.domain.Inscripcion;
@@ -100,6 +101,7 @@ privileged aspect OfertaController_Roo_Controller {
     void OfertaController.populateEditForm(Model uiModel, Oferta oferta) {
         uiModel.addAttribute("oferta", oferta);
         addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("empleadoes", Empleado.findAllEmpleadoes());
         uiModel.addAttribute("empresas", Empresa.findAllEmpresas());
         uiModel.addAttribute("estadoes", Estado.findAllEstadoes());
         uiModel.addAttribute("inscripcions", Inscripcion.findAllInscripcions());

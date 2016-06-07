@@ -14,7 +14,7 @@ privileged aspect Sede_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Sede.entityManager;
     
-    public static final List<String> Sede.fieldNames4OrderClauseFilter = java.util.Arrays.asList("nombre", "direccion", "localidad", "provincia", "pais", "telefono");
+    public static final List<String> Sede.fieldNames4OrderClauseFilter = java.util.Arrays.asList("nombre", "direccion", "localidad", "provincia", "pais", "telefono", "empresa");
     
     public static final EntityManager Sede.entityManager() {
         EntityManager em = new Sede().entityManager;
