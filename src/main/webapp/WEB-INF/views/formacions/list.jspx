@@ -7,6 +7,7 @@
             <table:column id="c_es_uca_iw_tempojobs_domain_Formacion_titulo" property="titulo" z="fXkXulqxjnWFcxCKca2aIzLxsnw="/>
             <table:column date="true" dateTimePattern="${formacion_fechainicio_date_format}" id="c_es_uca_iw_tempojobs_domain_Formacion_fechaInicio" property="fechaInicio" z="sRfbXGxRc38fPvZe9zd3vZDPecs="/>
             <table:column date="true" dateTimePattern="${formacion_fechafinal_date_format}" id="c_es_uca_iw_tempojobs_domain_Formacion_fechaFinal" property="fechaFinal" z="gf9a/oz+VI1xbFqYf/tBoWK3mOQ="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Formacion_demandante" property="demandante" z="lMVeIZSKyAn28OeimKE3HNsDV7k="/>
         </table:table>
     </page:list>
 </div>

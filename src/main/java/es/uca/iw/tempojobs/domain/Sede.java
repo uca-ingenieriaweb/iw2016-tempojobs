@@ -5,6 +5,7 @@ import org.springframework.roo.addon.tostring.RooToString;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import org.springframework.beans.factory.annotation.Value;
+import javax.persistence.ManyToOne;
 
 @RooJavaBean
 @RooToString
@@ -47,4 +48,9 @@ public class Sede {
     @NotNull
     @Size(min = 9, max = 16)
     private String telefono;
+
+    /**
+     */
+    @ManyToOne
+    private Empresa empresa;
 }

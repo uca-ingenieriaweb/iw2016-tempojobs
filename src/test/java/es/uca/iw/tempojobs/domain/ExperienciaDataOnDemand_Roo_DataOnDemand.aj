@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.domain;
 
+import es.uca.iw.tempojobs.domain.DemandanteDataOnDemand;
 import es.uca.iw.tempojobs.domain.Experiencia;
 import es.uca.iw.tempojobs.domain.ExperienciaDataOnDemand;
 import java.security.SecureRandom;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect ExperienciaDataOnDemand_Roo_DataOnDemand {
@@ -24,6 +26,9 @@ privileged aspect ExperienciaDataOnDemand_Roo_DataOnDemand {
     private Random ExperienciaDataOnDemand.rnd = new SecureRandom();
     
     private List<Experiencia> ExperienciaDataOnDemand.data;
+    
+    @Autowired
+    DemandanteDataOnDemand ExperienciaDataOnDemand.demandanteDataOnDemand;
     
     public Experiencia ExperienciaDataOnDemand.getNewTransientExperiencia(int index) {
         Experiencia obj = new Experiencia();

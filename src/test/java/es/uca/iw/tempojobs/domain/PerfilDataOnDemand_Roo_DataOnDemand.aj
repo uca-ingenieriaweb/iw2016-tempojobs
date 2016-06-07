@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.domain;
 
+import es.uca.iw.tempojobs.domain.DemandanteDataOnDemand;
 import es.uca.iw.tempojobs.domain.Perfil;
 import es.uca.iw.tempojobs.domain.PerfilDataOnDemand;
 import java.security.SecureRandom;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect PerfilDataOnDemand_Roo_DataOnDemand {
@@ -21,6 +23,9 @@ privileged aspect PerfilDataOnDemand_Roo_DataOnDemand {
     private Random PerfilDataOnDemand.rnd = new SecureRandom();
     
     private List<Perfil> PerfilDataOnDemand.data;
+    
+    @Autowired
+    DemandanteDataOnDemand PerfilDataOnDemand.demandanteDataOnDemand;
     
     public Perfil PerfilDataOnDemand.getNewTransientPerfil(int index) {
         Perfil obj = new Perfil();

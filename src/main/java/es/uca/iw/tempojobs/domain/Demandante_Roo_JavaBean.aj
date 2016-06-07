@@ -4,6 +4,7 @@
 package es.uca.iw.tempojobs.domain;
 
 import es.uca.iw.tempojobs.domain.Demandante;
+import es.uca.iw.tempojobs.domain.Experiencia;
 import es.uca.iw.tempojobs.domain.Formacion;
 import es.uca.iw.tempojobs.domain.Perfil;
 import java.util.Set;
@@ -24,6 +25,14 @@ privileged aspect Demandante_Roo_JavaBean {
     
     public void Demandante.setFormaciones(Set<Formacion> formaciones) {
         this.formaciones = formaciones;
+    }
+    
+    public Set<Experiencia> Demandante.getExperiencias() {
+        return this.experiencias;
+    }
+    
+    public void Demandante.setExperiencias(Set<Experiencia> experiencias) {
+        this.experiencias = experiencias;
     }
     
 }

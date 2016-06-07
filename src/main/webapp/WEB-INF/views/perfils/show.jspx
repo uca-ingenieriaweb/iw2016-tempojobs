@@ -7,5 +7,6 @@
         <field:display field="inscripciones" id="s_es_uca_iw_tempojobs_domain_Perfil_inscripciones" object="${perfil}" z="Hm5LJswcvcG7/cjMbty6iFHZeNQ="/>
         <field:display field="puestos" id="s_es_uca_iw_tempojobs_domain_Perfil_puestos" object="${perfil}" z="tB49iTqwJWNxeaEXh3cMr3td49Y="/>
         <field:display field="experiencias" id="s_es_uca_iw_tempojobs_domain_Perfil_experiencias" object="${perfil}" z="tr8SLSYLn9jo6mz0n39C1ZqsnQA="/>
+        <field:display field="demandante" id="s_es_uca_iw_tempojobs_domain_Perfil_demandante" object="${perfil}" z="k1OXo0k/maTg4JnTmgVDTl0uv9Y="/>
     </page:show>
 </div>

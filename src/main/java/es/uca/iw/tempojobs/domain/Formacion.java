@@ -8,6 +8,7 @@ import java.util.Date;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.springframework.format.annotation.DateTimeFormat;
+import javax.persistence.ManyToOne;
 
 @RooJavaBean
 @RooToString
@@ -33,4 +34,9 @@ public class Formacion {
     @Temporal(TemporalType.TIMESTAMP)
     @DateTimeFormat(style = "M-")
     private Date fechaFinal;
+
+    /**
+     */
+    @ManyToOne
+    private Demandante demandante;
 }

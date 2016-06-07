@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.domain;
 
+import es.uca.iw.tempojobs.domain.Demandante;
 import es.uca.iw.tempojobs.domain.Experiencia;
 import es.uca.iw.tempojobs.domain.Inscripcion;
 import es.uca.iw.tempojobs.domain.Perfil;
@@ -41,6 +42,14 @@ privileged aspect Perfil_Roo_JavaBean {
     
     public void Perfil.setExperiencias(Set<Experiencia> experiencias) {
         this.experiencias = experiencias;
+    }
+    
+    public Demandante Perfil.getDemandante() {
+        return this.demandante;
+    }
+    
+    public void Perfil.setDemandante(Demandante demandante) {
+        this.demandante = demandante;
     }
     
 }

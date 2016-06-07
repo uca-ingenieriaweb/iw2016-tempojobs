@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.domain;
 
+import es.uca.iw.tempojobs.domain.DemandanteDataOnDemand;
 import es.uca.iw.tempojobs.domain.Formacion;
 import es.uca.iw.tempojobs.domain.FormacionDataOnDemand;
 import java.security.SecureRandom;
@@ -15,6 +16,7 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect FormacionDataOnDemand_Roo_DataOnDemand {
@@ -24,6 +26,9 @@ privileged aspect FormacionDataOnDemand_Roo_DataOnDemand {
     private Random FormacionDataOnDemand.rnd = new SecureRandom();
     
     private List<Formacion> FormacionDataOnDemand.data;
+    
+    @Autowired
+    DemandanteDataOnDemand FormacionDataOnDemand.demandanteDataOnDemand;
     
     public Formacion FormacionDataOnDemand.getNewTransientFormacion(int index) {
         Formacion obj = new Formacion();

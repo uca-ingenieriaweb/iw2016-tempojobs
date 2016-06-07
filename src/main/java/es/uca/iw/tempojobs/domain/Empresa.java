@@ -39,11 +39,16 @@ public class Empresa {
 
     /**
      */
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "empresa")
     private Set<Sede> sedes = new HashSet<Sede>();
 
     /**
      */
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "empresa")
     private Set<Oferta> ofertas = new HashSet<Oferta>();
+
+    /**
+     */
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "empresa")
+    private Set<UsuarioEmpresa> usuarioempresas = new HashSet<UsuarioEmpresa>();
 }

@@ -70,7 +70,7 @@ public class Oferta {
 
     /**
      */
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "oferta")
     private Set<Inscripcion> inscripciones = new HashSet<Inscripcion>();
 
     /**

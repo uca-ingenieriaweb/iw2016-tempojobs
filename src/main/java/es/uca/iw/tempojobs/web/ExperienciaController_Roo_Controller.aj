@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.web;
 
+import es.uca.iw.tempojobs.domain.Demandante;
 import es.uca.iw.tempojobs.domain.Experiencia;
 import es.uca.iw.tempojobs.web.ExperienciaController;
 import java.io.UnsupportedEncodingException;
@@ -96,6 +97,7 @@ privileged aspect ExperienciaController_Roo_Controller {
     void ExperienciaController.populateEditForm(Model uiModel, Experiencia experiencia) {
         uiModel.addAttribute("experiencia", experiencia);
         addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("demandantes", Demandante.findAllDemandantes());
     }
     
     String ExperienciaController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

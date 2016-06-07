@@ -9,6 +9,7 @@
         <field:input field="empleados" id="c_es_uca_iw_tempojobs_domain_Empresa_empleados" required="true" validationMessageCode="field_invalid_integer" z="LmsvIawmMCsolotna18zE5JD7H8="/>
         <field:select field="sedes" id="c_es_uca_iw_tempojobs_domain_Empresa_sedes" itemValue="id" items="${sedes}" multiple="true" path="/sedes" z="kRHAh02e0XO3ZaOJe3eobFnDKeM="/>
         <field:select field="ofertas" id="c_es_uca_iw_tempojobs_domain_Empresa_ofertas" itemValue="id" items="${ofertas}" multiple="true" path="/ofertas" z="INnNpmEMkDWZK5sBnnBW31dQrm8="/>
+        <field:select field="usuarioempresas" id="c_es_uca_iw_tempojobs_domain_Empresa_usuarioempresas" itemValue="id" items="${usuarioempresas}" multiple="true" path="/usuarioempresas" z="SvFga8vPtmckm82wF/L2Seb0iT8="/>
     </form:create>
     <form:dependency dependencies="${dependencies}" id="d_es_uca_iw_tempojobs_domain_Empresa" render="${not empty dependencies}" z="S0MCFpyvo8IGurpwMnSZ9+PJD1E="/>
 </div>

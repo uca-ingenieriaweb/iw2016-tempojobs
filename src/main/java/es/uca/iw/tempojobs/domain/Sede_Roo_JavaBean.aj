@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.domain;
 
+import es.uca.iw.tempojobs.domain.Empresa;
 import es.uca.iw.tempojobs.domain.Sede;
 
 privileged aspect Sede_Roo_JavaBean {
@@ -53,6 +54,14 @@ privileged aspect Sede_Roo_JavaBean {
     
     public void Sede.setTelefono(String telefono) {
         this.telefono = telefono;
+    }
+    
+    public Empresa Sede.getEmpresa() {
+        return this.empresa;
+    }
+    
+    public void Sede.setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
     }
     
 }

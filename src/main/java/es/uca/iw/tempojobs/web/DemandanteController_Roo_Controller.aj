@@ -4,6 +4,7 @@
 package es.uca.iw.tempojobs.web;
 
 import es.uca.iw.tempojobs.domain.Demandante;
+import es.uca.iw.tempojobs.domain.Experiencia;
 import es.uca.iw.tempojobs.domain.Formacion;
 import es.uca.iw.tempojobs.domain.Perfil;
 import es.uca.iw.tempojobs.web.DemandanteController;
@@ -97,6 +98,7 @@ privileged aspect DemandanteController_Roo_Controller {
     void DemandanteController.populateEditForm(Model uiModel, Demandante demandante) {
         uiModel.addAttribute("demandante", demandante);
         addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("experiencias", Experiencia.findAllExperiencias());
         uiModel.addAttribute("formacions", Formacion.findAllFormacions());
         uiModel.addAttribute("perfils", Perfil.findAllPerfils());
     }

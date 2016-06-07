@@ -6,5 +6,6 @@
         <field:display field="titulo" id="s_es_uca_iw_tempojobs_domain_Formacion_titulo" object="${formacion}" z="h/Rz6gJvd3K9i7sUTfCQHC+dPzw="/>
         <field:display date="true" dateTimePattern="${formacion_fechainicio_date_format}" field="fechaInicio" id="s_es_uca_iw_tempojobs_domain_Formacion_fechaInicio" object="${formacion}" z="bixJuyvQaEjjBihf6Ht9P/31Jkk="/>
         <field:display date="true" dateTimePattern="${formacion_fechafinal_date_format}" field="fechaFinal" id="s_es_uca_iw_tempojobs_domain_Formacion_fechaFinal" object="${formacion}" z="adAHgtwXVNQY376wUF53JktW7/o="/>
+        <field:display field="demandante" id="s_es_uca_iw_tempojobs_domain_Formacion_demandante" object="${formacion}" z="thkOyVea6slqntJ6LcGycncIpb4="/>
     </page:show>
 </div>

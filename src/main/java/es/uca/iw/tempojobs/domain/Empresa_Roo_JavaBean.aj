@@ -6,6 +6,7 @@ package es.uca.iw.tempojobs.domain;
 import es.uca.iw.tempojobs.domain.Empresa;
 import es.uca.iw.tempojobs.domain.Oferta;
 import es.uca.iw.tempojobs.domain.Sede;
+import es.uca.iw.tempojobs.domain.UsuarioEmpresa;
 import java.util.Set;
 
 privileged aspect Empresa_Roo_JavaBean {
@@ -56,6 +57,14 @@ privileged aspect Empresa_Roo_JavaBean {
     
     public void Empresa.setOfertas(Set<Oferta> ofertas) {
         this.ofertas = ofertas;
+    }
+    
+    public Set<UsuarioEmpresa> Empresa.getUsuarioempresas() {
+        return this.usuarioempresas;
+    }
+    
+    public void Empresa.setUsuarioempresas(Set<UsuarioEmpresa> usuarioempresas) {
+        this.usuarioempresas = usuarioempresas;
     }
     
 }

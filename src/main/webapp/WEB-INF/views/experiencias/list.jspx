@@ -8,6 +8,7 @@
             <table:column id="c_es_uca_iw_tempojobs_domain_Experiencia_puesto" property="puesto" z="yLLU9TvdzIyeCXPQ4rzaP18MtXA="/>
             <table:column date="true" dateTimePattern="${experiencia_fechainicio_date_format}" id="c_es_uca_iw_tempojobs_domain_Experiencia_fechaInicio" property="fechaInicio" z="iBBVwBxYmixHTpfBt7ANyGsxZsA="/>
             <table:column date="true" dateTimePattern="${experiencia_fechafinal_date_format}" id="c_es_uca_iw_tempojobs_domain_Experiencia_fechaFinal" property="fechaFinal" z="l7FCHmBXfbB6C+4GCSFCCyYXiAY="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Experiencia_demandante" property="demandante" z="hTZ6Zh8kyxJ0XBc/DUcn6E8+w5Q="/>
         </table:table>
     </page:list>
 </div>

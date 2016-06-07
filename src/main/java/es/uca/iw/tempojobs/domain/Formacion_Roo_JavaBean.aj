@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.domain;
 
+import es.uca.iw.tempojobs.domain.Demandante;
 import es.uca.iw.tempojobs.domain.Formacion;
 import java.util.Date;
 
@@ -30,6 +31,14 @@ privileged aspect Formacion_Roo_JavaBean {
     
     public void Formacion.setFechaFinal(Date fechaFinal) {
         this.fechaFinal = fechaFinal;
+    }
+    
+    public Demandante Formacion.getDemandante() {
+        return this.demandante;
+    }
+    
+    public void Formacion.setDemandante(Demandante demandante) {
+        this.demandante = demandante;
     }
     
 }

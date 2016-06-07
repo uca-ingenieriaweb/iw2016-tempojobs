@@ -15,5 +15,6 @@
         <field:display field="telefono" id="s_es_uca_iw_tempojobs_domain_Demandante_telefono" object="${demandante}" z="lOTL8z/YP53TEfygOrq1A87+zl8="/>
         <field:display field="perfiles" id="s_es_uca_iw_tempojobs_domain_Demandante_perfiles" object="${demandante}" z="cSXx/oi+7lxq/L8HyAzY6me5jMA="/>
         <field:display field="formaciones" id="s_es_uca_iw_tempojobs_domain_Demandante_formaciones" object="${demandante}" z="2pU+M1B6CAT88esdudHPTY+hyDw="/>
+        <field:display field="experiencias" id="s_es_uca_iw_tempojobs_domain_Demandante_experiencias" object="${demandante}" z="FR3oBrzE5nPR7yreUrUZgzeExpQ="/>
     </page:show>
 </div>

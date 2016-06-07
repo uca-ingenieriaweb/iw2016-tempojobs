@@ -56,20 +56,20 @@ body {
 /* Custom theme Bootstrap for gvNIX by DISID */
 
 .navbar {
-	background-color: #563d7c;
-	border-color: #463265;
+	background-color: #608224;
+	border-color: #527711;
 }
 .navbar .navbar-toggle {
-	border-color: #563d7c;
+	border-color: #608224;
 }
 .navbar .navbar-toggle:hover {
-	background-color: #563d7c;
-	border-color: #463265;
+	background-color: #608224;
+	border-color: #43600E;
 }
 .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus,
 .navbar .navbar-nav > .active > a, .navbar .navbar-nav > .active > a:hover {
 	color: #fff;
-	background-color: #563d5a;
+	background-color: #43600E;
 }
 .navbar .navbar-nav > li > a {
 color: #acc47f;

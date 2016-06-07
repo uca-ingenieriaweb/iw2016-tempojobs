@@ -7,5 +7,6 @@
         <field:display field="puesto" id="s_es_uca_iw_tempojobs_domain_Experiencia_puesto" object="${experiencia}" z="0JkwoHaxpUS9yQgaADPVcNleeaY="/>
         <field:display date="true" dateTimePattern="${experiencia_fechainicio_date_format}" field="fechaInicio" id="s_es_uca_iw_tempojobs_domain_Experiencia_fechaInicio" object="${experiencia}" z="wchA2pUvja4yuBNCQWxBFA+0Mxc="/>
         <field:display date="true" dateTimePattern="${experiencia_fechafinal_date_format}" field="fechaFinal" id="s_es_uca_iw_tempojobs_domain_Experiencia_fechaFinal" object="${experiencia}" z="IC0jHYvRGX7nDf5Z5l/ta1FIdv8="/>
+        <field:display field="demandante" id="s_es_uca_iw_tempojobs_domain_Experiencia_demandante" object="${experiencia}" z="NJnjMBX+xsxvyGhwgFJPjwzRhig="/>
     </page:show>
 </div>

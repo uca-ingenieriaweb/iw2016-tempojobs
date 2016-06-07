@@ -6,5 +6,6 @@
         <field:textarea field="titulo" id="c_es_uca_iw_tempojobs_domain_Formacion_titulo" required="true" z="XQCenmloodLs3QFNQvZM4woUzJA="/>
         <field:datetime dateTimePattern="${formacion_fechainicio_date_format}" field="fechaInicio" id="c_es_uca_iw_tempojobs_domain_Formacion_fechaInicio" required="true" z="nbXN8NQ35yYVrfho53MxFnHTCsE="/>
         <field:datetime dateTimePattern="${formacion_fechafinal_date_format}" field="fechaFinal" id="c_es_uca_iw_tempojobs_domain_Formacion_fechaFinal" required="true" z="dznJ3x/LdKYzxrx1e2MQ6cCgpI8="/>
+        <field:select field="demandante" id="c_es_uca_iw_tempojobs_domain_Formacion_demandante" itemValue="id" items="${demandantes}" path="/demandantes" z="csXVgkClfY+VqV29xLGkaZlPRp0="/>
     </form:update>
 </div>

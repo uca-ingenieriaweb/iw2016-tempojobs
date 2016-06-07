@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.web;
 
+import es.uca.iw.tempojobs.domain.Demandante;
 import es.uca.iw.tempojobs.domain.Formacion;
 import es.uca.iw.tempojobs.web.FormacionController;
 import java.io.UnsupportedEncodingException;
@@ -96,6 +97,7 @@ privileged aspect FormacionController_Roo_Controller {
     void FormacionController.populateEditForm(Model uiModel, Formacion formacion) {
         uiModel.addAttribute("formacion", formacion);
         addDateTimeFormatPatterns(uiModel);
+        uiModel.addAttribute("demandantes", Demandante.findAllDemandantes());
     }
     
     String FormacionController.encodeUrlPathSegment(String pathSegment, HttpServletRequest httpServletRequest) {

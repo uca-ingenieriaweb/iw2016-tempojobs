@@ -3,6 +3,7 @@
 
 package es.uca.iw.tempojobs.web;
 
+import es.uca.iw.tempojobs.domain.Demandante;
 import es.uca.iw.tempojobs.domain.Experiencia;
 import es.uca.iw.tempojobs.domain.Inscripcion;
 import es.uca.iw.tempojobs.domain.Perfil;
@@ -89,6 +90,7 @@ privileged aspect PerfilController_Roo_Controller {
     
     void PerfilController.populateEditForm(Model uiModel, Perfil perfil) {
         uiModel.addAttribute("perfil", perfil);
+        uiModel.addAttribute("demandantes", Demandante.findAllDemandantes());
         uiModel.addAttribute("experiencias", Experiencia.findAllExperiencias());
         uiModel.addAttribute("inscripcions", Inscripcion.findAllInscripcions());
         uiModel.addAttribute("puestoes", Puesto.findAllPuestoes());

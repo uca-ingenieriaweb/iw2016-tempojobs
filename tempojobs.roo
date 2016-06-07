@@ -76,20 +76,27 @@ field string --fieldName nombre --notNull --sizeMin 3 --sizeMax 16 --class ~.dom
 
 // Creando relaciones entre entidades
 field reference --fieldName empresa --type ~.domain.Empresa --class ~.domain.UsuarioEmpresa
-field set --fieldName sedes --type ~.domain.Sede --class ~.domain.Empresa
-field set --fieldName ofertas --type ~.domain.Oferta
+field reference --fieldName empresa --type ~.domain.Empresa --class ~.domain.Sede
+field set --fieldName sedes --type ~.domain.Sede --mappedBy empresa --class ~.domain.Empresa
+field set --fieldName ofertas --type ~.domain.Oferta --mappedBy empresa
+field set --fieldName usuarioempresas --type ~.domain.UsuarioEmpresa --mappedBy empresa
+field reference --fieldName empresa --type ~.domain.Empresa
 
 field reference --fieldName oferta --type ~.domain.Oferta --class ~.domain.Empleado
-field set --fieldName perfiles --type ~.domain.Perfil --class ~.domain.Demandante
-field set --fieldName formaciones --type ~.domain.Formacion
+field set --fieldName perfiles --type ~.domain.Perfil --mappedBy demandante --class ~.domain.Demandante
+field set --fieldName formaciones --type ~.domain.Formacion --mappedBy demandante
+field set --fieldName experiencias --type ~.domain.Experiencia --mappedBy demandante
+field reference --fieldName demandante --type ~.domain.Demandante --class ~.domain.Formacion
+field reference --fieldName demandante --type ~.domain.Demandante --class ~.domain.Experiencia
 
 field reference --fieldName oferta --type ~.domain.Oferta --class ~.domain.Inscripcion
 field reference --fieldName perfil --type ~.domain.Perfil
-field set --fieldName inscripciones --type ~.domain.Inscripcion --class ~.domain.Oferta
+field set --fieldName inscripciones --type ~.domain.Inscripcion --mappedBy oferta --class ~.domain.Oferta
 field reference --fieldName empresa --type ~.domain.Empresa
-field set --fieldName inscripciones --type ~.domain.Inscripcion --class ~.domain.Perfil
+field set --fieldName inscripciones --type ~.domain.Inscripcion --mappedBy perfil --class ~.domain.Perfil
 field set --fieldName puestos --type ~.domain.Puesto
-field set --fieldName experiencias --type ~.domain.Experiencia
+field set --fieldName experiencias --type ~.domain.Experiencia --mappedBy perfil
+field reference --fieldName demandante --type ~.domain.Demandante
 field reference --fieldName estado --type ~.domain.Estado --class ~.domain.Oferta
 field reference --fieldName estado --type ~.domain.Estado --class ~.domain.Inscripcion
 

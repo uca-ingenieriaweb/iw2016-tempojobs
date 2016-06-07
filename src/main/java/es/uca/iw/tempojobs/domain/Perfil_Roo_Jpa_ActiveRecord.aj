@@ -14,7 +14,7 @@ privileged aspect Perfil_Roo_Jpa_ActiveRecord {
     @PersistenceContext
     transient EntityManager Perfil.entityManager;
     
-    public static final List<String> Perfil.fieldNames4OrderClauseFilter = java.util.Arrays.asList("nombre", "inscripciones", "puestos", "experiencias");
+    public static final List<String> Perfil.fieldNames4OrderClauseFilter = java.util.Arrays.asList("nombre", "inscripciones", "puestos", "experiencias", "demandante");
     
     public static final EntityManager Perfil.entityManager() {
         EntityManager em = new Perfil().entityManager;

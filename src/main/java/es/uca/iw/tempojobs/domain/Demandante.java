@@ -14,11 +14,16 @@ public class Demandante extends AbstractUsuario {
 
     /**
      */
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "demandante")
     private Set<Perfil> perfiles = new HashSet<Perfil>();
 
     /**
      */
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "demandante")
     private Set<Formacion> formaciones = new HashSet<Formacion>();
+
+    /**
+     */
+    @ManyToMany(cascade = CascadeType.ALL, mappedBy = "demandante")
+    private Set<Experiencia> experiencias = new HashSet<Experiencia>();
 }
