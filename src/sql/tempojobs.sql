@@ -38,16 +38,18 @@ CREATE TABLE `abstract_usuario` (
   `version` int(11) DEFAULT NULL,
   `fecha_final` datetime DEFAULT NULL,
   `fecha_inicio` datetime DEFAULT NULL,
-  `puesto` varchar(32) DEFAULT NULL,
   `oferta` bigint(20) DEFAULT NULL,
+  `puesto` bigint(20) DEFAULT NULL,
   `empresa` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UK_cn86ef7rs9ndjsds53de23tsm` (`apodo`),
   KEY `FK_n8elc9ijgfblp157cgypi10i9` (`oferta`),
+  KEY `FK_2gvnsecq529f7v7v20ciow0cd` (`puesto`),
   KEY `FK_2vlqps9hwpv6df2ubgahb765d` (`empresa`),
   CONSTRAINT `FK_2vlqps9hwpv6df2ubgahb765d` FOREIGN KEY (`empresa`) REFERENCES `empresa` (`id`),
+  CONSTRAINT `FK_2gvnsecq529f7v7v20ciow0cd` FOREIGN KEY (`puesto`) REFERENCES `puesto` (`id`),
   CONSTRAINT `FK_n8elc9ijgfblp157cgypi10i9` FOREIGN KEY (`oferta`) REFERENCES `oferta` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,34 +58,7 @@ CREATE TABLE `abstract_usuario` (
 
 LOCK TABLES `abstract_usuario` WRITE;
 /*!40000 ALTER TABLE `abstract_usuario` DISABLE KEYS */;
-INSERT INTO `abstract_usuario` VALUES ('Admin',1,'Admin','admin','admin','localhost','admin@localhost','1980-01-01 00:00:00','localhost','Admin','roo','000 000 000',0,NULL,NULL,NULL,NULL,NULL),('Admin',2,'diazag','matias','matiasdiag','direccion','email@example','1984-08-27 00:00:00','localidad','matias','provincia','0123456789',0,NULL,NULL,NULL,NULL,NULL),('UsuarioEmpresa',3,'apel','usuario1','usuario1234','localhost','usuario1@email','2000-01-01 00:00:00','th1','usuario1','th1','000 000 000',0,NULL,NULL,NULL,NULL,NULL),('UsuarioEmpresa',4,'usuarioempresa','usuarioempresa','tempojobs','direccion','usuarioempresa@tempojobs.com','1980-01-01 00:00:00','localidad','usuarioempresa','prov','000 000 000',0,NULL,NULL,NULL,NULL,NULL),('Empleado',5,'empleado','empleado','tempojobs','direccion','empleado@tempojobs.com','1980-01-01 00:00:00','localidad','empleado','prov','000 000 000',0,'2016-12-31 00:00:00','2016-01-01 00:00:00',NULL,NULL,NULL),('Demandante',6,'demandante','demandante','tempojobs','direccion','demandante@tempojobs.com','1980-01-01 00:00:00','localidad','demandante','prov','000 000 000',0,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `abstract_usuario` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `abstract_usuario_formaciones`
---
-
-DROP TABLE IF EXISTS `abstract_usuario_formaciones`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `abstract_usuario_formaciones` (
-  `abstract_usuario` bigint(20) NOT NULL,
-  `formaciones` bigint(20) NOT NULL,
-  PRIMARY KEY (`abstract_usuario`,`formaciones`),
-  KEY `FK_4kbudje9ro6av6gwkildu48vc` (`formaciones`),
-  CONSTRAINT `FK_4kbudje9ro6av6gwkildu48vc` FOREIGN KEY (`formaciones`) REFERENCES `formacion` (`id`),
-  CONSTRAINT `FK_nkl2opyf608354gk2oit5v3hm` FOREIGN KEY (`abstract_usuario`) REFERENCES `abstract_usuario` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `abstract_usuario_formaciones`
---
-
-LOCK TABLES `abstract_usuario_formaciones` WRITE;
-/*!40000 ALTER TABLE `abstract_usuario_formaciones` DISABLE KEYS */;
-/*!40000 ALTER TABLE `abstract_usuario_formaciones` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -501,32 +476,6 @@ LOCK TABLES `perfil_inscripciones` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `perfil_puestos`
---
-
-DROP TABLE IF EXISTS `perfil_puestos`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `perfil_puestos` (
-  `perfil` bigint(20) NOT NULL,
-  `puestos` bigint(20) NOT NULL,
-  PRIMARY KEY (`perfil`,`puestos`),
-  KEY `FK_5nmcmk684168mc9htydncomsc` (`puestos`),
-  CONSTRAINT `FK_5nmcmk684168mc9htydncomsc` FOREIGN KEY (`puestos`) REFERENCES `puesto` (`id`),
-  CONSTRAINT `FK_trerxpv0cg0wngb2jpum1c6sh` FOREIGN KEY (`perfil`) REFERENCES `perfil` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `perfil_puestos`
---
-
-LOCK TABLES `perfil_puestos` WRITE;
-/*!40000 ALTER TABLE `perfil_puestos` DISABLE KEYS */;
-/*!40000 ALTER TABLE `perfil_puestos` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `puesto`
 --
 
@@ -591,4 +540,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-08  0:02:24
+-- Dump completed on 2016-06-08  0:10:51
