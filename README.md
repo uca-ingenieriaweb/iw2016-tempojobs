@@ -1,3 +1,5 @@
+!(http://s32.postimg.org/nmm3ix4ol/logo_portada.jpg)
+
 iw2016-tempojobs
 ================
 Proyecto de la asignatura Ingeniería Web sobre una ETT.
