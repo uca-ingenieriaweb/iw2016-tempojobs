@@ -17,8 +17,8 @@ public class Perfil {
     /**
      */
     @NotNull
-    @Size(min = 3, max = 128)
-    private String foto;
+    @Size(min = 3, max = 16)
+    private String nombre;
 
     /**
      */

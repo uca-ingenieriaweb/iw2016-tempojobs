@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <form:update id="fu_es_uca_iw_tempojobs_domain_Perfil" modelAttribute="perfil" path="/perfils" versionField="Version" z="XRnu4NHHTmfldz/1BVpy7JZ6ino=">
-        <field:textarea field="foto" id="c_es_uca_iw_tempojobs_domain_Perfil_foto" required="true" z="D7uwnkeECZRQIT8fBff3qK9RNGM="/>
+        <field:input field="nombre" id="c_es_uca_iw_tempojobs_domain_Perfil_nombre" max="16" min="3" required="true" z="mh1qCsO6icTRzR9AWewNX9cDtpA="/>
         <field:select field="inscripciones" id="c_es_uca_iw_tempojobs_domain_Perfil_inscripciones" itemValue="id" items="${inscripcions}" multiple="true" path="/inscripcions" z="Te4an67aJM7Y0hddG80gTzH7s50="/>
         <field:select field="puestos" id="c_es_uca_iw_tempojobs_domain_Perfil_puestos" itemValue="id" items="${puestoes}" multiple="true" path="/puestoes" z="UsC8TfbHiClnG9JXDl48IRTtX6M="/>
         <field:select field="experiencias" id="c_es_uca_iw_tempojobs_domain_Perfil_experiencias" itemValue="id" items="${experiencias}" multiple="true" path="/experiencias" z="YMVjnILDLXzHmL1PRGl+QPuBoZo="/>

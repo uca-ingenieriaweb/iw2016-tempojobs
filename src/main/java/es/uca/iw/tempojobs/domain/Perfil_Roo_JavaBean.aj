@@ -11,12 +11,12 @@ import java.util.Set;
 
 privileged aspect Perfil_Roo_JavaBean {
     
-    public String Perfil.getFoto() {
-        return this.foto;
+    public String Perfil.getNombre() {
+        return this.nombre;
     }
     
-    public void Perfil.setFoto(String foto) {
-        this.foto = foto;
+    public void Perfil.setNombre(String nombre) {
+        this.nombre = nombre;
     }
     
     public Set<Inscripcion> Perfil.getInscripciones() {

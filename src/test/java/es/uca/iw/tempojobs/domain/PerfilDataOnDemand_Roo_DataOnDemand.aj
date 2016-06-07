@@ -24,16 +24,16 @@ privileged aspect PerfilDataOnDemand_Roo_DataOnDemand {
     
     public Perfil PerfilDataOnDemand.getNewTransientPerfil(int index) {
         Perfil obj = new Perfil();
-        setFoto(obj, index);
+        setNombre(obj, index);
         return obj;
     }
     
-    public void PerfilDataOnDemand.setFoto(Perfil obj, int index) {
-        String foto = "foto_" + index;
-        if (foto.length() > 128) {
-            foto = foto.substring(0, 128);
+    public void PerfilDataOnDemand.setNombre(Perfil obj, int index) {
+        String nombre = "nombre_" + index;
+        if (nombre.length() > 16) {
+            nombre = nombre.substring(0, 16);
         }
-        obj.setFoto(foto);
+        obj.setNombre(nombre);
     }
     
     public Perfil PerfilDataOnDemand.getSpecificPerfil(int index) {

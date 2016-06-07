@@ -244,7 +244,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Perfil, String> ApplicationConversionServiceFactoryBean.getPerfilToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<es.uca.iw.tempojobs.domain.Perfil, java.lang.String>() {
             public String convert(Perfil perfil) {
-                return new StringBuilder().append(perfil.getFoto()).toString();
+                return new StringBuilder().append(perfil.getNombre()).toString();
             }
         };
     }

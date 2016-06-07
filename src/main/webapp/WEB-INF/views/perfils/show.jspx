@@ -3,7 +3,7 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_es_uca_iw_tempojobs_domain_Perfil" object="${perfil}" path="/perfils" z="tYcpVNcza2dku7dz+apWJ1pLbAs=">
-        <field:display field="foto" id="s_es_uca_iw_tempojobs_domain_Perfil_foto" object="${perfil}" z="cUs5ac3KERtG/N4NPi+xuStvl5Q="/>
+        <field:display field="nombre" id="s_es_uca_iw_tempojobs_domain_Perfil_nombre" object="${perfil}" z="uJEeG+yJvMjx1iv6+/bJMJKqkDg="/>
         <field:display field="inscripciones" id="s_es_uca_iw_tempojobs_domain_Perfil_inscripciones" object="${perfil}" z="Hm5LJswcvcG7/cjMbty6iFHZeNQ="/>
         <field:display field="puestos" id="s_es_uca_iw_tempojobs_domain_Perfil_puestos" object="${perfil}" z="tB49iTqwJWNxeaEXh3cMr3td49Y="/>
         <field:display field="experiencias" id="s_es_uca_iw_tempojobs_domain_Perfil_experiencias" object="${perfil}" z="tr8SLSYLn9jo6mz0n39C1ZqsnQA="/>

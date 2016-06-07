@@ -4,7 +4,7 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_es_uca_iw_tempojobs_domain_Perfil" items="${perfils}" z="JVhWsgDnWkg9AmLkuxwMq1tRa8c=">
         <table:table data="${perfils}" id="l_es_uca_iw_tempojobs_domain_Perfil" path="/perfils" z="vU+j89AJX3jSBqNkJodBxeLvkcY=">
-            <table:column id="c_es_uca_iw_tempojobs_domain_Perfil_foto" property="foto" z="f/LgxTgNWOt/x88rnfslCl7aLUM="/>
+            <table:column id="c_es_uca_iw_tempojobs_domain_Perfil_nombre" property="nombre" z="6VDLpu3oSxj/LttVNv36t6jjGs8="/>
             <table:column id="c_es_uca_iw_tempojobs_domain_Perfil_inscripciones" property="inscripciones" z="jZFVq7gI+JbIdRLS1izXOVpJaDo="/>
             <table:column id="c_es_uca_iw_tempojobs_domain_Perfil_puestos" property="puestos" z="sphDw/nejY6WJVneVc8ebWhm2Ig="/>
             <table:column id="c_es_uca_iw_tempojobs_domain_Perfil_experiencias" property="experiencias" z="dZDrLhwfUE6OhoMx5Da7yhDUJHw="/>

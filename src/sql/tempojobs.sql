@@ -235,7 +235,7 @@ CREATE TABLE IF NOT EXISTS `oferta_inscripciones` (
 
 CREATE TABLE IF NOT EXISTS `perfil` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `foto` varchar(128) NOT NULL,
+  `nombre` varchar(16) NOT NULL,
   `version` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
