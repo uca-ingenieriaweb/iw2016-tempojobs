@@ -85,7 +85,6 @@
 			<menu:category id="c_experiencia" z="user-managed">
 				<menu:item id="i_experiencia_new" messageCode="global_menu_new" url="/experiencias?form" z="user-managed"/>
 				<menu:item id="i_experiencia_list" messageCode="global_menu_list" url="/experiencias?page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
-				<menu:item id="fi_experiencia_puestolike" messageCode="global_menu_find" url="/experiencias?find=ByPuestoLike&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
 			</menu:category>
         </sec:authorize>
 		<!-- FIN - demandante -->
@@ -148,7 +147,6 @@
 			<menu:category id="c_experiencia" z="user-managed">
 				<menu:item id="i_experiencia_new" messageCode="global_menu_new" url="/experiencias?form" z="user-managed"/>
 				<menu:item id="i_experiencia_list" messageCode="global_menu_list" url="/experiencias?page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
-				<menu:item id="fi_experiencia_puestolike" messageCode="global_menu_find" url="/experiencias?find=ByPuestoLike&amp;form&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed"/>
 			</menu:category>
 			<!-- Admin -->
 			<menu:category id="c_estado" z="user-managed">
