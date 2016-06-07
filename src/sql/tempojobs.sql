@@ -47,7 +47,7 @@ CREATE TABLE `abstract_usuario` (
   KEY `FK_2vlqps9hwpv6df2ubgahb765d` (`empresa`),
   CONSTRAINT `FK_2vlqps9hwpv6df2ubgahb765d` FOREIGN KEY (`empresa`) REFERENCES `empresa` (`id`),
   CONSTRAINT `FK_n8elc9ijgfblp157cgypi10i9` FOREIGN KEY (`oferta`) REFERENCES `oferta` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,7 +56,7 @@ CREATE TABLE `abstract_usuario` (
 
 LOCK TABLES `abstract_usuario` WRITE;
 /*!40000 ALTER TABLE `abstract_usuario` DISABLE KEYS */;
-INSERT INTO `abstract_usuario` VALUES ('Admin',1,'Admin','admin','admin','localhost','admin@localhost','1980-01-01 00:00:00','localhost','Admin','roo','000 000 000',0,NULL,NULL,NULL,NULL,NULL);
+INSERT INTO `abstract_usuario` VALUES ('Admin',1,'Admin','admin','admin','localhost','admin@localhost','1980-01-01 00:00:00','localhost','Admin','roo','000 000 000',0,NULL,NULL,NULL,NULL,NULL),('Admin',2,'diazag','matias','matiasdiag','direccion','email@example','1984-08-27 00:00:00','localidad','matias','provincia','0123456789',0,NULL,NULL,NULL,NULL,NULL),('UsuarioEmpresa',3,'apel','usuario1','usuario1234','localhost','usuario1@email','2000-01-01 00:00:00','th1','usuario1','th1','000 000 000',0,NULL,NULL,NULL,NULL,NULL),('UsuarioEmpresa',4,'usuarioempresa','usuarioempresa','tempojobs','direccion','usuarioempresa@tempojobs.com','1980-01-01 00:00:00','localidad','usuarioempresa','prov','000 000 000',0,NULL,NULL,NULL,NULL,NULL),('Empleado',5,'empleado','empleado','tempojobs','direccion','empleado@tempojobs.com','1980-01-01 00:00:00','localidad','empleado','prov','000 000 000',0,'2016-12-31 00:00:00','2016-01-01 00:00:00',NULL,NULL,NULL),('Demandante',6,'demandante','demandante','tempojobs','direccion','demandante@tempojobs.com','1980-01-01 00:00:00','localidad','demandante','prov','000 000 000',0,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `abstract_usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -406,7 +406,10 @@ CREATE TABLE `perfil` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(16) NOT NULL,
   `version` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `demandante` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_3y3sjar26im4jj93eo6f46u81` (`demandante`),
+  CONSTRAINT `FK_3y3sjar26im4jj93eo6f46u81` FOREIGN KEY (`demandante`) REFERENCES `abstract_usuario` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -588,4 +591,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-06-07 23:07:59
+-- Dump completed on 2016-06-08  0:02:24
