@@ -9,11 +9,12 @@ import javax.persistence.ManyToMany;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
+@RooJpaActiveRecord(finders = { "findDemandantesById" })
 public class Demandante extends AbstractUsuario {
 
     /**
      */
     @ManyToMany(cascade = CascadeType.ALL)
     private Set<Perfil> perfiles = new HashSet<Perfil>();
+
 }
