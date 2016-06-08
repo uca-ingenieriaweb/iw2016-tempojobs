@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 
 @RooJavaBean
 @RooToString
-@RooJpaActiveRecord
+@RooJpaActiveRecord(finders = { "findPerfilsByDemandante" })
 public class Perfil {
 
     /**
