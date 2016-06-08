@@ -6,7 +6,7 @@
     <spring:message arguments="${app_name}" code="welcome_titlepane" htmlEscape="false" var="title"/>
 
         <div class="jumbotron">
-            <h1><spring:message arguments="${app_name}" code="welcome_h3"/></h1>
+			<img src="images/logo_portada.jpeg"/>
             <p><spring:message code="welcome_text"/></p>
         </div>
 

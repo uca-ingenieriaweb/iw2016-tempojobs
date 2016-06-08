@@ -13,16 +13,6 @@
         </a>
 			</div>
 
-			<div class="pull-right">
-
-        <spring:message code="application_name" var="project_name" htmlEscape="false" />
-
-				<a class="navbar-brand nav navbar-right" href="${home}"
-				name="${fn:escapeXml(home_label)}"
-				title="${fn:escapeXml(home_label)}">${fn:escapeXml(project_name)}</a>
-
-			</div>
-
 </div>
 
 
