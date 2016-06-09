@@ -220,6 +220,7 @@ CREATE TABLE `estado` (
 
 LOCK TABLES `estado` WRITE;
 /*!40000 ALTER TABLE `estado` DISABLE KEYS */;
+INSERT INTO `estado` VALUES (1,'En espera',0),(2,'Activa',0),(3,'Detenida',0),(4,'Cancelada',0),(5,'En Trámite',0),(6,'Resuelta',0);
 /*!40000 ALTER TABLE `estado` ENABLE KEYS */;
 UNLOCK TABLES;
 
