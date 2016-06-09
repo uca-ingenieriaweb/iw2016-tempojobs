@@ -9,7 +9,7 @@ la cual poder gestionar ofertas de empleo y las inscripciones de posibles candid
 
 Instalación y despliegue
 ========================
-Pre-requisitos: maven y git.
+Pre-requisitos: maven, git y mysql.
 
 Introducimos las siguientes órdenes en la terminal:
 ```
