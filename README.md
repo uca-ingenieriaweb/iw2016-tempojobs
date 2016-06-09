@@ -16,7 +16,7 @@ Introducimos las siguientes órdenes en la terminal:
 git clone https://github.com/IngenieriaWebUCA/iw2016-tempojobs
 cd iw2016-tempojobs
 ./deploy.sh
-mvn clean compile tomcat7:run
+mvn tomcat7:run
 ```
 
 Hoja de auto-evaluación
