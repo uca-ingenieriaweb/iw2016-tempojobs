@@ -23,7 +23,7 @@
 		<intercept-url pattern="\A/inscripcions.*\Z" access="hasAnyRole('Admin','UsuarioEmpresa','Demandante')" />
 		<intercept-url pattern="\A/perfils.*\Z" access="hasAnyRole('Admin','Demandante')" />
 		<intercept-url pattern="\A/formacions.*\Z" access="hasAnyRole('Admin','Demandante')" />
-		<intercept-url pattern="\A/experiencias.*\Z" access="hasRole('Admin','Demandante')" />
+		<intercept-url pattern="\A/experiencias.*\Z" access="hasAnyRole('Admin','Demandante')" />
 		<intercept-url pattern="\A/estadoes.*\Z" access="hasRole('Admin')" />
 		<intercept-url pattern="\A/admins.*\Z" access="hasRole('Admin')" />
 
