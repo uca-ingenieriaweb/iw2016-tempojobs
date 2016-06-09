@@ -7,6 +7,18 @@ Proyecto de la asignatura Ingeniería Web sobre una ETT.
 El objetivo de este proyecto es desarrollar una aplicación web empresarial sencilla desde
 la cual poder gestionar ofertas de empleo y las inscripciones de posibles candidatos.
 
+Instalación y despliegue
+========================
+Pre-requisitos: maven.
+
+Introducimos las siguientes órdenes en la terminal:
+```
+git clone https://github.com/IngenieriaWebUCA/iw2016-tempojobs
+cd iw2016-tempojobs
+./deploy.sh
+mvn clean compile tomcat7:run
+```
+
 Hoja de auto-evaluación
 =======================
 A lo largo del desarrollo del proyecto, los miembros del equipo iremos completando la hoja de evaluación con la idea de conocer, de forma aproximada, los hitos conseguidos del proyecto y el porcentaje de los mismos.
