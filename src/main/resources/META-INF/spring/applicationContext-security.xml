@@ -12,7 +12,7 @@
 		<intercept-url pattern="\A/usuarioempresas\?form.*\Z" access="permitAll" />
 		<intercept-url pattern="\A/usuarioempresas\?page.*\Z" access="hasAnyRole('Admin','UsuarioEmpresa')" />
 		<intercept-url pattern="\A/demandantes\?form.*\Z" access="permitAll" />
-		<intercept-url pattern="\A/demandantes\?page.*\Z" access="hasAnyRole('Admin','Demandante')" />
+		<intercept-url pattern="\A/demandantes\?page.*\Z" access="hasAnyRole('Admin','Demandante','UsuarioEmpresa','Empleado')" />
 		<intercept-url pattern="\A/empleadoes\?form.*\Z" access="permitAll" />
 		<intercept-url pattern="\A/empleadoes\?page.*\Z" access="hasAnyRole('Admin','Empleado')" />
 		<intercept-url pattern="\A/empresas\?form.*\Z" access="hasAnyRole('UsuarioEmpresa','Admin')" />
