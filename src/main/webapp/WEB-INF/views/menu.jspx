@@ -139,6 +139,5 @@
                 <menu:item id="i_logout" messageCode="global_menu_logout" url="/resources/j_spring_security_logout" z="user-managed"/>
             </menu:category>
         </sec:authorize>
-        <menu:category id="c_admin" z="yJekxb7XuSQP9KBD9S6wbwLaHZY="/>
     </menu:menu>
 </div>
