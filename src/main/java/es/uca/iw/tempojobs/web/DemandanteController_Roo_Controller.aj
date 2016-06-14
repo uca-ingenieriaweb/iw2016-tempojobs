@@ -33,12 +33,6 @@ privileged aspect DemandanteController_Roo_Controller {
         return "redirect:/demandantes/" + encodeUrlPathSegment(demandante.getId().toString(), httpServletRequest);
     }
     
-    @RequestMapping(params = "form", produces = "text/html")
-    public String DemandanteController.createForm(Model uiModel) {
-        populateEditForm(uiModel, new Demandante());
-        return "demandantes/create";
-    }
-    
     @RequestMapping(value = "/{id}", produces = "text/html")
     public String DemandanteController.show(@PathVariable("id") Long id, Model uiModel) {
         addDateTimeFormatPatterns(uiModel);

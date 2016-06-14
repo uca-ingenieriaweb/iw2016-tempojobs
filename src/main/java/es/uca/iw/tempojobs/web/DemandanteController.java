@@ -15,4 +15,9 @@ import org.gvnix.addon.datatables.annotations.GvNIXDatatables;
 @GvNIXWebJQuery
 @GvNIXDatatables(ajax = true)
 public class DemandanteController {
+    @RequestMapping(params = "form", produces = "text/html")
+    public String createForm(Model uiModel) {
+        populateEditForm(uiModel, new Demandante());
+        return "demandantes/create";
+    }
 }
